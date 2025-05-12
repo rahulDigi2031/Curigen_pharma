@@ -1,10 +1,11 @@
 import Header from "@/Components/header";
 import { Box , Typography } from "@mui/material";
-import Image from "next/image";
+// import Image from "next/image";
 import ServiceComaponent from "@/Components/ServiceComponent";
-import Card from "@/common_components/card";
+// import Card from "@/common_components/card";
 import ExperinceSection from "./experinceSection";
 import ItemCategoryDisplay from "./itemCategory";
+import PublishContent from "./publish";
 
 export default function Homepage() {
 
@@ -19,7 +20,8 @@ export default function Homepage() {
 
       {/*Services component below side"*/}
       <ServiceComaponent />
-      
+      {/* Publish component below side */}
+      <PublishContent/>
     </Box>
   );
 }
