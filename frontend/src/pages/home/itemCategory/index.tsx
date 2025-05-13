@@ -1,118 +1,107 @@
-import Card from "@/common_components/card/index";
-import { Box, Typography } from "@mui/material";
-import Image from "next/image";
+// components/ItemCategoryGrid.tsx
 
-export default function ItemCategoryDisplay() {
-  const itemCategory = [
+import React from "react";
+import Image from "next/image";
+import { Box, Card, Typography } from "@mui/material";
+
+const itemCategory = [
   { image: "/tablet.png", label: "Tablet", count: 30 },
   { image: "/capsule.png", label: "Capsule", count: 30 },
   { image: "/injection.png", label: "Injection", count: 30 },
-  { image: "/syrup.png", label: "Suspension / syrup", count: 30 },
+  { image: "/syrup.png", label: "Suspension / Syrup", count: 30 },
   { image: "/eye-ear.png", label: "Eye / EarDrops", count: 30 },
   { image: "/other.png", label: "Other", count: 30 },
 ];
 
-
+const ItemCategoryGrid = () => {
   return (
-    <Box sx={{ backgroundColor: "#F7F7F7F7", padding: 4 }}>
-      <Box
-        sx={{
-          display: "grid",
-          gap: 3,
-          gridTemplateColumns: "repeat(6 , 1fr)",
-          width: "80%",
-          margin: "auto",
-        }}
-      >
-        {itemCategory.map((item, index) => (
-          <Card
-            content
-            key={index}
-            variant="outlined"
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              height: 250,
-              width: 160,
-              padding: 0,
-              borderRadius: "20px",
-              boxShadow: "0px 2px 6px rgba(0,0,0,0.05)",
-              transition: "background-color 0.3s, transform 0.3s",
-              "&:hover": {
-                backgroundColor: "#27548A",
-                cursor: "pointer",
-                transform: "translateY(-4px)",
-              },
-            }}
-          >
-            {/* Inner container with dotted border */}
-            <Box
+    <>
+      {/* Test image outside loop to confirm static image loads */}
+      <Box sx={{ width: "100%", height: "330px", backgroundColor: "#F7F7F7F7", padding:"40px"}}>
+        <Box
+          sx={{
+            display: "grid",
+            gap: 3,
+            gridTemplateColumns: "repeat(6, 1fr)",
+            width: "80%",
+            margin: "auto",
+          }}
+        >
+          {itemCategory.map((item, index) => (
+            <Card
+              key={index}
+              variant="outlined"
               sx={{
-                border: "2px dotted #B0BEC5",
-                borderRadius: "15px",
-                width: "90%",
-                height: "90%",
                 display: "flex",
-                flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                padding: 2,
+                height: 250,
+                width: 160,
+                padding: 0,
+                borderRadius: "20px",
+                boxShadow: "0px 2px 18px rgba(165, 158, 158, 0.85)",
+                transition: "background-color 0.3s, transform 0.3s",
+                "&:hover": {
+                  backgroundColor: "#27548A",
+                  cursor: "pointer",
+                  transform: "translateY(-4px)",
+                },
               }}
             >
-              {/* <Box
+              <Box
                 sx={{
-                  backgroundColor: "#23A397",
-                  borderRadius: "50%",
-                  width: 80,
-                  height: 80,
+                  border: "2px dotted #B0BEC5",
+                  borderRadius: "15px",
+                  width: "90%",
+                  height: "90%",
                   display: "flex",
+                  flexDirection: "column",
                   alignItems: "center",
                   justifyContent: "center",
-                  marginBottom: 2,
+                  padding: 2,
+                  textAlign: "center",
                 }}
               >
-                <Image src={item.image} alt={item.label} width={40} height={40} />
-              </Box> */}
+                <Box
+                  sx={{
+                    backgroundColor: "#23A397",
+                    borderRadius: "50%",
+                    width: 80,
+                    height: 80,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginBottom: 2,
+                  }}
+                >
+                  <Image
+                    src={item.image}
+                    alt={item.label}
+                    width={150}
+                    height={150}
+                  />
+                </Box>
 
-              <Box
-  sx={{
-    backgroundColor: "#fff",
-    borderRadius: "50%",
-    width: 80,
-    height: 80,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: 2,
-  }}
->
-  <Image
-    src={item.image}
-    alt={item.label}
-    width={40}
-    height={40}
-  />
-</Box>
+                <Typography
+                  variant="subtitle1"
+                  sx={{ fontWeight: "bold", color: "#0A2540", mb: 0.5 }}
+                >
+                  {item.label}
+                </Typography>
 
-
-              <Typography
-                variant="subtitle1"
-                sx={{ fontWeight: "bold", color: "#0A2540" }}
-              >
-                {item.label}
-              </Typography>
-
-              <Typography
-                variant="body2"
-                sx={{ color: "#23A397", fontWeight: 500 }}
-              >
-                {item.count} Items
-              </Typography>
-            </Box>
-          </Card>
-        ))}
+                <Typography
+                  variant="body2"
+                  sx={{ color: "#23A397", fontWeight: 500 }}
+                >
+                  {item.count} Items
+                </Typography>
+              </Box>
+            </Card>
+          ))}
+        </Box>
       </Box>
-    </Box>
+    </>
   );
-}
+};
+
+export default ItemCategoryGrid;

@@ -134,8 +134,6 @@ export default function PublishContent() {
                 </Box>
               ))}
             </Box>
-
-            
           </Box>
         </Box>
       </Box>

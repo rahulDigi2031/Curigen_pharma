@@ -90,7 +90,7 @@ export default function Navbar() {
           <Typography sx={{ cursor: "pointer" }}>Gallery</Typography>
           <Typography sx={{ cursor: "pointer" }}>About</Typography>
           <Typography sx={{ cursor: "pointer" }}>Blog</Typography>
-          <Button sx={{ backgroundColor: "#23A397" , color:"white" , borderRadius:2 , padding:"10px 20px" , cursor:"pointer"}}>Contact Us</Button>
+          <Button sx={{ backgroundColor: "#23A397" , color:"white" , borderRadius:2 , padding:"10px 20px" , cursor:"pointer" , ":hover":{backgroundColor:"#002B5B"}}}>Contact Us</Button>
         </Box>
       </Toolbar>
     </Box>
