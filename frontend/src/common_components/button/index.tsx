@@ -1,7 +1,12 @@
 import React from "react";
-import { Button as MuiButton, CircularProgress, useTheme } from "@mui/material";
+import {
+  Button as MuiButton,
+  CircularProgress,
+  useTheme,
+  SxProps,
+  Theme,
+} from "@mui/material";
 import { ButtonTypes } from "./types";
-
 
 const Button: React.FC<ButtonTypes> = ({
   variant = "contained",
@@ -9,16 +14,25 @@ const Button: React.FC<ButtonTypes> = ({
   onClick,
   disabled = false,
   loading = false,
-  css,
+  sx,
+  color = "primary",
 }) => {
   const theme = useTheme();
+
   return (
     <MuiButton
       variant={variant}
+      color={color}
       onClick={onClick}
       disabled={disabled || loading}
       sx={{
-        backgroundColor: theme.palette.primary.dark,
+        ...(variant === "contained" && {
+          backgroundColor: theme.palette.primary.dark,
+          "&:hover": {
+            backgroundColor: theme.palette.primary.main,
+          },
+        }),
+        ...sx,
       }}
     >
       {loading ? <CircularProgress size={20} color="inherit" /> : children}
@@ -27,4 +41,3 @@ const Button: React.FC<ButtonTypes> = ({
 };
 
 export default Button;
-

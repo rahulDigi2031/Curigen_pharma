@@ -1,10 +1,11 @@
-import { SxProps } from "@mui/material";
+import { SxProps, Theme } from "@mui/material";
 
 export interface ButtonTypes {
-  variant?: "text" | "contained" | "outlined";
-  children?: React.ReactNode;
+  variant?: "contained" | "outlined" | "text";
+  children: React.ReactNode;
   onClick?: () => void;
   disabled?: boolean;
   loading?: boolean;
-  css?: SxProps;
+  sx?: SxProps<Theme>; // instead of `css`
+  color?: "primary" | "secondary" | "error" | "inherit" | "success" | "info" | "warning";
 }

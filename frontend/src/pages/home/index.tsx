@@ -6,6 +6,8 @@ import ItemCategoryDisplay from "./itemCategory";
 import PublishContent from "./publish";
 import PromiseSection from "./QualitySection";
 import HomeGallerySection from "./galleryHome";
+import HomeBlog from "./homeBlog";
+import Footer from "@/Components/footer";
 
 export default function Homepage() {
   return (
@@ -30,6 +32,11 @@ export default function Homepage() {
 
       {/* Gallery Section */}
       <HomeGallerySection/>
+
+      {/* Home-Blog Section */}
+      <HomeBlog/>
+      {/* footer  */}
+      <Footer/>
       
     </Box>
   );

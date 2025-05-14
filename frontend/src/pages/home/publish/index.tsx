@@ -125,10 +125,10 @@ export default function PublishContent() {
                   key={index}
                   sx={{ textAlign: "center", minWidth: "140px" }}
                 >
-                  <Typography variant="h6" fontWeight="bold" color="#002B5B">
+                  <Typography variant="h4" fontWeight="bold" color="#002B5B">
                     {item.value}
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="">
                     {item.label}
                   </Typography>
                 </Box>
