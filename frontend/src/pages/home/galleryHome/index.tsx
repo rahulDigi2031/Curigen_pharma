@@ -52,7 +52,7 @@ export default function HomeGallerySection() {
 
           <Box sx={{ width: "80%", margin: "15px auto" }}>
   <Grid container spacing={2} gap={2}>
-    <Grid item xs={6}>
+    <Grid>
       <Box
         sx={{ position: "relative", width: "750px", height: "300px", borderRadius: "20px", overflow: "hidden", "&:hover .overlay": { opacity: 1,}, }}>
         <Image src="/gallery1.png" alt="" width={750} height={300} style={{ borderRadius: "20px" }} />
@@ -116,7 +116,7 @@ export default function HomeGallerySection() {
       </Box>
     </Grid>
 
-    <Grid item xs={6}>
+    <Grid>
       <Box sx={{ display: "flex", gap: "20px", alignItems: "center" }}>
         {[
           { src: "/gallery2.png", width: 365, height: 300 },

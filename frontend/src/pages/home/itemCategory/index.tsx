@@ -17,7 +17,7 @@ const ItemCategoryGrid = () => {
   return (
     <>
       {/* Test image outside loop to confirm static image loads */}
-      <Box sx={{ width: "100%", height: "330px", backgroundColor: "#F7F7F7F7", padding:"40px"}}>
+      <Box sx={{ width: "100%", height: "370px", backgroundColor: "#F7F7F7F7", padding:"40px"}}>
         <Box
           sx={{
             display: "grid",
@@ -35,11 +35,11 @@ const ItemCategoryGrid = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                height: 250,
-                width: 160,
+                height: 280,
+                width: 200,
                 padding: 0,
                 borderRadius: "20px",
-                boxShadow: "0px 2px 18px rgba(165, 158, 158, 0.85)",
+                boxShadow: "0px 2px 12px rgba(165, 158, 158, 0.85)",
                 transition: "background-color 0.3s, transform 0.3s",
                 "&:hover": {
                   backgroundColor: "#27548A",

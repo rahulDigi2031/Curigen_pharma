@@ -1,115 +1,211 @@
-import { Box, Grid, Typography, TextField, Button, IconButton } from "@mui/material";
+import {
+  Box,
+  Grid,
+  Typography,
+  TextField,
+  Button,
+  IconButton,
+} from "@mui/material";
 import Image from "next/image";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import PhoneIcon from "@mui/icons-material/Phone";
-import EmailIcon from "@mui/icons-material/Email";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import GoogleIcon from "@mui/icons-material/Google";
+import XIcon from '@mui/icons-material/X';
+import GoogleIcon from '@mui/icons-material/Google';
+import Input from "@/common_components/input";
+import Router from "next/router";
 
 export default function Footer() {
-  const certifications = ["/cert1.png", "/cert2.png", "/cert3.png", "/cert4.png", "/cert5.png", "/cert6.png"];
-
+  // const certifications = ["/cert1.png", "/cert2.png", "/cert3.png", "/cert4.png", "/cert5.png", "/cert6.png"];
   return (
-    <Box sx={{ backgroundColor: "#2c2c2c", color: "#fff", pt: 8 }}>
-      {/* Contact Info Strip */}
-      <Grid
-        container
-        justifyContent="space-around"
-        alignItems="center"
+    <Box>
+      <Box
         sx={{
-          backgroundColor: "#04344F",
-          borderRadius: "0 0 30px 30px",
-          p: 4,
-        }}
-      >
-        {/* Address */}
-        <Grid item xs={12} md={3} sx={{ textAlign: "center", mb: { xs: 2, md: 0 } }}>
-          <LocationOnIcon fontSize="large" />
-          <Typography variant="subtitle1">Address</Typography>
-          <Typography variant="body2">Find Us On Map</Typography>
-        </Grid>
+          backgroundImage: "url(/footerbg.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          height: "515px",
+          width: "100%",
+          position: "relative",
+          objectFit: "cover",
+          zIndex: 1,
+          marginTop: "5%",
+        }}>
+        <Box
+          sx={{
+            backgroundColor: "black",
+            height: "100%",
+            width: "100%",
+            position: "absolute",
+            opacity: "0.85",
+            color:"white"
+          }}
+        >
+          <Box
+            sx={{
+              position: "relative",
+              top: "",
+              width: "76%",
+              backgroundColor: "#023350",
+              zIndex: 2,
+              height: "165px",
+              padding: "40px",
+              margin: "auto",
+              borderRadius: "20px",
+              bottom: "90px",
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                color: "white",
+              }}
+            >
+              {/* divider */}
+              <Box
+                sx={{
+                  width: "1px",
+                  height: "60px",
+                  backgroundColor: "white",
+                  mx: 4,
+                }}
+              />
+              <Typography>Address</Typography>
+              <br />
+              <Box
+                sx={{
+                  backgroundImage: "url(/polygon.png)",
+                  height: "100px",
+                  width: "100px",
+                  backgroundRepeat: "no-repeat",
+                  objectFit: "cover",
+                  position: "relative",
+                }}
+              >
+                <Image
+                  src="/location.png"
+                  alt=""
+                  width={35}
+                  height={35}
+                  style={{ position: "absolute", left: "27px", top: "28px" }}
+                ></Image>
+              </Box>
 
-        {/* Phone */}
-        <Grid item xs={12} md={3} sx={{ textAlign: "center", mb: { xs: 2, md: 0 } }}>
-          <PhoneIcon fontSize="large" />
-          <Typography variant="subtitle1">Phone</Typography>
-          <Typography variant="body2">+91 256-253-2538</Typography>
-        </Grid>
+              <Box sx={{
+                  width: "1px",
+                  height: "60px",
+                  backgroundColor: "white",
+                  mx: 4,
+                }}/>
+              <Typography>Phone</Typography>
+              <Box
+                sx={{
+                  backgroundImage: "url(/polygon.png)",
+                  height: "100px",
+                  width: "100px",
+                  backgroundRepeat: "no-repeat",
+                  objectFit: "cover",
+                  position: "relative",
+                }}
+              >
+                <Image
+                  src="/phone.png"
+                  alt=""
+                  width={30}
+                  height={30}
+                  style={{ position: "absolute", left: "32px", top: "35px" }}
+                ></Image>
+              </Box>
 
-        {/* Email */}
-        <Grid item xs={12} md={3} sx={{ textAlign: "center" }}>
-          <EmailIcon fontSize="large" />
-          <Typography variant="subtitle1">Email</Typography>
-          <Typography variant="body2">info@curigenpharmaceuticals.com</Typography>
-        </Grid>
-      </Grid>
-
-      {/* Main Footer */}
-      <Grid container spacing={4} sx={{ p: 4 }}>
-        {/* Logo + Description + Social */}
-        <Grid item xs={12} md={3}>
-          <Box sx={{ mb: 2 }}>
-            <Image src="/logo.png" alt="Logo" width={150} height={40} />
+              <Box
+                sx={{
+                  width: "1px",
+                  height: "60px",
+                  backgroundColor: "white",
+                  mx: 4,
+                }}
+              />
+              <Typography>Email</Typography>
+              <Box
+                sx={{
+                  backgroundImage: "url(/polygon.png)",
+                  height: "100px",
+                  width: "100px",
+                  backgroundRepeat: "no-repeat",
+                  objectFit: "cover",
+                  position: "relative",
+                }}
+              >
+                <Image
+                  src="/email.png"
+                  alt=""
+                  width={30}
+                  height={30}
+                  style={{ position: "absolute", left: "32px", top: "35px" }}
+                ></Image>
+              </Box>
+            </Box>
           </Box>
-          <Typography variant="body2" sx={{ mb: 2 }}>
-            Macat Megatrons is a thriving community where innovators, professionals, and enthusiasts come together to share knowledge, collaborate, and grow.
-          </Typography>
-          <Box>
-            <IconButton><FacebookIcon sx={{ color: "#fff" }} /></IconButton>
-            <IconButton><InstagramIcon sx={{ color: "#fff" }} /></IconButton>
-            <IconButton><GoogleIcon sx={{ color: "#fff" }} /></IconButton>
-            <IconButton><TwitterIcon sx={{ color: "#fff" }} /></IconButton>
-            <IconButton><LinkedInIcon sx={{ color: "#fff" }} /></IconButton>
-          </Box>
-        </Grid>
-
-        {/* Company Links */}
-        <Grid item xs={6} md={2}>
-          <Typography variant="subtitle1" sx={{ fontWeight: "bold", mb: 1 }}>
-            Company
-          </Typography>
-          <Typography variant="body2">Global Presence</Typography>
-          <Typography variant="body2">Products</Typography>
-          <Typography variant="body2">Services</Typography>
-          <Typography variant="body2">Gallery</Typography>
-          <Typography variant="body2">About us</Typography>
-          <Typography variant="body2">Blog</Typography>
-        </Grid>
-
-        {/* Certifications */}
-        <Grid item xs={12} md={4}>
-          <Typography variant="subtitle1" sx={{ fontWeight: "bold", mb: 2 }}>
-            Global Certifications
-          </Typography>
-          <Grid container spacing={1}>
-            {certifications.map((cert, idx) => (
-              <Grid item xs={4} key={idx}>
-                <Image src={cert} alt={`cert-${idx}`} width={80} height={80} />
-              </Grid>
-            ))}
-          </Grid>
-        </Grid>
-
-        {/* Email/Mobile Form */}
-        <Grid item xs={12} md={3}>
-          <Typography variant="subtitle1" sx={{ fontWeight: "bold", mb: 1 }}>
-            EMAIL ADDRESS*
-          </Typography>
-          <TextField fullWidth placeholder="Enter your Email Address" variant="outlined" size="small" sx={{ mb: 2, backgroundColor: "#fff" }} />
-
-          <Typography variant="subtitle1" sx={{ fontWeight: "bold", mb: 1 }}>
-            Mobile*
-          </Typography>
-          <TextField fullWidth placeholder="Number" variant="outlined" size="small" sx={{ mb: 2, backgroundColor: "#fff" }} />
-
-          <Button variant="outlined" sx={{ color: "#fff", borderColor: "#fff", textTransform: "none" }}>
-            Contact us
-          </Button>
-        </Grid>
-      </Grid>
+              {/* footer content */}
+              <Box sx={{height:"350px" , width:"78%" , margin:"auto" , padding:"15px"}}>
+                  <Grid container spacing={3}>
+                      <Grid size={4}>
+                          <Image src="/link.png" alt="" width={200} height={40} style={{marginBottom:"20px"}}></Image>
+                          <Typography variant="body1" sx={{fontSize:"16px" , mb:3}}>Macat Megatrons is a thriving community where innovators, professionals, and enthusiasts come together to share knowledge, collaborate, and grow.</Typography>
+                          <Box sx={{width:"200px" , display:"flex" , gap:"15px" , cursor:"pointer"}}>
+                              <a href=""><FacebookRoundedIcon/></a>
+                              <a href=""><InstagramIcon /></a>
+                              <a href=""><GoogleIcon/></a>
+                              <a href=""><XIcon/></a>
+                              <a href=""><LinkedInIcon/></a>
+                          </Box>
+                      </Grid>
+                      <Grid size={4}>
+                          <Box sx={{display:"flex" , gap:"30px" , cursor:"pointer"}}>
+                              <Box>
+                                  <Typography variant="h6" sx={{marginBottom:"25px"}}>Company</Typography>
+                                    <Typography variant="body2" sx={{marginBottom:"15px"}}>Global presence</Typography>
+                                    <Typography onClick={()=> Router.push('/products')} sx={{marginBottom:"15px"}}>Products</Typography>
+                                    <Typography onClick={()=> Router.push('/services')} sx={{marginBottom:"15px"}}>Services</Typography>
+                                    <Typography sx={{marginBottom:"15px"}}>Gallery</Typography>
+                                    <Typography sx={{marginBottom:"15px"}}>About Us</Typography>
+                                    <Typography sx={{marginBottom:"15px"}}>Blog</Typography>
+                              </Box>
+                              <Box>
+                                  <Typography sx={{marginBottom:"35px"}}>Global Certification</Typography>
+                                  <Box sx={{display:"grid" , gridTemplateColumns:"repeat(3 , 1fr)" , gap:"15px"}}>
+                                      <Image src="" alt="" width={140} height={120}></Image>
+                                      <Image src="" alt="" width={140} height={120}></Image>
+                                      <Image src="" alt="" width={140} height={120}></Image>
+                                      <Image src="" alt="" width={140} height={120}></Image>
+                                      <Image src="" alt="" width={140} height={120}></Image>
+                                      <Image src="" alt="" width={140} height={120}></Image>
+                                  </Box>
+                              </Box>
+                          </Box>
+                      </Grid>
+                      <Grid size={4}>
+                            <Grid container spacing={2} mb={4}>
+                                  <Grid>
+                                      <Typography>EMAIL ADDRESS*</Typography>
+                                      <Input type="text" placeholder="Enter your Email Address" required css={{ backgroundColor: "white",borderRadius:"10px"}}></Input>
+                                  </Grid>
+                                  <Grid>
+                                      <Typography>MOBILE*</Typography>
+                                      <Input type="number" placeholder="Number" required css={{ backgroundColor: "white" ,borderRadius:"10px" , outline:"none"}}></Input>
+                                  </Grid>
+                            </Grid>
+                            <Button variant="outlined" sx={{width:"440px" , borderRadius:"10px" , border:"1px solid white" , color:"white"}}>
+                                Contact Us
+                            </Button>
+                      </Grid>
+                  </Grid>
+              </Box>
+        </Box>
+      </Box>
     </Box>
   );
 }
