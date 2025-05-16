@@ -11,6 +11,7 @@ export default function Header() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
+          objectFit:"cover",
           height: "800px",
           width: "100%",
           margin: "0 auto",

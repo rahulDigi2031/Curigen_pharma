@@ -16,7 +16,6 @@ export default function Homepage() {
       {/* Items Categories below side */}
       <ItemCategoryDisplay />
 
-
       {/* experince section below side */}
       <ExperinceSection />
 
