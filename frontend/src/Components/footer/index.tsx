@@ -16,7 +16,7 @@ import Input from "@/common_components/input";
 import Router from "next/router";
 
 export default function Footer() {
-  // const certifications = ["/cert1.png", "/cert2.png", "/cert3.png", "/cert4.png", "/cert5.png", "/cert6.png"];
+
   return (
     <Box>
       <Box

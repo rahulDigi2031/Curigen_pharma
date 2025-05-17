@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import Homepage from "./home";
 import GlobalPresence from "./globalPresence";
+import Gallery from "./gallery";
+import ProductsList from "./products";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,8 +19,10 @@ const geistMono = Geist_Mono({
 export default function Home() {
   return (
     <>
-      {/* <Homepage /> */}
-      <GlobalPresence/>
+      <Homepage />
+      {/* <GlobalPresence/> */}
+      {/* <Gallery/> */}
+      {/* <ProductsList/> */}
     </>
   );
 }

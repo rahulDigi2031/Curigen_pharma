@@ -1,129 +1,65 @@
-"use client";
+// import BackgroundImage from "@/common_components/backgroundComman";
+import { Box, Typography } from "@mui/material";
 
-import Card from "@/common_components/card";
-import { Box, Typography, Grid } from "@mui/material";
-import Image from "next/image";
-
-const cardHeight = 400;
-
-const countryData = [
-  {
-    title: "ASIA",
-    image: "/map1.png",
-    countries: [
-      "Afghanistan", "Israel", "Jordan", "Pakistan", "Russia", "Saudi Arabia", "Singapore", "Syria",
-      "Philippines", "Turkey", "Turkmenistan", "Uzbekistan", "Yemen", "Vietnam", "Indonesia",
-      "Malaysia", "Iran", "Tajikistan",
-    ],
-  },
-  {
-    title: "AFRICA",
-    image: "/map2.png",
-    countries: [
-      "South Africa", "Uganda", "Nigeria", "Ghana", "Kenya", "Mauritius", "Botswana", "Egypt",
-      "Ethiopia", "Libya", "Sudan", "Congo", "Gambia", "Ivory Coast",
-    ],
-  },
-  {
-    title: "NORTH & LATIN AMERICA",
-    image: "/map3.png",
-    countries: [
-      "South Africa", "Uganda", "Nigeria", "Ghana", "Kenya", "Mauritius", "Botswana", "Egypt",
-      "Ethiopia", "Libya", "Sudan", "Congo", "Gambia", "Ivory Coast",
-    ],
-  },
-  {
-    title: "EUROPE",
-    image: "/map4.png",
-    countries: [
-      "Austria", "Azerbaijan", "Belarus", "Belgium", "Cyprus", "Czech Republic", "Denmark", "France",
-      "Georgia", "Germany", "Hungary", "Ireland", "Iceland", "Netherlands", "Norway", "Poland",
-      "Spain", "Sweden", "Switzerland", "Ukraine", "United Kingdom (UK)", "Latvia",
-    ],
-  },
-  {
-    title: "OCEANIA",
-    image: "/map5.png",
-    countries: ["Australia", "New Zealand", "Fiji"],
-  },
-  {
-    title: "",
-    image: "/map6.png",
-    countries: "",
-  }
-];
-
-export default function GlobalCountry() {
-  return (
-    <Box sx={{ px: 3, py: 6, backgroundColor: "#f9f9f9" }}>
-      <Box sx={{ width: "80%", margin: "auto" }}>
-        <Typography variant="h6" sx={{ fontWeight: 700, textAlign: "start", mb: 4 }}>
-          OUR BRANDED AND GENERIC MEDICINES ENJOY{" "}
-          <Box component="span" sx={{ color: "teal" }}>
-            STEADY DEMAND IN FOLLOWING COUNTRIES:
-          </Box>
-        </Typography>
-
-        <Grid container spacing={3}>
-          {countryData.map((item, index) => (
-            <Grid item xs={4} sm={6} md={4} key={index}>
-              {item.title ? (
-                <Card
-                content
-                  title={item.title}
-                  sx={{
-                    height: `${cardHeight}px`,
-                    borderRadius: "20px",
-                    backgroundImage: `url(${item.image})`,
-                    backgroundSize: "contain",
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "flex-end",
-                    padding: 2,
-                  }}
-                >
-                  <Typography variant="body2" color="text.secondary">
-                    {item.countries.join(", ")}
-                  </Typography>
-                </Card>
-              ) : (
-                <Box
-                  sx={{
-                    borderRadius: "20px",
-                    overflow: "hidden",
-                    position: "relative",
-                    height: `${cardHeight}px`,
-                    width: "100%",
-                  }}
-                >
-                  <Image
-                    src={item.image}
-                    alt="Pharmacist"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                  <Box
-                    sx={{
-                      position: "absolute",
-                      bottom: 0,
-                      p: 2,
-                      bgcolor: "rgba(255,255,255,0.85)",
-                      width: "100%",
-                    }}
-                  >
-                    <Typography variant="body2" fontWeight={500}>
-                      Our mantra has always been global. Only the best quality,
-                      capability, infrastructure and pricing can survive in this market.
-                    </Typography>
-                  </Box>
+export default function GallerySection(){
+    return (
+        <Box sx={{backgroundColor:"#F7F7F7F7" , height:"780px" , Width:"100%" , paddingTop:"20px"}}>
+            <Box sx={{width:"80%" , margin:"auto" , padding:"20px" , height:"700px"}}>
+                <Typography variant="h5" sx={{fontweight:"bolder"}}>Our Branded and Generic medicines enjoy <span style={{color:"#03A297" , fontWeight:"700" , fontSize:"25px"}}>steady demand in following countries:</span></Typography>
+                {/* 6boxes image map */}
+                <Box sx={{display:"flex" , justifyContent:"space-between" , paddingTop:"15px"}}>
+                    <Box sx={{backgroundColor:"#ffff" , padding:"20px" , height:"300px" , width:"470px" , borderRadius:"20px" , display:"flex",justifyContent:"center"}}>
+                        <Box sx={{backgroundImage:"url(/map1.png)" , height:"100%" , width:"100%" ,border:"2px dotted green", borderRadius:"20px", opacity:"0.45",objectFit:"cover"}}>
+                        <Typography variant="h5" sx={{padding:"10px 0px 0px 15px"}}>ASIA</Typography>
+                            <Box sx={{display:"flex" , alignItems:"center",padding:"10px",color:"black"}}>
+                                <Typography variant="body1">Afghanistan, Israel, Jordan, Pakistan, Russia, Saudi Arabia, Singapore, Syria, Philippines, Turkey, Turkmenistan, Uzbekistan, Yemen, Vietnam, Indonesia, Malaysia, Iran, Tajikistan</Typography>
+                            </Box>
+                        </Box>
+                    </Box>
+                    <Box sx={{backgroundColor:"#ffff" , padding:"20px" , height:"300px" , width:"470px" , borderRadius:"20px" , display:"flex",justifyContent:"center"}}>
+                        <Box sx={{backgroundImage:"url(/map2.png)" , height:"100%" , width:"100%" ,border:"2px dotted green", borderRadius:"20px", opacity:"0.45",objectFit:"cover" }}>
+                        <Typography variant="h5" sx={{padding:"10px 0px 0px 15px"}}>AFRICA</Typography>
+                            <Box sx={{display:"flex" , alignItems:"center",padding:"10px",color:"black"}}>
+                                <Typography variant="body1">South Africa, Uganda, Nigeria, Ghana, Kenya, Mauritius, Botswana, Egypt, Ethiopia, Libya, Sudan, Congo, Gambia, Ivory Coast</Typography>
+                            </Box>
+                        </Box>
+                    </Box>
+                    <Box sx={{backgroundColor:"#ffff" , padding:"20px" , height:"300px" , width:"470px" , borderRadius:"20px" , display:"flex",justifyContent:"center"}}>
+                        <Box sx={{backgroundImage:"url(/map3.png)" , height:"100%" , width:"100%" ,border:"2px dotted green", borderRadius:"20px", opacity:"0.45",objectFit:"cover" }}>
+                        <Typography variant="h5" sx={{padding:"10px 0px 0px 15px"}}>NORTH & LATIN AMERICA</Typography>
+                            <Box sx={{display:"flex" , alignItems:"center",padding:"10px",color:"black"}}>
+                                <Typography variant="body1">South Africa, Uganda, Nigeria, Ghana, Kenya, Mauritius, Botswana, Egypt, Ethiopia, Libya, Sudan, Congo, Gambia, Ivory Coast</Typography>
+                            </Box>
+                        </Box>
+                    </Box>
                 </Box>
-              )}
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
-    </Box>
-  );
+                
+                <Box sx={{display:"flex" , justifyContent:"space-between" , paddingTop:"30px"}}>
+                <Box sx={{backgroundColor:"#ffff" , padding:"20px" , height:"300px" , width:"470px" , borderRadius:"20px" , display:"flex",justifyContent:"center"}}>
+                        <Box sx={{backgroundImage:"url(/map4.png)" , height:"100%" , width:"100%" ,border:"2px dotted green", borderRadius:"20px", opacity:"0.45",objectFit:"cover" }}>
+                        <Typography variant="h5" sx={{padding:"10px 0px 0px 15px"}}>EUROPE</Typography>
+                            <Box sx={{display:"flex" , alignItems:"center",padding:"10px",color:"black"}}>
+                                <Typography variant="body1">Austria , Azerbaijan, Belarus, Belgium, Cyprus, Czech Republic, Denmark, France, Georgia, Germany, Hungary, Ireland, Iceland, Netherlands, Norway, Poland, Spain, Sweden, Switzerland, Ukraine, United Kingdom (UK) , Latvia</Typography>
+                            </Box>
+                        </Box>
+                    </Box>
+                    <Box sx={{backgroundColor:"#ffff" , padding:"20px" , height:"300px" , width:"470px" , borderRadius:"20px" , display:"flex",justifyContent:"center"}}>
+                        <Box sx={{backgroundImage:"url(/map5.png)" , height:"100%" , width:"100%" ,border:"2px dotted green", borderRadius:"20px", opacity:"0.45" , objectFit:"cover" }}>
+                        <Typography variant="h5" sx={{padding:"10px 0px 0px 15px"}}>OCEANIA</Typography>
+                            <Box sx={{display:"flex" , alignItems:"center",padding:"10px",color:"black"}}>
+                                <Typography variant="body1">Australia, New Zealand, Fiji</Typography>
+                            </Box>
+                        </Box>
+                    </Box>
+                    <Box sx={{backgroundImage:"url(/map6.png)" , padding:"20px" , height:"300px" , width:"470px" , borderRadius:"20px" , display:"flex",justifyContent:"center"}}>
+                        <Box sx={{ height:"100%" , width:"100%" , borderRadius:"20px", objectFit:"cover" , border:"2px dotted white" }}>
+                            <Box sx={{display:"flex" , alignItems:"center",padding:"10px",color:"black"}}>
+                                <Typography variant="body1"sx={{paddingTop:"80px"}}>Our mantra has always been global. Only the best quality, capability, infrastructure and pricing can survive in this market.</Typography>
+                            </Box>
+                        </Box>
+                    </Box>
+                </Box>
+            </Box>
+        </Box>
+    )
 }

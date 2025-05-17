@@ -1,5 +1,8 @@
 import React from "react";
 import { Box, Button, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 // import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -16,6 +19,23 @@ export default function Navbar() {
 
   return (
     <Box sx={{ backgroundColor: "transparent" }}>
+      {/* Top Contact Info */}
+      <Box sx={{ py: 1, px: 2, display: "flex", justifyContent: "start", width: "80%" , margin:"auto"}}>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 2, color: "#023350", fontSize: "14px" }}>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+                  <EmailIcon sx={{ fontSize: "16px", color: "#03A297" }} />
+                  <Typography variant="body2">info@example.com</Typography>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+                  <PhoneIcon sx={{ fontSize: "16px", color: "#03A297" }} />
+                  <Typography variant="body2">+2 123 654 7898</Typography>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+                  <HelpOutlineIcon sx={{ fontSize: "16px", color: "#03A297" }} />
+                  <Typography variant="body2">Need Help?</Typography>
+              </Box>
+          </Box>
+      </Box>
       <Toolbar
         sx={{
           display: "flex",
@@ -23,7 +43,7 @@ export default function Navbar() {
           padding: "10px 20px",
           width: "80%",
           margin: "0 auto",
-          alignItems:"center"
+          alignItems: "center",
         }}
       >
         {/* Logo and Brand */}
@@ -51,20 +71,19 @@ export default function Navbar() {
             display: "flex",
             gap: 4,
             padding: "10px 20px",
-            width:"100%",
-            alignItems:"center"
+            width: "100%",
+            alignItems: "center",
           }}
         >
-          <Typography sx={{ cursor: "pointer" , color:"#23A397" , fontWeight:"bold" }} onClick={() => router.push("/home")}>Home</Typography>
-          <Typography sx={{ cursor: "pointer" }}>Global presence</Typography>
+          <Typography sx={{ cursor: "pointer", color: "#23A397", fontWeight: "bold" }} onClick={() => router.push("/home")}>Home</Typography>
+          <Typography sx={{ cursor: "pointer" }} onClick={() => router.push("/globalPresence")}>Global presence</Typography>
           <Typography
-            sx={{ cursor: "pointer"}}
+            sx={{ cursor: "pointer" }}
             id="basic-button"
             aria-controls={open ? "basic-menu" : undefined}
             aria-haspopup="true"
             aria-expanded={open ? "true" : undefined}
-            onClick={handleClick}
-          >
+            onClick={handleClick}>
             Products
           </Typography>
           <Menu
@@ -72,25 +91,22 @@ export default function Navbar() {
             anchorEl={anchorEl}
             open={open}
             onClose={handleClose}
-            MenuListProps={{
-              "aria-labelledby": "basic-button",
-            }}
           >
-            <MenuItem onClick={handleClose}>All</MenuItem>
-            <MenuItem onClick={handleClose}>Tablet</MenuItem>
-            <MenuItem onClick={handleClose}>Capsule</MenuItem>
-            <MenuItem onClick={handleClose}>Injection</MenuItem>
-            <MenuItem onClick={handleClose}>Suspension/Syrup</MenuItem>
-            <MenuItem onClick={handleClose}>Eye / Eardrops</MenuItem>
-            <MenuItem onClick={handleClose}>Cream</MenuItem>
-            <MenuItem onClick={handleClose}>Other</MenuItem>
+            <MenuItem onClick={() => { handleClose(); router.push('/products/all'); }}>All</MenuItem>
+            <MenuItem onClick={() => { handleClose(); router.push('/products/tablet'); }}>Tablet</MenuItem>
+            <MenuItem onClick={() => { handleClose(); router.push('/products/capsule'); }}>Capsule</MenuItem>
+            <MenuItem onClick={() => { handleClose(); router.push('/products/injection'); }}>Injection</MenuItem>
+            <MenuItem onClick={() => { handleClose(); router.push('/products/suspension-syrup'); }}>Suspension/Syrup</MenuItem>
+            <MenuItem onClick={() => { handleClose(); router.push('/products/eye-eardrops'); }}>Eye / Eardrops</MenuItem>
+            <MenuItem onClick={() => { handleClose(); router.push('/products/cream'); }}>Cream</MenuItem>
+            <MenuItem onClick={() => { handleClose(); router.push('/products/other'); }}>Other</MenuItem>
 
           </Menu>
-          <Typography sx={{ cursor: "pointer" , display:"flex" , alignItems:"center"}}>Services</Typography>
-          <Typography sx={{ cursor: "pointer" }}>Gallery</Typography>
+          <Typography sx={{ cursor: "pointer", display: "flex", alignItems: "center" }} onClick={()=> router.push("/services")}>Services</Typography>
+          <Typography sx={{ cursor: "pointer" }} onClick={()=> router.push("/gallery")}>Gallery</Typography>
           <Typography sx={{ cursor: "pointer" }}>About</Typography>
           <Typography sx={{ cursor: "pointer" }}>Blog</Typography>
-          <Button sx={{ backgroundColor: "#23A397" , color:"white" , borderRadius:2 , padding:"10px 20px" , cursor:"pointer" , ":hover":{backgroundColor:"#002B5B"}}}>Contact Us</Button>
+          <Button sx={{ backgroundColor: "#23A397", color: "white", borderRadius: 2, padding: "10px 20px", cursor: "pointer", ":hover": { backgroundColor: "#002B5B" } }}>Contact Us</Button>
         </Box>
       </Toolbar>
     </Box>
