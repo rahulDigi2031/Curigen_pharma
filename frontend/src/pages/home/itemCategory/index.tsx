@@ -15,92 +15,62 @@ const itemCategory = [
 
 const ItemCategoryGrid = () => {
   return (
-    <>
-      {/* Test image outside loop to confirm static image loads */}
-      <Box sx={{ width: "100%", height: "370px", backgroundColor: "#F7F7F7F7", padding:"40px"}}>
-        <Box
-          sx={{
-            display: "grid",
-            gap: 3,
-            gridTemplateColumns: "repeat(6, 1fr)",
-            width: "80%",
-            margin: "auto",
-          }}
-        >
-          {itemCategory.map((item, index) => (
-            <Card
-              key={index}
-              variant="outlined"
+    <Box className="w-full h-[370px] bg-[#F7F7F7F7] py-10 px-4 sm:mb-5 md:px-10">
+      <Box
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 w-4/5 mx-auto"
+      >
+        {itemCategory.map((item, index) => (
+          <Card
+            key={index}
+            variant="outlined"
+            className="flex flex-col items-center justify-center h-[280px] w-full p-0 rounded-[20px] shadow-lg hover:cursor-pointer transform transition-transform duration-300 hover:-translate-y-1"
+            sx={{
+              borderRadius:"20px",
+              '&:hover': {
+                backgroundColor: '#044678',
+                color: 'white',
+                 // Light blue background on hover
+                // The transform transition is already handled by Tailwind class hover:-translate-y-1
+              },
+              transition: 'background-color 0.3s ease-in-out', // Smooth transition for background color
+            }}
+          >
+            <Box
               sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: 280,
-                width: 200,
-                padding: 0,
-                borderRadius: "20px",
-                boxShadow: "0px 2px 12px rgba(165, 158, 158, 0.85)",
-                transition: "background-color 0.3s, transform 0.3s",
-                "&:hover": {
-                  backgroundColor: "#27548A",
-                  cursor: "pointer",
-                  transform: "translateY(-4px)",
-                },
+                border: "2px dotted #B0BEC5",
+                borderRadius: "15px",
               }}
+              className="w-[90%] h-[90%] flex flex-col items-center justify-center p-2 text-center"
             >
               <Box
-                sx={{
-                  border: "2px dotted #B0BEC5",
-                  borderRadius: "15px",
-                  width: "90%",
-                  height: "90%",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  padding: 2,
-                  textAlign: "center",
-                }}
+                className="bg-[#23A397] rounded-full w-20 h-20 flex items-center justify-center mb-2"
               >
-                <Box
-                  sx={{
-                    backgroundColor: "#23A397",
-                    borderRadius: "50%",
-                    width: 80,
-                    height: 80,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    marginBottom: 2,
-                  }}
-                >
-                  <Image
-                    src={item.image}
-                    alt={item.label}
-                    width={150}
-                    height={150}
-                  />
-                </Box>
-
-                <Typography
-                  variant="subtitle1"
-                  sx={{ fontWeight: "bold", color: "#0A2540", mb: 0.5 }}
-                >
-                  {item.label}
-                </Typography>
-
-                <Typography
-                  variant="body2"
-                  sx={{ color: "#23A397", fontWeight: 500 }}
-                >
-                  {item.count} Items
-                </Typography>
+                <Image
+                  src={item.image}
+                  alt={item.label}
+                  width={150}
+                  height={150}
+                />
               </Box>
-            </Card>
-          ))}
-        </Box>
+
+              <Typography sx={{":hover":{color:"white"}}}
+                variant="subtitle1"
+                className="font-bold text-[#0A2540] mb-1"
+              >
+                {item.label}
+              </Typography>
+
+              <Typography
+                variant="body2"
+                className="text-[#23A397] font-medium"
+              >
+                {item.count} Items
+              </Typography>
+            </Box>
+          </Card>
+        ))}
       </Box>
-    </>
+    </Box>
   );
 };
 

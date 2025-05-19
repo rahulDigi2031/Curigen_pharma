@@ -3,54 +3,44 @@ import Image from "next/image";
 
 export default function ExperinceSection(){
     return(
-        <Box
-        sx={{
-          width: "80%",
-          height: "700px",
-          display: "grid",
-          gridTemplateColumns: "repeat(2 , 1fr)",
-          gap:1,
-          margin: "auto",
-          alignItems: "center",
-        }}
-      >
-        <Box sx={{ml:5}}>
-          <Image src="/group174.png" alt="" width={650} height={400}></Image>
+        <Box className="2xl:mb-20  lg:mt-10  w-4/5 mx-auto flex flex-col md:flex-row items-center gap-4 py-10 mt-[250px] sm:mt-[240px] below-sm:mt-[250px]">
+        <Box className="w-full md:w-1/2 pl-0 md:pl-5">
+          <Image src="/group174.png" alt="" width={650} height={400} className="w-full h-auto"></Image>
         </Box>
-        <Box>
-            <Box sx={{mb:2}}>
-                <Typography variant="h5" sx={{color:"#23A397" , fontWeight:"bolder"}}>WEL-COME TO</Typography>
+        <Box className="w-full md:w-1/2 md:font-size-[20px]">
+            <Box className="mb-2">
+                <Typography variant="h5" className="text-[#23A397] font-bold-800">WEL-COME TO</Typography>
             </Box>
-            <Box>
-                <Typography variant="h5" sx={{fontWeight:"bolder"}}><span style={{color:"#23A397" , fontWeight:"bolder"}}>Curigen</span> Pharmaceuticals</Typography>
-                <Typography variant="h5" sx={{fontWeight:"bolder" , marginBottom:2}}>Limited</Typography>
+            <Box className="mb-2">
+                <Typography variant="h5" className="font-bold-800"><span className="text-[#23A397]">Curigen</span> Pharmaceuticals</Typography>
+                <Typography variant="h5" className="font-bold-800">Limited</Typography>
             </Box>
-          <Typography sx={{width:"90%" , textWrap:"pretty" , mb:3 }}>
+          <Typography className="w-full mb-6">
             Curigen Pharmaceutical has established itself as a renowned name in
-            the pharmaceutical industry, recognized for its unwaverin
+            the pharmaceutical industry, recognized for its unwavering
             dedicationto delivering high-quality and effective pharmaceutical
             products. With years of experience
           </Typography>
 
-          <Box sx={{display:"grid" , gridTemplateColumns:"repeat(2,0.5fr)" , width:"80%" , gap:2}}>
-             <Box sx={{display:"flex" , alignItems:"center" , gap:1}}>
+          <Box className="flex flex-wrap gap-y-4 gap-x-8 items-center">
+             <Box className="flex items-center gap-1">
              <Image src="/dot.png" alt="" width={30} height={30}/>
-             <Typography sx={{fontWeight:"bolder"}}>Streamlined Shipping Experience</Typography>
+             <Typography className="font-bold">Streamlined Shipping Experience</Typography>
              </Box>
 
-             <Box sx={{display:"flex" , alignItems:"center" , gap:1}}>
+             <Box className="flex items-center gap-1">
              <Image src="/dot.png" alt="" width={30} height={30} />
-             <Typography sx={{fontWeight:"bolder"}}>Streamlined Shipping Experience</Typography>
+             <Typography className="font-bold">Streamlined Shipping Experience</Typography>
              </Box>
 
-             <Box sx={{display:"flex" , alignItems:"center" , gap:1}}>
+             <Box className="flex items-center gap-1">
              <Image src="/dot.png" alt="" width={30} height={30}/>
-             <Typography sx={{fontWeight:"bolder"}}>Streamlined Shipping Experience</Typography>
+             <Typography className="font-bold">Streamlined Shipping Experience</Typography>
              </Box>
 
-             <Box sx={{display:"flex" , alignItems:"center" , gap:1}}>
+             <Box className="flex items-center gap-1">
              <Image src="/dot.png" alt="" width={30} height={30} />
-             <Typography sx={{fontWeight:"bolder"}}>Streamlined Shipping Experience</Typography>
+             <Typography className="font-bold">Streamlined Shipping Experience</Typography>
              </Box>
           </Box>
         </Box>

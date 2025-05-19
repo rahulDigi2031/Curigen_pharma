@@ -5,6 +5,8 @@ import {
   TextField,
   Button,
   IconButton,
+  useTheme,
+  useMediaQuery
 } from "@mui/material";
 import Image from "next/image";
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
@@ -16,6 +18,9 @@ import Input from "@/common_components/input";
 import Router from "next/router";
 
 export default function Footer() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isTablet = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
     <Box>
@@ -25,7 +30,7 @@ export default function Footer() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          height: "515px",
+          height: { xs: "1250px", sm: "900px", md: "750px" },
           width: "100%",
           position: "relative",
           objectFit: "cover",
@@ -45,165 +50,127 @@ export default function Footer() {
           <Box
             sx={{
               position: "relative",
-              top: "",
-              width: "76%",
+              top: { xs: "-50px", sm: "-70px", md: "-90px" },
+              width: { xs: "90%", md: "76%" },
               backgroundColor: "#023350",
               zIndex: 2,
-              height: "165px",
-              padding: "40px",
+              height: { xs: "auto", md: "165px" },
+              padding: { xs: "20px", md: "10px" },
               margin: "auto",
               borderRadius: "20px",
-              bottom: "90px",
+              display: "flex",
+              flexDirection: isMobile ? 'column' : 'row',
+              justifyContent: "space-around",
+              alignItems: "center",
+              textAlign: isMobile ? 'center' : 'left'
             }}
           >
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                color: "white",
-              }}
-            >
-              {/* divider */}
-              <Box
-                sx={{
-                  width: "1px",
-                  height: "60px",
-                  backgroundColor: "white",
-                  mx: 4,
-                }}
-              />
-              <Typography>Address</Typography>
-              <br />
-              <Box
-                sx={{
+            <Box sx={{ display: "flex", flexDirection: isMobile ? 'column' : 'row', alignItems: "center", gap: isMobile ? 1 : 4 }}>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                <Box sx={{
                   backgroundImage: "url(/polygon.png)",
-                  height: "100px",
-                  width: "100px",
+                  height: "50px",
+                  width: "50px",
                   backgroundRepeat: "no-repeat",
-                  objectFit: "cover",
+                  backgroundSize: "contain",
                   position: "relative",
-                }}
-              >
-                <Image
-                  src="/location.png"
-                  alt=""
-                  width={35}
-                  height={35}
-                  style={{ position: "absolute", left: "27px", top: "28px" }}
-                ></Image>
+                  display: "flex", justifyContent: "center", alignItems: "center"
+                }}>
+                  <Image src="/location.png" alt="" width={isMobile ? 20 : 35} height={isMobile ? 20 : 35}></Image>
+                </Box>
+                <Typography variant="body2">Address</Typography>
               </Box>
+              {!isMobile && <Box sx={{ width: "1px", height: "60px", backgroundColor: "white", mx: 2 }} />}
 
-              <Box sx={{
-                  width: "1px",
-                  height: "60px",
-                  backgroundColor: "white",
-                  mx: 4,
-                }}/>
-              <Typography>Phone</Typography>
-              <Box
-                sx={{
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                <Box sx={{
                   backgroundImage: "url(/polygon.png)",
-                  height: "100px",
-                  width: "100px",
+                  height: "50px",
+                  width: "50px",
                   backgroundRepeat: "no-repeat",
-                  objectFit: "cover",
+                  backgroundSize: "contain",
                   position: "relative",
-                }}
-              >
-                <Image
-                  src="/phone.png"
-                  alt=""
-                  width={30}
-                  height={30}
-                  style={{ position: "absolute", left: "32px", top: "35px" }}
-                ></Image>
+                  display: "flex", justifyContent: "center", alignItems: "center"
+                }}>
+                  <Image src="/phone.png" alt="" width={isMobile ? 20 : 30} height={isMobile ? 20 : 30}></Image>
+                </Box>
+                <Typography variant="body2">Phone</Typography>
               </Box>
+              {!isMobile && <Box sx={{ width: "1px", height: "60px", backgroundColor: "white", mx: 2 }} />}
 
-              <Box
-                sx={{
-                  width: "1px",
-                  height: "60px",
-                  backgroundColor: "white",
-                  mx: 4,
-                }}
-              />
-              <Typography>Email</Typography>
-              <Box
-                sx={{
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                <Box sx={{
                   backgroundImage: "url(/polygon.png)",
-                  height: "100px",
-                  width: "100px",
+                  height: "50px",
+                  width: "50px",
                   backgroundRepeat: "no-repeat",
-                  objectFit: "cover",
+                  backgroundSize: "contain",
                   position: "relative",
-                }}
-              >
-                <Image
-                  src="/email.png"
-                  alt=""
-                  width={30}
-                  height={30}
-                  style={{ position: "absolute", left: "32px", top: "35px" }}
-                ></Image>
+                  display: "flex", justifyContent: "center", alignItems: "center"
+                }}>
+                  <Image src="/email.png" alt="" width={isMobile ? 20 : 30} height={isMobile ? 20 : 30}></Image>
+                </Box>
+                <Typography variant="body2">Email</Typography>
               </Box>
             </Box>
           </Box>
-              {/* footer content */}
-              <Box sx={{height:"350px" , width:"78%" , margin:"auto" , padding:"15px"}}>
-                  <Grid container spacing={3}>
-                      <Grid size={4}>
-                          <Image src="/link.png" alt="" width={200} height={40} style={{marginBottom:"20px"}}></Image>
-                          <Typography variant="body1" sx={{fontSize:"16px" , mb:3}}>Macat Megatrons is a thriving community where innovators, professionals, and enthusiasts come together to share knowledge, collaborate, and grow.</Typography>
-                          <Box sx={{width:"200px" , display:"flex" , gap:"15px" , cursor:"pointer"}}>
-                              <a href=""><FacebookRoundedIcon/></a>
-                              <a href=""><InstagramIcon /></a>
-                              <a href=""><GoogleIcon/></a>
-                              <a href=""><XIcon/></a>
-                              <a href=""><LinkedInIcon/></a>
-                          </Box>
-                      </Grid>
-                      <Grid size={4}>
-                          <Box sx={{display:"flex" , gap:"30px" , cursor:"pointer"}}>
-                              <Box>
-                                  <Typography variant="h6" sx={{marginBottom:"25px"}}>Company</Typography>
-                                    <Typography variant="body2" sx={{marginBottom:"15px"}}>Global presence</Typography>
-                                    <Typography onClick={()=> Router.push('/products')} sx={{marginBottom:"15px"}}>Products</Typography>
-                                    <Typography onClick={()=> Router.push('/services')} sx={{marginBottom:"15px"}}>Services</Typography>
-                                    <Typography sx={{marginBottom:"15px"}}>Gallery</Typography>
-                                    <Typography sx={{marginBottom:"15px"}}>About Us</Typography>
-                                    <Typography sx={{marginBottom:"15px"}}>Blog</Typography>
-                              </Box>
-                              <Box>
-                                  <Typography sx={{marginBottom:"35px"}}>Global Certification</Typography>
-                                  <Box sx={{display:"grid" , gridTemplateColumns:"repeat(3 , 1fr)" , gap:"15px"}}>
-                                      <Image src="" alt="" width={140} height={120}></Image>
-                                      <Image src="" alt="" width={140} height={120}></Image>
-                                      <Image src="" alt="" width={140} height={120}></Image>
-                                      <Image src="" alt="" width={140} height={120}></Image>
-                                      <Image src="" alt="" width={140} height={120}></Image>
-                                      <Image src="" alt="" width={140} height={120}></Image>
-                                  </Box>
-                              </Box>
-                          </Box>
-                      </Grid>
-                      <Grid size={4}>
-                            <Grid container spacing={2} mb={4}>
-                                  <Grid>
-                                      <Typography>EMAIL ADDRESS*</Typography>
-                                      <Input type="text" placeholder="Enter your Email Address" required css={{ backgroundColor: "white",borderRadius:"10px"}}></Input>
-                                  </Grid>
-                                  <Grid>
-                                      <Typography>MOBILE*</Typography>
-                                      <Input type="number" placeholder="Number" required css={{ backgroundColor: "white" ,borderRadius:"10px" , outline:"none"}}></Input>
-                                  </Grid>
-                            </Grid>
-                            <Button variant="outlined" sx={{width:"440px" , borderRadius:"10px" , border:"1px solid white" , color:"white"}}>
-                                Contact Us
-                            </Button>
-                      </Grid>
+
+          <Box sx={{height:{ xs: "auto", md: "350px"} , width:{ xs: "90%", md: "78%"} , margin:"auto" , padding:{ xs: "10px", md: "15px"} , marginTop: isMobile ? '80px' : '20px'}}>
+            <Grid container spacing={isMobile ? 2 : 3} direction={isTablet ? 'column' : 'row'}>
+              <Grid item xs={12} md={4}>
+                <Image src="/link.png" alt="" width={isMobile ? 150 : 200} height={isMobile ? 30 : 40} style={{marginBottom: isMobile ? "10px" : "20px"}}></Image>
+                <Typography variant="body1" sx={{fontSize: isMobile ? "14px" : "16px" , mb: isMobile ? 2 : 3, textAlign: isMobile ? 'center' : 'left'}}>
+                  Macat Megatrons is a thriving community where innovators, professionals, and enthusiasts come together to share knowledge, collaborate, and grow.
+                </Typography>
+                <Box sx={{width: isMobile ? "100%" : "200px" , display:"flex" , gap: isMobile ? "10px" : "15px" , cursor:"pointer", justifyContent: isMobile ? 'center' : 'flex-start'}}>
+                  <a href=""><FacebookRoundedIcon/></a>
+                  <a href=""><InstagramIcon /></a>
+                  <a href=""><GoogleIcon/></a>
+                  <a href=""><XIcon/></a>
+                  <a href=""><LinkedInIcon/></a>
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Box sx={{display:"flex" , gap: isMobile ? "15px" : "30px" , cursor:"pointer", flexDirection: isMobile ? 'column' : 'row', textAlign: isMobile ? 'center' : 'left', alignItems: isMobile ? 'center' : 'flex-start'}}>
+                  <Box>
+                    <Typography variant="h6" sx={{marginBottom: isMobile ? "15px" : "25px", fontSize: isMobile ? "1rem" : "1.25rem"}}>Company</Typography>
+                      <Typography variant="body2" sx={{marginBottom:"15px"}}>Global presence</Typography>
+                      <Typography onClick={()=> Router.push('/products')} sx={{marginBottom:"15px"}}>Products</Typography>
+                      <Typography onClick={()=> Router.push('/services')} sx={{marginBottom:"15px"}}>Services</Typography>
+                      <Typography sx={{marginBottom:"15px"}}>Gallery</Typography>
+                      <Typography sx={{marginBottom:"15px"}}>About Us</Typography>
+                      <Typography sx={{marginBottom:"15px"}}>Blog</Typography>
+                  </Box>
+                  <Box sx={{ textAlign: isMobile ? 'center' : 'left'}}>
+                    <Typography sx={{marginBottom: isMobile ? "20px" : "35px", fontSize: isMobile ? "1rem" : "1.25rem"}}>Global Certification</Typography>
+                    <Box sx={{display:"grid" , gridTemplateColumns: isMobile ? "repeat(3 , 1fr)" : "repeat(3 , 1fr)" , gap: isMobile ? "10px" : "15px"}}>
+                      <Image src="/placeholder.png" alt="" width={isMobile ? 80 : 140} height={isMobile ? 60 : 120}></Image>
+                      <Image src="/placeholder.png" alt="" width={isMobile ? 80 : 140} height={isMobile ? 60 : 120}></Image>
+                      <Image src="/placeholder.png" alt="" width={isMobile ? 80 : 140} height={isMobile ? 60 : 120}></Image>
+                      <Image src="/placeholder.png" alt="" width={isMobile ? 80 : 140} height={isMobile ? 60 : 120}></Image>
+                      <Image src="/placeholder.png" alt="" width={isMobile ? 80 : 140} height={isMobile ? 60 : 120}></Image>
+                      <Image src="/placeholder.png" alt="" width={isMobile ? 80 : 140} height={isMobile ? 60 : 120}></Image>
+                    </Box>
+                  </Box>
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Grid container spacing={isMobile ? 1 : 2} mb={isMobile ? 2 : 4} direction={isMobile ? 'column' : 'row'}>
+                  <Grid item xs={12} sm={6} md={12}>
+                    <Typography>EMAIL ADDRESS*</Typography>
+                    <Input type="text" placeholder="Enter your Email Address" required css={{ backgroundColor: "white",borderRadius:"10px"}}></Input>
                   </Grid>
-              </Box>
+                  <Grid item xs={12} sm={6} md={12}>
+                    <Typography>MOBILE*</Typography>
+                    <Input type="number" placeholder="Number" required css={{ backgroundColor: "white" ,borderRadius:"10px" , outline:"none"}}></Input>
+                  </Grid>
+                </Grid>
+                <Button variant="outlined" sx={{width: isMobile ? "100%" : "440px" , borderRadius:"10px" , border:"1px solid white" , color:"white", textAlign: 'center'}}>
+                    Contact Us
+                </Button>
+              </Grid>
+            </Grid>
+          </Box>
         </Box>
       </Box>
     </Box>

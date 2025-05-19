@@ -6,7 +6,7 @@ import ViewListOutlinedIcon from '@mui/icons-material/ViewListOutlined';
 import Image from "next/image";
 import Footer from "@/Components/footer";
 
-export default function ProductAll(){
+export default function Capsule(){
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const isTablet = useMediaQuery(theme.breakpoints.down('md'));
