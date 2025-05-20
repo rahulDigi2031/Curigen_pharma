@@ -59,32 +59,59 @@ const successFactors = [
 
 export default function GridImageSection() {
     const isMobile = useMediaQuery('(max-width:768px)');
+    const isTablet = useMediaQuery('(max-width:1024px)');
 
     const sectionStyle = {
-        height: "300px",
-        width: "80%",
+        height: isMobile ? "auto" : "300px",
+        width: isMobile ? "95%" : isTablet ? "90%" : "80%",
         display: "flex",
+        flexDirection: isMobile ? "column" : "row",
         justifyContent: "center",
         alignItems: "center",
         gap: 2,
-        margin: "auto"
+        margin: "auto",
+        padding: isMobile ? "20px 0" : "0"
     };
 
     const imageStyle = {
-        borderRadius: "16px"
+        borderRadius: "16px",
+        width: isMobile ? "100%" : "580px",
+        height: isMobile ? "auto" : "250px",
+        objectFit: "cover" as const
+    };
+
+    const contentBoxStyle = {
+        flex: 1,
+        width: isMobile ? "100%" : "auto",
+        padding: isMobile ? "20px 0" : "0"
     };
 
     return (
-        <Box sx={{ width: "80%", margin: "auto" }}>
+        <Box sx={{ width: isMobile ? "95%" : isTablet ? "90%" : "80%", margin: "auto" }}>
             {sectionData.map((section, index) => (
                 <Box key={index} sx={sectionStyle}>
                     {section.imageFirst ? (
                         <>
-                            <Box sx={{ flex: 1 }}>
-                                <Image src={section.image} alt={section.title} width={580} height={250} style={imageStyle} />
+                            <Box sx={contentBoxStyle}>
+                                <Image 
+                                    src={section.image} 
+                                    alt={section.title} 
+                                    width={580} 
+                                    height={250} 
+                                    style={imageStyle}
+                                    priority={index === 0}
+                                />
                             </Box>
-                            <Box sx={{ flex: 1 }}>
-                                <Typography variant="h5" sx={{ fontWeight: 700, color: "#023350", mb: 2 }}>
+                            <Box sx={contentBoxStyle}>
+                                <Typography 
+                                    variant={isMobile ? "h6" : "h5"} 
+                                    sx={{ 
+                                        fontWeight: 700, 
+                                        color: "#023350", 
+                                        mb: 2,
+                                        fontSize: isMobile ? "1.25rem" : "1.5rem"
+                                    }}
+                                >
                                     {section.title.split(" ").map((word, i) => 
                                         word.toLowerCase().includes("policy") || word.toLowerCase().includes("manufacture") || 
                                         word.toLowerCase().includes("support") || word.toLowerCase().includes("marketing") ? 
@@ -92,13 +119,29 @@ export default function GridImageSection() {
                                         <span key={i}> {word}</span>
                                     )}
                                 </Typography>
-                                <Typography variant="body1">{section.content}</Typography>
+                                <Typography 
+                                    variant="body1"
+                                    sx={{
+                                        fontSize: isMobile ? "0.9rem" : "1rem",
+                                        lineHeight: 1.6
+                                    }}
+                                >
+                                    {section.content}
+                                </Typography>
                             </Box>
                         </>
                     ) : (
                         <>
-                            <Box sx={{ flex: 1 }}>
-                                <Typography variant="h5" sx={{ fontWeight: 700, color: "#023350", mb: 2 }}>
+                            <Box sx={contentBoxStyle}>
+                                <Typography 
+                                    variant={isMobile ? "h6" : "h5"} 
+                                    sx={{ 
+                                        fontWeight: 700, 
+                                        color: "#023350", 
+                                        mb: 2,
+                                        fontSize: isMobile ? "1.25rem" : "1.5rem"
+                                    }}
+                                >
                                     {section.title.split(" ").map((word, i) => 
                                         word.toLowerCase().includes("policy") || word.toLowerCase().includes("manufacture") || 
                                         word.toLowerCase().includes("support") || word.toLowerCase().includes("marketing") ? 
@@ -106,23 +149,68 @@ export default function GridImageSection() {
                                         <span key={i}> {word}</span>
                                     )}
                                 </Typography>
-                                <Typography variant="body1">{section.content}</Typography>
+                                <Typography 
+                                    variant="body1"
+                                    sx={{
+                                        fontSize: isMobile ? "0.9rem" : "1rem",
+                                        lineHeight: 1.6
+                                    }}
+                                >
+                                    {section.content}
+                                </Typography>
                             </Box>
-                            <Box sx={{ flex: 1 }}>
-                                <Image src={section.image} alt={section.title} width={580} height={250} style={imageStyle} />
+                            <Box sx={contentBoxStyle}>
+                                <Image 
+                                    src={section.image} 
+                                    alt={section.title} 
+                                    width={580} 
+                                    height={250} 
+                                    style={imageStyle}
+                                    priority={index === 0}
+                                />
                             </Box>
                         </>
                     )}
                 </Box>
             ))}
 
-            <Box sx={{width:"80%" , margin:"auto" , marginTop:"5%" , marginBottom:"12%"}}>
-                <Typography variant="h6" sx={{ fontWeight: 700, color: "#023350" }}>
+            <Box sx={{
+                width: isMobile ? "95%" : isTablet ? "90%" : "80%",
+                margin: "auto",
+                marginTop: isMobile ? "10%" : "5%",
+                marginBottom: isMobile ? "15%" : "12%"
+            }}>
+                <Typography 
+                    variant={isMobile ? "subtitle1" : "h6"} 
+                    sx={{ 
+                        fontWeight: 700, 
+                        color: "#023350",
+                        fontSize: isMobile ? "1.1rem" : "1.25rem"
+                    }}
+                >
                     In A Nutshell, The Factors That Have Made Us Successful In Drug Manufacturing For Overseas Markets Are:
                 </Typography>
-                <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", maxWidth: "900px", mt: 2 }}>
+                <Box sx={{ 
+                    display: "flex", 
+                    flexDirection: isMobile ? "column" : "row",
+                    flexWrap: "wrap", 
+                    justifyContent: "space-between", 
+                    maxWidth: "900px", 
+                    mt: 2,
+                    gap: isMobile ? 2 : 0
+                }}>
                     {successFactors.map((list, index) => (
-                        <Box key={index} component="ul" sx={{ width: "45%", pl: 2, color: "#6c7586", fontSize: "16px", m: 0 }}>
+                        <Box 
+                            key={index} 
+                            component="ul" 
+                            sx={{ 
+                                width: isMobile ? "100%" : "45%", 
+                                pl: 2, 
+                                color: "#6c7586", 
+                                fontSize: isMobile ? "14px" : "16px", 
+                                m: 0 
+                            }}
+                        >
                             {list.map((item, i) => (
                                 <li key={i}>{item}</li>
                             ))}

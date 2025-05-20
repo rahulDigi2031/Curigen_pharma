@@ -1,64 +1,59 @@
-import { Box, Typography } from "@mui/material";
-import react from "react";
 import Image from "next/image";
+
 export default function PromiseSection() {
   return (
-    <Box>
-      <Box
-        sx={{
-          width: "80%",
-          backgroundColor: "#023350",
-          height: "165px",
-          padding: "40px",
-          margin: "50px auto",
-          borderRadius: "20px",
-        }}
-      >
-        <Box sx={{display:"flex" , gap:"20px" , justifyContent:"space-between"}}>
-          <Box sx={{ color: "#FFFFFF", maxWidth: "280px" }}>
-            <Typography
-              variant="h5"
-              sx={{ fontWeight: 600, marginBottom: "8px" }}
-            >
-              Our Promise
-            </Typography>
-            <Typography sx={{ fontSize: "16px", lineHeight: 1.5 }}>
+    <div className="w-full px-4">
+      <div className="w-full md:w-4/5 bg-[#023350] rounded-[20px] p-6 md:p-10 my-12 mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-5">
+          {/* Promise Text */}
+          <div className="text-white max-w-[280px] text-center md:text-left">
+            <h2 className="text-xl font-semibold mb-2">Our Promise</h2>
+            <p className="text-base leading-relaxed">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
-            </Typography>
-          </Box>
-            {/* Divider */}
-          <Box sx={{width: "1px", height: "80px", backgroundColor: "#1E5C7B", mx: 4, }}/>
+            </p>
+          </div>
 
-            {/* image 1st div */}
-                <Box sx={{color:"#ffff"}}>
-                    <Box sx={{display:"flex" , gap:2 , alignItems:"center"}}>
-                        <Box sx={{backgroundColor:"#23A397" , borderRadius:"50%", padding:"15px"}}><Image src="/quality.png" alt="Quality" width={40} height={40}></Image></Box>
-                        <Typography variant="h6">Quality</Typography>
-                    </Box>
-                </Box>
+          {/* Divider - Hidden on mobile */}
+          <div className="hidden md:block w-[1px] h-20 bg-[#1E5C7B] mx-4" />
 
-                <Box sx={{width: "1px", height: "80px", backgroundColor: "#1E5C7B", mx: 4, }}/>
+          {/* Quality */}
+          <div className="text-white">
+            <div className="flex items-center gap-4">
+              <div className="bg-[#23A397] rounded-full p-4">
+                <Image src="/quality.png" alt="Quality" width={40} height={40} />
+              </div>
+              <h3 className="text-lg font-semibold">Quality</h3>
+            </div>
+          </div>
 
-            {/* image 2nd div */}
-                <Box sx={{color:"#ffff"}}>
-                    <Box sx={{display:"flex" , gap:2 , alignItems:"center"}}>
-                        <Box sx={{backgroundColor:"#23A397" , borderRadius:"50%", padding:"15px"}}><Image src="/affordability.png" alt="Affordability" width={40} height={40}></Image></Box>
-                        <Typography variant="h6">Affordability</Typography>
-                    </Box>
-                </Box>
+          {/* Divider - Hidden on mobile */}
+          <div className="hidden md:block w-[1px] h-20 bg-[#1E5C7B] mx-4" />
 
-                <Box sx={{width: "1px", height: "80px", backgroundColor: "#1E5C7B", mx: 4, }}/>
+          {/* Affordability */}
+          <div className="text-white">
+            <div className="flex items-center gap-4">
+              <div className="bg-[#23A397] rounded-full p-4">
+                <Image src="/affordability.png" alt="Affordability" width={40} height={40} />
+              </div>
+              <h3 className="text-lg font-semibold">Affordability</h3>
+            </div>
+          </div>
 
-            {/* image 3rd div */}
-                <Box sx={{color:"#ffff"}}>
-                    <Box sx={{display:"flex" , gap:2 , alignItems:"center"}}>
-                        <Box sx={{backgroundColor:"#23A397" , borderRadius:"50%", padding:"15px", border:"2px #23A397"}}><Image src="/accessibility.png" alt="Accessibility" width={40} height={40}></Image></Box>
-                        <Typography variant="h6">Accessibility</Typography>
-                    </Box>
-                </Box>
-        </Box>
-      </Box>
-    </Box>
+          {/* Divider - Hidden on mobile */}
+          <div className="hidden md:block w-[1px] h-20 bg-[#1E5C7B] mx-4" />
+
+          {/* Accessibility */}
+          <div className="text-white">
+            <div className="flex items-center gap-4">
+              <div className="bg-[#23A397] rounded-full p-4 border-2 border-[#23A397]">
+                <Image src="/accessibility.png" alt="Accessibility" width={40} height={40} />
+              </div>
+              <h3 className="text-lg font-semibold">Accessibility</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

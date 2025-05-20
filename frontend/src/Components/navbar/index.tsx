@@ -97,7 +97,7 @@ export default function Navbar() {
     <Box sx={{ backgroundColor: "transparent" }}>
       {/* Top Contact Info */}
       <Box className={`py-1 px-2 flex justify-start w-4/5 mx-auto ${isMobile ? 'flex-col items-start gap-1' : 'flex-row items-center gap-2'}`}>
-          <Box className={`flex items-center gap-0.5 text-[#023350] text-sm ${isMobile ? 'flex-col items-start' : 'flex-row items-center'}`}>
+          <Box className={`flex items-center gap-0.5 text-[#023350] text-sm ${isMobile ? 'hidden' : 'flex-row items-center'}`}>
               <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
                   <EmailIcon sx={{ fontSize: "16px", color: "#03A297" }} />
                   <Typography variant="body2">info@example.com</Typography>

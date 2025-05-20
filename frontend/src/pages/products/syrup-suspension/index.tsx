@@ -82,7 +82,10 @@ export default function ProductAll(){
             <Box className="py-8 px-4 bg-[#F5F7FA]">
                 <Box className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 w-[90%] md:w-[80%] mx-auto">
                     {Images.map((product, index) => (
-                        <Box key={index} className="bg-white rounded-2xl p-4 flex flex-col items-center shadow-md hover:shadow-lg transition-all duration-300">
+                        <Box
+                            key={index}
+                            className="bg-white rounded-2xl p-4 flex flex-col items-center shadow-md hover:shadow-lg transition-all duration-300"
+                        >
                             <Box className="w-full h-[200px] md:h-[300px] relative mb-4 group">
                                 <Image
                                     src={product.image}
