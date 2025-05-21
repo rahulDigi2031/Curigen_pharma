@@ -29,7 +29,7 @@ export default function Navbar() {
     { name: 'Products', isMenu: true },
     { name: 'Services', isMenu: true },
     { name: 'Gallery', path: '/gallery' },
-    { name: 'About', path: '/about' },
+    { name: 'AboutUs', path: '/aboutUs' },
     { name: 'Blog', path: '/blog' },
   ];
 

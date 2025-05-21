@@ -55,7 +55,7 @@ import Input from "@/common_components/input";
                                 />
                             </Box>
 
-                            <Button variant="contained">
+                            <Button variant="contained" sx={{backgroundColor:"#03A297" , color:"white"}}>
                                 Send message 
                             </Button>
 
@@ -76,7 +76,6 @@ import Input from "@/common_components/input";
                 title="Google Map"
             />
             </Box>
-
         </Box>
     );
   }
