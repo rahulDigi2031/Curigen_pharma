@@ -94,7 +94,7 @@ export default function Navbar() {
   const desktopMenuItems = desktopMenuType === 'Products' ? productMenuItems : serviceMenuItems;
 
   return (
-    <Box sx={{ backgroundColor: "transparent" }}>
+    <Box sx={{ backgroundColor: "transparent", display: "flex", flexDirection: "column", alignItems: "center" }}>
       {/* Top Contact Info */}
       <Box className={`py-1 px-2 flex justify-start w-4/5 mx-auto ${isMobile ? 'flex-col items-start gap-1' : 'flex-row items-center gap-2'}`}>
           <Box className={`flex items-center gap-0.5 text-[#023350] text-sm ${isMobile ? 'hidden' : 'flex-row items-center'}`}>
@@ -112,9 +112,7 @@ export default function Navbar() {
               </Box>
           </Box>
       </Box>
-      <Toolbar
-        className="flex justify-between px-5 w-4/5 mx-auto items-center"
-      >
+      <Toolbar className="flex justify-between px-5 w-4/5 mx-auto items-center">
         {/* Logo and Brand */}
         <Box
           sx={{
@@ -145,7 +143,7 @@ export default function Navbar() {
           </IconButton>
         ) : (
           <Box
-            className="flex gap-4 items-center"
+            className="flex gap-4 items-center mx-auto"
           >
             {navigationItems.map((item) => (
               item.isMenu ? (
@@ -214,7 +212,7 @@ export default function Navbar() {
             {navigationItems.map((item) => (
                item.isMenu ? (
                 <React.Fragment key={item.name}>
-                   <ListItem button component="div" onClick={item.name === 'Products' ? handleProductMenuClickInDrawer : handleServiceMenuClickInDrawer}>
+                   <ListItem component="button" role="listitem" onClick={item.name === 'Products' ? handleProductMenuClickInDrawer : handleServiceMenuClickInDrawer}>
                      <ListItemText primary={item.name} />
                      {item.name === 'Products' ? (productMenuOpenInDrawer ? <ExpandLess /> : <ExpandMore />) : (serviceMenuOpenInDrawer ? <ExpandLess /> : <ExpandMore />)}
                    </ListItem>
@@ -222,7 +220,7 @@ export default function Navbar() {
                      <Collapse in={productMenuOpenInDrawer} timeout="auto" unmountOnExit>
                         <List component="div" disablePadding>
                            {productMenuItems.map((productItem) => (
-                              <ListItem button component="div" key={productItem.name} onClick={() => handleMenuItemClick(productItem.path)} sx={{ pl: 4 }}>
+                              <ListItem component="button" role="listitem" key={productItem.name} onClick={() => handleMenuItemClick(productItem.path)} sx={{ pl: 4 }}>
                                  <ListItemText primary={productItem.name} />
                               </ListItem>
                            ))}
@@ -233,7 +231,7 @@ export default function Navbar() {
                      <Collapse in={serviceMenuOpenInDrawer} timeout="auto" unmountOnExit>
                         <List component="div" disablePadding>
                            {serviceMenuItems.map((serviceItem) => (
-                              <ListItem button component="div" key={serviceItem.name} onClick={() => handleMenuItemClick(serviceItem.path)} sx={{ pl: 4 }}>
+                              <ListItem component="button" role="listitem" key={serviceItem.name} onClick={() => handleMenuItemClick(serviceItem.path)} sx={{ pl: 4 }}>
                                  <ListItemText primary={serviceItem.name} />
                               </ListItem>
                            ))}
@@ -242,12 +240,12 @@ export default function Navbar() {
                    )}
                 </React.Fragment>
                ) : (
-                <ListItem button component="div" key={item.name} onClick={() => handleMenuItemClick(item.path)}>
+                <ListItem component="button" role="listitem" key={item.name} onClick={() => handleMenuItemClick(item.path)}>
                    <ListItemText primary={item.name} />
                 </ListItem>
                )
             ))}
-             <ListItem button component="div" onClick={() => handleMenuItemClick("/contact")}>
+             <ListItem component="button" role="listitem" onClick={() => handleMenuItemClick("/contact")}>
                  <ListItemText primary="Contact Us" />
              </ListItem>
           </List>

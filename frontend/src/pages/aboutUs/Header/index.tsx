@@ -136,7 +136,6 @@ export default function HeaderAboutUs(){
                     ))}
                 </Box>
             </Box>
-
         </Box>
     )
 }

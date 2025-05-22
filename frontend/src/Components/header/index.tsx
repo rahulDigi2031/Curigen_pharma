@@ -15,33 +15,6 @@ export default function Header() {
       {/* Top Contact Info Bar */}
       <Box
         sx={{
-          backgroundColor: '#f0f0f0', // Adjust color to match reference image
-          padding: { xs: '5px 10px', md: '8px 20px' },
-          display: 'flex',
-          justifyContent: { xs: 'center', md: 'flex-end' },
-          alignItems: 'center',
-          gap: { xs: 2, md: 4 },
-          color: '#333', // Adjust color to match reference image
-          fontSize: { xs: '0.75rem', md: '0.875rem' },
-          flexWrap: 'wrap' // Allow wrapping on small screens
-        }}
-      >
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-          <EmailIcon sx={{ fontSize: { xs: '0.8rem', md: '1rem' } }} />
-          <Typography variant="body2" sx={{fontSize: 'inherit'}}>info@example.com</Typography>
-        </Box>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-          <PhoneIcon sx={{ fontSize: { xs: '0.8rem', md: '1rem' } }} />
-          <Typography variant="body2" sx={{fontSize: 'inherit'}}>+2 123 654 7898</Typography>
-        </Box>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-          <HelpOutlineIcon sx={{ fontSize: { xs: '0.8rem', md: '1rem' } }} />
-          <Typography variant="body2" sx={{fontSize: 'inherit'}}>Need Help?</Typography>
-        </Box>
-      </Box>
-
-      <Box
-        sx={{
           backgroundImage: "url('/background.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -64,14 +37,8 @@ export default function Header() {
           className={`flex ${isMobile ? 'flex-col-reverse' : 'flex-row'} ${isMobile ? 'pt-4' : ''} items-center`}
         >
           <Box className={`w-full md:w-1/2 ${isMobile ? 'text-center' : 'text-left'}`}>
-            <Typography
-              className="text-2xl md:text-4xl font-bold text-black"
-            >
-              The Pursuit of a Healthier
-            </Typography>
-            <Typography
-              className={`text-2xl md:text-4xl font-bold text-black ${isMobile ? 'mb-4' : ''}`}
-            >
+            <Typography className="text-2xl md:text-4xl font-bold"> The Pursuit of a Healthier </Typography>
+            <Typography className={`text-2xl md:text-4xl font-bold text-black ${isMobile ? 'mb-4' : ''}`}>
               {" "}
               <span style={{ color: "#009688" }}>Bharat</span> Fueled by Science
             </Typography>
