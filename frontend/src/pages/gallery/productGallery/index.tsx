@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Container, Paper } from "@mui/material";
 import Image from "next/image";
 
 const productsData = [
@@ -20,32 +20,63 @@ const productsData = [
     { image: "/productGallery3.png", title: "Surgical Face Mask" }
 ];
 
-export default function ProductGallery(){
+export default function ProductGallery() {
     return (
-        <Box className="py-8 px-2 bg-white">
-            <Box
-                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-screen-xl mx-auto"
-            >
-                {productsData.map((product, index) => (
-                    <Box
-                        key={index}
-                        className="bg-white rounded-2xl p-5 flex flex-col items-center shadow-md"
-                    >
-                        <Box className="w-full h-48 relative mb-4">
-                             {/* Placeholder for image, adjust width/height/layout as needed */}
-                             <Image 
-                                src={product.image}
-                                alt={product.title}
-                                fill
-                                className="rounded-lg object-cover"
-                            />
-                        </Box>
-                        <Typography variant="body1" className="font-semibold text-[#023350]">
-                            {product.title}
-                        </Typography>
-                    </Box>
-                ))}
-            </Box>
+        <Box sx={{ py: 8, px: 2, bgcolor: '#F5F7FA' }}>
+            <Container maxWidth="xl">
+                <Box
+                    sx={{
+                        display: "grid",
+                        gridTemplateColumns: {
+                            xs: "1fr",
+                            sm: "repeat(2, 1fr)",
+                            md: "repeat(3, 1fr)",
+                            lg: "repeat(4, 1fr)",
+                        },
+                        gap: 2,
+                    }}
+                >
+                    {productsData.map((product, index) => (
+                        <Paper
+                            key={index}
+                            elevation={2}
+                            sx={{
+                                padding: "20px",
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                borderRadius: 4
+                            }}
+                        >
+                            <Box sx={{
+                                width: '100%',
+                                height: "390px",
+                                position: 'relative',
+                                mb: 5
+                            }}>
+                                <Image
+                                    src={product.image}
+                                    alt={product.title}
+                                    fill
+                                    style={{
+                                        objectFit: 'cover',
+                                        borderRadius: 8,
+                                    }}
+                                />
+                            </Box>
+                            <Typography
+                                variant="body1"
+                                sx={{
+                                    fontWeight: 600,
+                                    color: '#023350'
+                                }}
+                            >
+                                {product.title}
+                            </Typography>
+                        </Paper>
+                    ))}
+                </Box>
+            </Container>
         </Box>
-    )
+    );
 }

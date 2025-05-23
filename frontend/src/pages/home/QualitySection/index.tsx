@@ -1,59 +1,221 @@
+import { Box, Typography, Container, useTheme, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 
 export default function PromiseSection() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isTablet = useMediaQuery(theme.breakpoints.down('lg'));
+
   return (
-    <div className="w-full px-4">
-      <div className="w-full md:w-4/5 bg-[#023350] rounded-[20px] p-6 md:p-10 my-12 mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-5">
+    <Box sx={{ width: { xs: '95%', sm: '90%', md: '85%', lg: '80%' }, margin: 'auto' }}>
+      <Box
+        sx={{
+          width: '100%',
+          bgcolor: '#023350',
+          borderRadius: { xs: '15px', md: '20px' },
+          p: { xs: 2, sm: 3, md: 4, lg: 5 },
+          my: { xs: 4, sm: 5, md: 6 },
+          mx: 'auto'
+        }}
+      >
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: { xs: 'column', md: 'row' },
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: { xs: 4, sm: 3, md: 2.5 }
+          }}
+        >
           {/* Promise Text */}
-          <div className="text-white max-w-[280px] text-center md:text-left">
-            <h2 className="text-xl font-semibold mb-2">Our Promise</h2>
-            <p className="text-base leading-relaxed">
+          <Box
+            sx={{
+              color: 'white',
+              maxWidth: { xs: '100%', sm: '280px' },
+              textAlign: { xs: 'center', md: 'left' },
+              mb: { xs: 2, md: 0 }
+            }}
+          >
+            <Typography 
+              variant="h6" 
+              sx={{ 
+                mb: 1, 
+                fontWeight: 600,
+                fontSize: { xs: '1.1rem', sm: '1.25rem' }
+              }}
+            >
+              Our Promise
+            </Typography>
+            <Typography 
+              variant="body1" 
+              sx={{ 
+                lineHeight: 1.6,
+                fontSize: { xs: '0.9rem', sm: '1rem' }
+              }}
+            >
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
-            </p>
-          </div>
+            </Typography>
+          </Box>
 
           {/* Divider - Hidden on mobile */}
-          <div className="hidden md:block w-[1px] h-20 bg-[#1E5C7B] mx-4" />
+          {!isMobile && (
+            <Box
+              sx={{
+                width: '1px',
+                height: { md: '60px', lg: '80px' },
+                bgcolor: '#1E5C7B',
+                mx: { md: 1.5, lg: 2 }
+              }}
+            />
+          )}
 
           {/* Quality */}
-          <div className="text-white">
-            <div className="flex items-center gap-4">
-              <div className="bg-[#23A397] rounded-full p-4">
-                <Image src="/quality.png" alt="Quality" width={40} height={40} />
-              </div>
-              <h3 className="text-lg font-semibold">Quality</h3>
-            </div>
-          </div>
+          <Box sx={{ color: 'white' }}>
+            <Box sx={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: { xs: 1.5, sm: 2 }
+            }}>
+              <Box
+                sx={{
+                  bgcolor: '#23A397',
+                  borderRadius: '50%',
+                  p: { xs: 1.5, sm: 2 },
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}
+              >
+                <Image 
+                  src="/quality.png" 
+                  alt="Quality" 
+                  width={40} 
+                  height={40}
+                  style={{
+                    width: '100%',
+                    height: 'auto'
+                  }}
+                />
+              </Box>
+              <Typography 
+                variant="h6" 
+                sx={{ 
+                  fontWeight: 600,
+                  fontSize: { xs: '1rem', sm: '1.25rem' }
+                }}
+              >
+                Quality
+              </Typography>
+            </Box>
+          </Box>
 
           {/* Divider - Hidden on mobile */}
-          <div className="hidden md:block w-[1px] h-20 bg-[#1E5C7B] mx-4" />
+          {!isMobile && (
+            <Box
+              sx={{
+                width: '1px',
+                height: { md: '60px', lg: '80px' },
+                bgcolor: '#1E5C7B',
+                mx: { md: 1.5, lg: 2 }
+              }}
+            />
+          )}
 
           {/* Affordability */}
-          <div className="text-white">
-            <div className="flex items-center gap-4">
-              <div className="bg-[#23A397] rounded-full p-4">
-                <Image src="/affordability.png" alt="Affordability" width={40} height={40} />
-              </div>
-              <h3 className="text-lg font-semibold">Affordability</h3>
-            </div>
-          </div>
+          <Box sx={{ color: 'white' }}>
+            <Box sx={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: { xs: 1.5, sm: 2 }
+            }}>
+              <Box
+                sx={{
+                  bgcolor: '#23A397',
+                  borderRadius: '50%',
+                  p: { xs: 1.5, sm: 2 },
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}
+              >
+                <Image 
+                  src="/affordability.png" 
+                  alt="Affordability" 
+                  width={40} 
+                  height={40}
+                  style={{
+                    width: '100%',
+                    height: 'auto'
+                  }}
+                />
+              </Box>
+              <Typography 
+                variant="h6" 
+                sx={{ 
+                  fontWeight: 600,
+                  fontSize: { xs: '1rem', sm: '1.25rem' }
+                }}
+              >
+                Affordability
+              </Typography>
+            </Box>
+          </Box>
 
           {/* Divider - Hidden on mobile */}
-          <div className="hidden md:block w-[1px] h-20 bg-[#1E5C7B] mx-4" />
+          {!isMobile && (
+            <Box
+              sx={{
+                width: '1px',
+                height: { md: '60px', lg: '80px' },
+                bgcolor: '#1E5C7B',
+                mx: { md: 1.5, lg: 2 }
+              }}
+            />
+          )}
 
           {/* Accessibility */}
-          <div className="text-white">
-            <div className="flex items-center gap-4">
-              <div className="bg-[#23A397] rounded-full p-4 border-2 border-[#23A397]">
-                <Image src="/accessibility.png" alt="Accessibility" width={40} height={40} />
-              </div>
-              <h3 className="text-lg font-semibold">Accessibility</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          <Box sx={{ color: 'white' }}>
+            <Box sx={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: { xs: 1.5, sm: 2 }
+            }}>
+              <Box
+                sx={{
+                  bgcolor: '#23A397',
+                  borderRadius: '50%',
+                  p: { xs: 1.5, sm: 2 },
+                  border: '2px solid #23A397',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}
+              >
+                <Image 
+                  src="/accessibility.png" 
+                  alt="Accessibility" 
+                  width={40} 
+                  height={40}
+                  style={{
+                    width: '100%',
+                    height: 'auto'
+                  }}
+                />
+              </Box>
+              <Typography 
+                variant="h6" 
+                sx={{ 
+                  fontWeight: 600,
+                  fontSize: { xs: '1rem', sm: '1.25rem' }
+                }}
+              >
+                Accessibility
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
 }

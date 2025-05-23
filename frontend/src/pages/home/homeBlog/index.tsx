@@ -24,7 +24,8 @@ export default function HomeBlog() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           width: "100%",
-          height: "750px",
+          padding:{xs:"5px 0px 10px 0px"},
+          height: { xs: "auto", md: "780px" },
           position: "relative",
         }}
       >
@@ -42,7 +43,7 @@ export default function HomeBlog() {
           sx={{
             position: "relative",
             zIndex: 2,
-            width: "80%",
+            width: { xs: "95%", md: "80%" },
             margin: "auto",
             paddingTop: "15px",
           }}
@@ -56,29 +57,38 @@ export default function HomeBlog() {
             </Typography>
             <Typography
               variant="h4"
-              sx={{ color: "#023350", fontWeight: "bold" }}
+              sx={{ 
+                color: "#023350", 
+                fontWeight: "bold",
+                fontSize: { xs: "1.5rem", md: "2rem" }
+              }}
             >
               Our Latest News & <span style={{ color: "#04A297" }}>Blog</span>
             </Typography>
           </Box>
 
-          <Grid container spacing={4} justifyContent="center">
+          <Grid container spacing={4} justifyContent="center" className="px-4 md:px-0">
             {imageCard.map((el, index) => (
-              <Grid key={index} gap={5}>
-                <Card sx={{ width: 450, borderRadius: 3, boxShadow: 3 }}>
-                  <Box sx={{ position: "relative", padding: "30px" }}>
+              <Grid item key={index} sx={{ xs: 12, sm: 6, lg: 4 }} className="flex justify-center">
+                <Card sx={{ 
+                  width: { xs: "100%", sm: "450px" }, 
+                  borderRadius: 3, 
+                  boxShadow: 3 
+                }}>
+                  <Box sx={{ position: "relative", padding: { xs: "15px", md: "30px" } }}>
                     <Image
                       src={el.image}
                       alt="blog"
                       width={390}
                       height={180}
-                      style={{ borderRadius: "20px" }}
+                      className="w-full h-auto rounded-[20px]"
                     />
                     <Box
                       sx={{
                         position: "absolute",
-                        bottom: 50,
-                        left: 290,
+                        bottom: { xs: 30, md: 50 },
+                        left: { xs: "auto", md: 290 },
+                        right: { xs: 15, md: "auto" },
                         backgroundColor: "#04A297",
                         color: "#fff",
                         px: 1.5,
@@ -101,6 +111,8 @@ export default function HomeBlog() {
                         display: "flex",
                         justifyContent: "space-between",
                         mb: 1,
+                        flexDirection: { xs: "column", sm: "row" },
+                        gap: { xs: 1, sm: 0 }
                       }}
                     >
                       <Typography variant="body2" sx={{ color: "#023350" }}>
@@ -112,7 +124,12 @@ export default function HomeBlog() {
                     </Box>
                     <Typography
                       variant="subtitle1"
-                      sx={{ fontWeight: "bold", color: "#023350", mb: 1 }}
+                      sx={{ 
+                        fontWeight: "bold", 
+                        color: "#023350", 
+                        mb: 1,
+                        fontSize: { xs: "1rem", md: "1.25rem" }
+                      }}
                     >
                       If You Are Going Use Passage You Need Sure There Middle
                       Text.
@@ -134,8 +151,7 @@ export default function HomeBlog() {
                         },
                       }}
                     >
-                      {" "}
-                      Read More  → {" "}
+                      Read More →
                     </Button>
                   </CardContent>
                 </Card>
@@ -144,22 +160,25 @@ export default function HomeBlog() {
           </Grid>
         </Box>
       </Box>
-      {/*  */}
+
       <Box
         sx={{
           width: "100%",
-          height: "450px",
+          height: { xs: "auto", md: "450px" },
           backgroundColor: "#ffff",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          py: { xs: 4, md: 0 },
+          marginTop:"2px",
+          marginBottom:"20px"
         }}
       >
-        <Box sx={{ height: "300px", width: "100%", margin:"auto" }}>
+        <Box sx={{ height: { xs: "auto", md: "300px" }, width: "100%", margin: "auto" }}>
           <Box
             sx={{
-              width: "75%",
-              margin:"auto",
+              width: { xs: "90%", md: "75%" },
+              margin: "auto",
               minHeight: "100%",
               position: "relative",
               borderRadius: "20px",
@@ -169,20 +188,28 @@ export default function HomeBlog() {
               backgroundSize: "cover",
               backgroundPosition: "center",
               display: "flex",
+              flexDirection: { xs: "column", md: "row" },
               alignItems: "center",
               padding: "30px",
               color: "white",
+              gap: { xs: 4, md: 0 }
             }}
           >
-            <Box sx={{ zIndex: 2, maxWidth: "60%" }}>
-              <Typography variant="h5" fontWeight="bold">
+            <Box sx={{ zIndex: 2, maxWidth: { xs: "100%", md: "60%" } }}>
+              <Typography 
+                variant="h5" 
+                fontWeight="bold"
+                sx={{
+                  fontSize: { xs: "1.25rem", md: "1.5rem" },
+                  textAlign: { xs: "center", md: "left" }
+                }}
+              >
                 OUR ENVIRONMENT, SOCIAL AND <br /> GOVERNANCE STRATEGY
               </Typography>
             </Box>
             <Button
               variant="contained"
               sx={{
-                ml: "auto",
                 zIndex: 2,
                 backgroundColor: "#003366",
                 textTransform: "none",
@@ -196,7 +223,6 @@ export default function HomeBlog() {
             >
               Download 2024 ESG Report →
             </Button>
-
           </Box>
         </Box>
       </Box>
