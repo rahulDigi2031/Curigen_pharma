@@ -40,7 +40,7 @@ export default function HomeGallerySection() {
               "Quality Policy",
               "Management's Message",
             ].map((label, index) => (
-              <Button key={index} variant="outlined" sx={{ borderRadius: 2, textTransform: "none", fontWeight: 500, padding: "10px 16px", }}> {label}</Button>
+              <Button key={index} variant="outlined" sx={{ border:"none", backgroundColor:"#D4D4D4" ,borderRadius: 2, textTransform: "none", fontWeight: 500, padding: "14px 18px",color:"black",":hover":{ border:"3px dashed white" ,  backgroundColor:"#22A396", color:"white" } }}> {label}</Button>
             ))}
           </Stack>
         </Box>

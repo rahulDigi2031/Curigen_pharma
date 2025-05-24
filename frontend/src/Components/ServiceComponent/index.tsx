@@ -86,7 +86,7 @@ export default function ServiceComponent() {
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
-                borderRadius:"28% 28% 28% 28%",
+                borderRadius: "20%/50%"
               }}
             />
           </Box>

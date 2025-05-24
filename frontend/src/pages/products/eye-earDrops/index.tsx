@@ -1,6 +1,6 @@
 import BackgroundImage from "@/common_components/backgroundComman";
 import Navbar from "@/Components/navbar";
-import { Autocomplete, Box, TextField, Typography, Grid, useTheme, useMediaQuery } from "@mui/material";
+import { Autocomplete, Box, TextField, Typography, Grid, useTheme, useMediaQuery, Paper, Container } from "@mui/material";
 import GridViewIcon from '@mui/icons-material/GridView';
 import ViewListOutlinedIcon from '@mui/icons-material/ViewListOutlined';
 import Image from "next/image";
@@ -46,16 +46,18 @@ export default function ProductAll(){
             <BackgroundImage
                 imageUrl="/HeaderBG.png"
                 height="400px"
+                css={{marginBottom:"35px"}}
             >
                 <Navbar/>
-                <Box className="w-[90%] md:w-[80%] mx-auto p-4 md:p-6 font-inter">
+                <Box sx={{width:"80%" , margin:"auto" , padding:"15px" ,borderRadius:"10px"}}>
                     <Typography variant="h3" className="text-2xl md:text-4xl font-semibold text-[#023350] mb-2">products</Typography>
                     <Typography variant="h5" className="text-lg md:text-xl text-[#023350]">Home &gt;&gt; All</Typography>
                 </Box>
             </BackgroundImage>
 
             {/* Sort/Filter Bar */}
-            <Box className="w-[90%] md:w-[80%] h-auto md:h-[65px] bg-white mx-auto my-6 md:my-8 p-4 flex flex-col md:flex-row items-center justify-between">
+            <Box sx={{width:"80%" ,  margin:"auto" , marginBottom:"60px"}}>
+            <Box sx={{width:"95%" ,  margin:"auto" , marginBottom:"50px", backgroundColor:"#FFFFFF" , padding:"20px"}}>
                 <Box className="w-full md:w-auto flex flex-col md:flex-row items-center justify-between gap-4">
                     <Box className="flex items-center gap-2">
                         <Typography variant="body1">Sort -By:</Typography>
@@ -68,7 +70,7 @@ export default function ProductAll(){
                         />
                     </Box>
                     <Box className="flex gap-2">
-                        <Box className="h-10 w-10 rounded-full bg-white flex justify-center items-center hover:bg-[#03A297] transition-colors cursor-pointer">
+                        <Box className="h-10 w-10 rounded-full bg-white flex justify-center items-center transition-colors cursor-pointer">
                             <GridViewIcon sx={{ fontSize: 20 }}/>
                         </Box>
                         <Box className="h-10 w-10 rounded-full bg-white flex justify-center items-center hover:bg-[#03A297] transition-colors cursor-pointer">
@@ -79,30 +81,70 @@ export default function ProductAll(){
             </Box>
 
             {/* Product Gallery Grid */}
-            <Box className="py-8 px-4 bg-[#F5F7FA]">
-                <Box className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 w-[90%] md:w-[80%] mx-auto">
+            <Container maxWidth="xl">
+                <Box
+                    sx={{
+                        display: "grid",
+                        gridTemplateColumns: {
+                            xs: "1fr",
+                            sm: "repeat(2, 1fr)",
+                            md: "repeat(3, 1fr)",
+                            lg: "repeat(4, 1fr)",
+                        },
+                        gap: 4,
+                        justifyContent: "center",
+                        marginBottom: "60px",
+                        
+                    }}
+                >
                     {Images.map((product, index) => (
-                        <Box
+                        <Paper
                             key={index}
-                            className="bg-white rounded-2xl p-4 flex flex-col items-center shadow-md hover:shadow-lg transition-all duration-300"
+                            elevation={2}
+                            sx={{
+                                padding: "20px",
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                borderRadius: 4,
+                                ":hover":{
+                                  padding:"16px",
+                                  border:"2px dashed blue"
+                                  }
+                            }}
                         >
-                            <Box className="w-full h-[200px] md:h-[300px] relative mb-4 group">
+                            <Box sx={{
+                                width: '100%',
+                                height: "390px",
+                                position: 'relative',
+                                ":hover":{border:"3px dashedrgb(34, 26, 92)",cursor:"pointer"},
+                                mb: 5
+                            }}>
                                 <Image
                                     src={product.image}
                                     alt={product.title}
-                                    layout="fill"
-                                    objectFit="cover"
-                                    className="rounded-lg transition-transform duration-300 group-hover:scale-105"
+                                    fill
+                                    style={{
+                                        objectFit: 'cover',
+                                        borderRadius: 8,
+                                    }}
                                 />
-                                <div className="absolute inset-0 border-4 border-dashed border-[#023350] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                             </Box>
-                            <Typography variant="body1" className="font-semibold text-[#023350] text-center">
+                            <Typography
+                                variant="body1"
+                                sx={{
+                                    fontWeight: 600,
+                                    color: '#023350'
+                                }}
+                            >
                                 {product.title}
                             </Typography>
-                        </Box>
+                        </Paper>
                     ))}
                 </Box>
-            </Box>
+            </Container>
+        </Box>
+
             <Footer/>
         </Box>
     );

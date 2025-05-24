@@ -1,11 +1,12 @@
 // import BackgroundImage from "@/common_components/backgroundComman";
+import { Padding } from "@mui/icons-material";
 import { Box, Typography, Container } from "@mui/material";
 
 export default function GallerySection() {
   return (
     <Box className="w-full bg-[#F7F7F7] py-8 md:py-12">
-      <Container maxWidth="xl">
-        <Box className="w-full px-4">
+      <Container maxWidth="xl" sx={{padding:"50px"}}>
+        <Box sx={{ width: "100%", p: "15px" }}>
           <Typography 
             variant="h5" 
             className="font-bold text-center md:text-left mb-8"
@@ -19,10 +20,10 @@ export default function GallerySection() {
           {/* First Row */}
           <Box className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
             {/* Asia Box */}
-            <Box className="bg-white p-6 rounded-2xl h-[300px] md:h-[350px]">
+            <Box className="bg-white p-6 rounded-2xl h-[300px] md:h-[350px]" sx={{ p: "15px" }}>
               <Box 
                 className="relative h-full w-full rounded-2xl border-2 border-dotted border-green-500 opacity-45"
-                style={{ backgroundImage: "url(/map1.png)", backgroundSize: "cover" }}
+                style={{ backgroundImage: "url(/map1.png)", backgroundSize: "cover", }}
               >
                 <Typography variant="h5" className="p-4 text-black font-bold">
                   ASIA
@@ -36,7 +37,7 @@ export default function GallerySection() {
             </Box>
 
             {/* Africa Box */}
-            <Box className="bg-white p-6 rounded-2xl h-[300px] md:h-[350px]">
+            <Box className="bg-white p-6 rounded-2xl h-[300px] md:h-[350px]" sx={{ p: "15px" }}>
               <Box 
                 className="relative h-full w-full rounded-2xl border-2 border-dotted border-green-500 opacity-45"
                 style={{ backgroundImage: "url(/map2.png)", backgroundSize: "cover" }}
@@ -53,7 +54,7 @@ export default function GallerySection() {
             </Box>
 
             {/* North & Latin America Box */}
-            <Box className="bg-white p-6 rounded-2xl h-[300px] md:h-[350px]">
+            <Box className="bg-white p-6 rounded-2xl h-[300px] md:h-[350px]" sx={{ p: "15px" }}>
               <Box 
                 className="relative h-full w-full rounded-2xl border-2 border-dotted border-green-500 opacity-45"
                 style={{ backgroundImage: "url(/map3.png)", backgroundSize: "cover" }}
@@ -71,9 +72,16 @@ export default function GallerySection() {
           </Box>
 
           {/* Second Row */}
-          <Box className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Box
+            sx={{
+              display: 'grid',
+              gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' },
+              gap: 3,
+              mt:3
+            }}
+          >
             {/* Europe Box */}
-            <Box className="bg-white p-6 rounded-2xl h-[300px] md:h-[350px]">
+            <Box className="bg-white p-6 rounded-2xl h-[300px] md:h-[350px]" sx={{ p: "15px" }}>
               <Box 
                 className="relative h-full w-full rounded-2xl border-2 border-dotted border-green-500 opacity-45"
                 style={{ backgroundImage: "url(/map4.png)", backgroundSize: "cover" }}
@@ -90,7 +98,7 @@ export default function GallerySection() {
             </Box>
 
             {/* Oceania Box */}
-            <Box className="bg-white p-6 rounded-2xl h-[300px] md:h-[350px]">
+            <Box className="bg-white p-6 rounded-2xl h-[300px] md:h-[350px]" sx={{ p: "15px" }}>
               <Box 
                 className="relative h-full w-full rounded-2xl border-2 border-dotted border-green-500 opacity-45"
                 style={{ backgroundImage: "url(/map5.png)", backgroundSize: "cover" }}

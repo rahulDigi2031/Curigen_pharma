@@ -38,8 +38,8 @@ export default function Navbar() {
     { name: 'Tablet', path: '/products/tablet' },
     { name: 'Capsule', path: '/products/capsule' },
     { name: 'Injection', path: '/products/injection' },
-    { name: 'Suspension/Syrup', path: '/products/suspension-syrup' },
-    { name: 'Eye / Eardrops', path: '/products/eye-eardrops' },
+    { name: 'Suspension/Syrup', path: '/products/syrup-suspension' },
+    { name: 'Eye / Eardrops', path: '/products/eye-earDrops' },
     { name: 'Cream', path: '/products/cream' },
     { name: 'Other', path: '/products/other' },
   ];

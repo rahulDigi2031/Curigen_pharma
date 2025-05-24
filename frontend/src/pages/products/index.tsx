@@ -7,8 +7,8 @@ export default function ProductsList(){
     return (
         <>
             <ProductAll/>
-            <Tablet/>
-            <Capsule/>
+            {/* <Tablet/>
+            <Capsule/> */}
         </>
     )
 }
