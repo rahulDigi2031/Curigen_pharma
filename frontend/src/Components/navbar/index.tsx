@@ -9,6 +9,7 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import CloseIcon from '@mui/icons-material/Close';
 import Image from "next/image";
 import { useRouter } from "next/router";
+import path from "path";
 
 export default function Navbar() {
   const router = useRouter();
@@ -45,9 +46,11 @@ export default function Navbar() {
   ];
 
   const serviceMenuItems = [
-    { name: 'Contract Manufacturing', path: '/services/contract-manufacturing' },
-    { name: 'Institutional Tenders', path: '/services/institutional-tenders' },
-    { name: 'OTC PRODUCTS', path: '/services/otc-products' },
+    { name: 'Contract Manufacturing', path: '/services/ContractManufacturing' },
+    { name: 'Institutional Tenders', path: '/services/InstitutionalTenders' },
+    { name: 'OTC PRODUCTS', path: '/services/otcProducts' },
+    {name:"genericMedicines" , path:"/services/genericMedicines"},
+    { name: 'QC-QA', path:'/services/qc-qa' },
   ];
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>, menuType: string) => {
