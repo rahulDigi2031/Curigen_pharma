@@ -99,7 +99,7 @@ export default function Navbar() {
   return (
     <Box sx={{ backgroundColor: "transparent", display: "flex", flexDirection: "column", alignItems: "center" }}>
       {/* Top Contact Info */}
-      <Box className={`py-1 px-2 flex justify-start w-4/5 mx-auto ${isMobile ? 'flex-col items-start gap-1' : 'flex-row items-center gap-2'}`}>
+      <Box className={`py-3 px-2 flex justify-start w-4/5 mx-auto ${isMobile ? 'flex-col items-start gap-1' : 'flex-row items-center gap-2'}`}>
           <Box className={`flex items-center gap-0.5 text-[#023350] text-sm ${isMobile ? 'hidden' : 'flex-row items-center'}`}>
               <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
                   <EmailIcon sx={{ fontSize: "16px", color: "#03A297" }} />
@@ -115,6 +115,7 @@ export default function Navbar() {
               </Box>
           </Box>
       </Box>
+
       <Toolbar className="flex justify-between px-5 w-4/5 mx-auto items-center">
         {/* Logo and Brand */}
         <Box

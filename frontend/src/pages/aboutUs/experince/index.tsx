@@ -4,14 +4,14 @@ import Image from "next/image";
 export default function Experience(){
     return(
         <Box sx={{width:{xs:"98%" , md:"80%"} , margin:{xs:"20px auto" , md:"2% auto"}}}>
-        <Grid container spacing={2} alignItems="center">
-            <Grid item xs={12} md={6}>
-                <Box sx={{width:"100%" , display:"flex" , justifyContent:"center"}}>
-                    <Image src="/Group174.png" alt="" width={365} height={425} style={{width:"100%" , height:"auto" , maxWidth:365}}></Image>
+        <Grid container spacing={4} alignItems="center">
+            <Grid item lg={6} xs={12} md={6}>
+                <Box sx={{width:"100%" , display:"flex" , justifyContent:"center" , alignItems:"center" , height:{xs:"auto" , md:"100%"}}}>
+                    <Image src="/Group174.png" alt="Experience" width={500} height={425} style={{width:"100%" , height:"auto" , maxWidth:550 , borderRadius:20 , objectFit:"cover"}}></Image>
                 </Box>
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid item lg={6} xs={12} md={6}>
                 <Box sx={{padding:{xs:"10px" , sm:"20px"} , marginTop:{xs:"10px" , md:"20px"}}}>
                     <Typography variant="h4" sx={{fontWeight:"bold" , color:"#23A397" , mb:3 , fontSize:{xs:"1.25rem" , sm:"2rem"}}}>Wel-come to <br /><span style={{color:"#23A397"}}>Curigen</span><span style={{color:"#023350"}}> Pharmaceuticals Limited</span></Typography>
                     <Box>

@@ -24,8 +24,7 @@ export default function HomeBlog() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           width: "100%",
-          padding:{xs:"5px 0px 10px 0px"},
-          height: { xs: "auto", md: "780px" },
+          height: { xs: "auto", md: "785px" },
           position: "relative",
         }}
       >

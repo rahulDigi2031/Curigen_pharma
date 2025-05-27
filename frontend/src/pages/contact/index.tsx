@@ -5,11 +5,17 @@ export default function ContactPage(){
 
     return(
         <>
-            <HeaderContact/>
-            {/* Contact Section */}
-            <ContactSection/>
+            <header>
+                <HeaderContact/>
+            </header>
 
-            <Footer/>
+            <main>
+                <ContactSection/>
+            </main>
+
+            <footer>
+                <Footer/>
+            </footer>
         </>
     )
 }

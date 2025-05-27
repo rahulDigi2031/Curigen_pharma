@@ -19,36 +19,89 @@ const ServiceCard = ({ icon, title }: ServiceCardProps) => (
     sx={{
       bgcolor: 'white',
       borderRadius: '30% 30% 30% 0%',
-      p: 3,
+      p: 4,
       textAlign: 'left',
       height: '100%',
       display: 'flex',
       flexDirection: 'column',
-      gap: 1,
-      transition: 'all 0.3s',
+      gap: 2,
+      transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+      position: 'relative',
+      overflow: 'hidden',
       '&:hover': {
-        border: '3px dashed #002B5B'
+        transform: 'translateY(-8px)',
+        boxShadow: '0 12px 40px rgba(0, 43, 91, 0.15)',
+        '&::before': {
+          transform: 'scale(1)',
+          opacity: 1
+        }
+      },
+      '&::before': {
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        background: 'linear-gradient(45deg, rgba(0, 43, 91, 0.05) 0%, rgba(0, 169, 157, 0.05) 100%)',
+        transform: 'scale(0.8)',
+        opacity: 0,
+        transition: 'all 0.4s ease'
       }
     }}
   >
-    <Box sx={{ display: 'flex', justifyContent: 'flex-start', mb: 1 }}>
+    <Box sx={{ 
+      display: 'flex', 
+      justifyContent: 'flex-start', 
+      mb: 1,
+      position: 'relative',
+      zIndex: 1
+    }}>
       <Box sx={{
         bgcolor: '#00A99D',
         borderRadius: '50% 50% 50% 0',
-        width: 60,
-        height: 60,
+        width: 70,
+        height: 70,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         flexShrink: 0,
+        transition: 'all 0.3s ease',
+        boxShadow: '0 4px 20px rgba(0, 169, 157, 0.2)',
+        '&:hover': {
+          transform: 'rotate(360deg)',
+          bgcolor: '#00897B'
+        }
       }}>
-        <Image src={icon} alt={title} width={30} height={30} />
+        <Image src={icon} alt={title} width={35} height={35} />
       </Box>
     </Box>
-    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#002B5B', mb: 0.5 }}>
+    <Typography 
+      variant="h6" 
+      sx={{ 
+        fontWeight: 700, 
+        color: '#002B5B', 
+        mb: 1,
+        position: 'relative',
+        zIndex: 1,
+        fontSize: { xs: '1.1rem', sm: '1.25rem' },
+        transition: 'all 0.3s ease',
+        '&:hover': {
+          color: '#00A99D'
+        }
+      }}
+    >
       {title}
     </Typography>
-    <Typography sx={{ fontSize: '0.875rem', color: 'text.secondary' }}>
+    <Typography 
+      sx={{ 
+        fontSize: '0.95rem', 
+        color: 'text.secondary',
+        position: 'relative',
+        zIndex: 1,
+        lineHeight: 1.6
+      }}
+    >
       Lorem Ipsum is simply dummy text of the
     </Typography>
   </Paper>

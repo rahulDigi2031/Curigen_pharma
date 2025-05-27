@@ -15,11 +15,9 @@ const itemCategory = [
 
 const ItemCategoryGrid = () => {
   return (
-    <Box
-      sx={{
-        width: { xs: "95%", sm: "90%", md: "80%" },
-        margin: "auto",
+    <Box sx={{ width: { xs: "95%", sm: "90%", md: "80%" }, margin: "auto",
         padding: { xs: "10px", md: "15px" },
+        marginBottom:"35px"
       }}
     >
       <Box className="max-w-[100%] mx-auto bg-[#F7F7F7F7] py-6 md:py-10 px-4 sm:mb-5 md:px-10">
