@@ -4,11 +4,32 @@ import Image from "next/image";
 export default function Experience(){
     return(
         <Box sx={{width:{xs:"98%" , md:"80%"} , margin:{xs:"20px auto" , md:"2% auto"}}}>
-        <Grid container spacing={4} alignItems="center">
+        <Grid container spacing={2} alignItems="center">
             <Grid item lg={6} xs={12} md={6}>
-                <Box sx={{width:"100%" , display:"flex" , justifyContent:"center" , alignItems:"center" , height:{xs:"auto" , md:"100%"}}}>
-                    <Image src="/Group174.png" alt="Experience" width={500} height={425} style={{width:"100%" , height:"auto" , maxWidth:550 , borderRadius:20 , objectFit:"cover"}}></Image>
+                <Box
+                    sx={{
+                        width: "100%",
+                        display: {lg: "flex" },
+                        justifyContent: "center",
+                        alignItems: "center",
+                        height: { xs: "auto", md: "100%" },
+                    }}
+                >
+                    <Image
+                        src="/Group174.png"
+                        alt="Experience"
+                        width={500}
+                        height={425}
+                        style={{
+                            width: "100%",
+                            height: "auto",
+                            maxWidth: 550,
+                            borderRadius: 20,
+                            objectFit: "cover",
+                        }}
+                    />
                 </Box>
+
             </Grid>
 
             <Grid item lg={6} xs={12} md={6}>
