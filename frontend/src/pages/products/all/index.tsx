@@ -51,7 +51,7 @@ export default function ProductAll(){
 
             {/* Sort/Filter Bar */}
             <main>
-                <Box sx={{width:"80%" ,  margin:"auto" , marginBottom:"60px"}}>
+                <Box sx={{width:"80%" ,  margin:"auto" , marginBottom:"85px"}}>
             <Box sx={{width:"95%" ,  margin:"auto" , marginBottom:"50px", backgroundColor:"#FFFFFF" , padding:"20px"}}>
                 <Box className="w-full md:w-auto flex flex-col md:flex-row items-center justify-between gap-4">
                     <Box className="flex items-center gap-2">

@@ -144,12 +144,12 @@ export default function Footer() {
                   <Box sx={{ textAlign: isMobile ? 'center' : 'left'}}>
                     <Typography sx={{marginBottom: isMobile ? "20px" : "35px", fontSize: isMobile ? "1rem" : "1.25rem"}}>Global Certification</Typography>
                     <Box sx={{display:"grid" , gridTemplateColumns: isMobile ? "repeat(3 , 1fr)" : "repeat(3 , 1fr)" , gap: isMobile ? "10px" : "15px"}}>
-                      <Image src="/who.png" alt="" width={isMobile ? 80 : 140} height={isMobile ? 60 : 120}></Image>
+                      {/* <Image src="/who.png" alt="" width={isMobile ? 80 : 140} height={isMobile ? 60 : 120}></Image>
                       <Image src="/iso.png" alt="" width={isMobile ? 80 : 140} height={isMobile ? 60 : 120}></Image>
                       <Image src="/FDCA.webp" alt="" width={isMobile ? 80 : 140} height={isMobile ? 60 : 120}></Image>
                       <Image src="/msme.png" alt="" width={isMobile ? 80 : 140} height={isMobile ? 60 : 120}></Image>
                       <Image src="/FDCA.webp" alt="" width={isMobile ? 80 : 140} height={isMobile ? 60 : 120}></Image>
-                      <Image src="/msme.png" alt="" width={isMobile ? 80 : 140} height={isMobile ? 60 : 120}></Image>
+                      <Image src="/msme.png" alt="" width={isMobile ? 80 : 140} height={isMobile ? 60 : 120}></Image> */}
                     </Box>
                   </Box>
                 </Box>

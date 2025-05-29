@@ -12,31 +12,38 @@ import Footer from "@/Components/footer";
 export default function Homepage() {
   return (
     <Box>
-      <Header />
-      {/* Items Categories below side */}
-      <ItemCategoryDisplay />
-
-      {/* experince section below side */}
-      <ExperinceSection />
-
-
-      {/*Services component below side"*/}
-      <ServiceComaponent />
-
-      {/* Publish component below side */}
-      <PublishContent />
-
-      {/* Quality PromiseSection */}
-      <PromiseSection/>
-
-      {/* Gallery Section */}
-      <HomeGallerySection/>
-
-      {/* Home-Blog Section */}
-      <HomeBlog/>
-      {/* footer  */}
-      <Footer/>
       
+      <header>
+        <Header />
+      </header>
+
+      <main>
+        {/* Items Categories below side */}
+        <ItemCategoryDisplay />
+
+        {/* experince section below side */}
+        <ExperinceSection />
+
+        {/*Services component below side"*/}
+        <ServiceComaponent />
+
+        {/* Publish component below side */}
+        <PublishContent />
+
+        {/* Quality PromiseSection */}
+        <PromiseSection/>
+
+        {/* Gallery Section */}
+        <HomeGallerySection/>
+
+        {/* Home-Blog Section */}
+        <HomeBlog/>
+      </main>
+      
+      <footer>
+        {/* footer  */}
+        <Footer/>
+      </footer>
     </Box>
   );
 }

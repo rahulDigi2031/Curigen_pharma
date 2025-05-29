@@ -1,6 +1,8 @@
 import { Box, Typography, Container, Paper } from "@mui/material";
 import Image from "next/image";
 
+// Pending HOVER eFFECT AND INSERTING A Images...
+
 const services = [
   { icon: "/icon.png", title: "Impeccable Quality" },
   { icon: "/icon1.png", title: "Affordable Medicines" },
@@ -21,33 +23,11 @@ const ServiceCard = ({ icon, title }: ServiceCardProps) => (
       borderRadius: '30% 30% 30% 0%',
       p: 4,
       textAlign: 'left',
-      height: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      gap: 2,
-      transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-      position: 'relative',
-      overflow: 'hidden',
-      '&:hover': {
-        transform: 'translateY(-8px)',
-        boxShadow: '0 12px 40px rgba(0, 43, 91, 0.15)',
-        '&::before': {
-          transform: 'scale(1)',
-          opacity: 1
-        }
+      height: '220px',
+      ":hover":{
+        border:"3px dashed rgb(12, 58, 84)",
       },
-      '&::before': {
-        content: '""',
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        background: 'linear-gradient(45deg, rgba(0, 43, 91, 0.05) 0%, rgba(0, 169, 157, 0.05) 100%)',
-        transform: 'scale(0.8)',
-        opacity: 0,
-        transition: 'all 0.4s ease'
-      }
+      mb:5
     }}
   >
     <Box sx={{ 
@@ -58,22 +38,21 @@ const ServiceCard = ({ icon, title }: ServiceCardProps) => (
       zIndex: 1
     }}>
       <Box sx={{
-        bgcolor: '#00A99D',
+        // position: 'absolute',
+        bgcolor:"#03A297",
         borderRadius: '50% 50% 50% 0',
-        width: 70,
-        height: 70,
+        width: 95,
+        height: 85,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         flexShrink: 0,
         transition: 'all 0.3s ease',
-        boxShadow: '0 4px 20px rgba(0, 169, 157, 0.2)',
         '&:hover': {
-          transform: 'rotate(360deg)',
-          bgcolor: '#00897B'
+          
         }
       }}>
-        <Image src={icon} alt={title} width={35} height={35} />
+        {/* <Image src={icon} alt={title} width={500} height={500} /> */}
       </Box>
     </Box>
     <Typography 
@@ -119,9 +98,9 @@ export default function ServiceComponent() {
         <Box sx={{ 
           display: 'flex',
           alignItems: 'center',
-          gap: 6,
+          gap:1,
           flexDirection: { xs: 'column', md: 'row' },
-          mb: 8,
+          mb:8,
         }}>
           <Box sx={{ 
             overflow: 'hidden',
@@ -129,6 +108,7 @@ export default function ServiceComponent() {
             height: { xs: 200, md: 300 },
             borderRadius: '20px',
             flexShrink: 0,
+            alignContent:"center"
           }}>
             <Image 
               src="/image3.png" 
@@ -136,16 +116,14 @@ export default function ServiceComponent() {
               width={450}
               height={400}
               style={{ 
-                width: '100%',
-                height: '100%',
+                width: '65%',
+                height: '200px',
                 objectFit: 'cover',
                 borderRadius: "20%/50%"
               }}
             />
           </Box>
-          <Box sx={{ 
-            width: { xs: '100%', md: '50%' },
-          }}>
+          <Box sx={{  width: { xs: '100%', md: '50%' },}}>
             <Typography 
               variant="h4"
               sx={{ 
@@ -167,7 +145,7 @@ export default function ServiceComponent() {
           gridTemplateColumns: {
             xs: '1fr',
             sm: 'repeat(2, 1fr)',
-            md: 'repeat(4, 1fr)'
+            md: 'repeat(4, 1fr)',
           },
           gap: 3
         }}>
