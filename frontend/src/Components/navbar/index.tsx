@@ -99,19 +99,19 @@ export default function Navbar() {
   return (
     <Box sx={{ backgroundColor: "transparent", display: "flex", flexDirection: "column", alignItems: "center" }}>
       {/* Top Contact Info */}
-      <Box className={`py-3 px-2 flex justify-start w-4/5 mx-auto ${isMobile ? 'flex-col items-start gap-1' : 'flex-row items-center gap-2'}`}>
+      <Box sx={{width:"77%" , margin:"auto"}}>
           <Box className={`flex items-center gap-0.5 text-[#023350] text-sm ${isMobile ? 'hidden' : 'flex-row items-center'}`}>
               <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
                   <EmailIcon sx={{ fontSize: "16px", color: "#03A297" }} />
-                  <Typography variant="body2">info@example.com</Typography>
+                  <Typography variant="body2" sx={{fontWeight:"550"}}>info@example.com</Typography>
               </Box>
               <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
                   <PhoneIcon sx={{ fontSize: "16px", color: "#03A297" }} />
-                  <Typography variant="body2">+2 123 654 7898</Typography>
+                  <Typography variant="body2" sx={{fontWeight:"550"}}>+2 123 654 7898</Typography>
               </Box>
               <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
                   <HelpOutlineIcon sx={{ fontSize: "16px", color: "#03A297" }} />
-                  <Typography variant="body2">Need Help?</Typography>
+                  <Typography variant="body2" sx={{fontWeight:"550"}}>Need Help?</Typography>
               </Box>
           </Box>
       </Box>
@@ -153,7 +153,12 @@ export default function Navbar() {
               item.isMenu ? (
                 <Typography
                   key={item.name}
-                  sx={{ cursor: "pointer" }}
+                  sx={{ 
+                    cursor: "pointer",
+                    "&:hover": {
+                      color: "#03A297"
+                    }
+                  }}
                   id={`basic-button-${item.name.toLowerCase()}`}
                   aria-controls={open && desktopMenuType === item.name ? "basic-menu" : undefined}
                   aria-haspopup="true"
@@ -169,6 +174,9 @@ export default function Navbar() {
                     cursor: "pointer",
                     color: router.pathname === item.path ? "#23A397" : "#023350",
                     fontWeight: router.pathname === item.path ? "bold" : "normal",
+                    "&:hover": {
+                      color: "#03A297"
+                    }
                   }}
                   onClick={() => handleMenuItemClick(item.path)}
                 >

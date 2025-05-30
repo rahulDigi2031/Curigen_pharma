@@ -37,9 +37,6 @@ const ItemCategoryGrid = () => {
                '&:hover': {
                  backgroundColor: '#044678',
                  color: 'white',
-
-
-                 
                  '& .MuiTypography-root': {
                    color: 'white',
                  },

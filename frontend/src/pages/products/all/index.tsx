@@ -36,6 +36,8 @@ export default function ProductAll(){
         {title:"other"}
     ];
 
+
+
     return(
         <Box className="min-h-screen">
             {/* Header Section with Background Image */}
@@ -49,6 +51,7 @@ export default function ProductAll(){
             </BackgroundImage>
             </header>
 
+        
             {/* Sort/Filter Bar */}
             <main>
                 <Box sx={{width:"80%" ,  margin:"auto" , marginBottom:"85px"}}>
