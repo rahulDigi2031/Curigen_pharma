@@ -36,7 +36,7 @@ export default function PublishContent() {
       }}
     >
       <Container
-        maxWidth="lg"
+        maxWidth="xl"
         sx={{
           display: 'flex',
           position: 'relative',
@@ -106,38 +106,38 @@ export default function PublishContent() {
                 position: { md: 'absolute' },
                 right: { md: 0 },
                 left: { xs: 'auto', md: 'auto' },
-                bottom: { md: 0 },
-                top: { xs: 0, md: 'auto' },
+                bottom: { xs:"5%", md: 0 },
+                top: { xs:"-800px", md: '-37px' },
                 zIndex: 10,
                 maxWidth: { xs: '90%', md: '100%' },
                 height: 'auto',
             }
         }}>
-          {/* <Image
+          <Image
             src="/Doctor.png"
             alt="Doctor"
             width={480}
-            height={760}
+            height={800}
             className="doctor-image" // Apply classname for styling via parent sx
             style={{
                 objectFit: 'cover'
             }}
-          /> */}
+          />
 
           {/* Stats Box */}
           <Box
             sx={{
               position: 'absolute',
-              bottom: { xs: -180, md: -60 },
-              left: { xs: '50%', md: -80 },
+              bottom: { xs: -180, md: -550 },
+              left: { xs: '50%', md: -860 },
               transform: { xs: 'translateX(-50%)', md: 'none' },
               zIndex: 20,
               bgcolor: 'white',
               borderRadius: '20px',
               p: { xs: 2, md: 3 },
               boxShadow: 3,
-              width: { xs: '90%', sm: '80%', md: 500 },
-              height: { xs: 'auto', md: 120 },
+              width: { xs: '90%', sm: '80%', md:"1100px" },
+              height: { xs: 'auto', md: 140 },
               display: 'flex',
               justifyContent: 'space-around',
               alignItems: 'center',
@@ -147,10 +147,10 @@ export default function PublishContent() {
           >
             {stats.map((item, index) => (
               <Box key={index} sx={{ textAlign: 'center', minWidth: { xs: '40%', sm: 'auto' } }}>
-                <Typography variant="h5" sx={{ fontWeight: 'bold', color: '#002B5B' }}>
+                <Typography variant="h4" sx={{ fontWeight: 'bold', color: '#002B5B' }}>
                   {item.value}
                 </Typography>
-                <Typography variant="body2">{item.label}</Typography>
+                <Typography variant="body1">{item.label}</Typography>
               </Box>
             ))}
           </Box>
@@ -159,13 +159,16 @@ export default function PublishContent() {
       
       {/* Bottom Certification/Turnaround Section */}
       <Container
-        maxWidth="lg"
+        maxWidth="xl"
          sx={{
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
           gap: { xs: 4, md: 8 },
-          mt: { xs: 15, md: 5 },
+          mt: { xs: 15, md: 10 },
+          position:"relative",
+          top:{xs:0 , md:"60px"},
+          left:{md:-490},
           zIndex: 5,
           flexDirection: { xs: 'column', sm: 'row' },
           textAlign: { xs: 'center', sm: 'left' },

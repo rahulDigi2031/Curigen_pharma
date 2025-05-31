@@ -7,9 +7,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import CloseIcon from '@mui/icons-material/Close';
+import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import Image from "next/image";
 import { useRouter } from "next/router";
-import path from "path";
+// import path from "path";
 
 export default function Navbar() {
   const router = useRouter();
@@ -184,7 +185,7 @@ export default function Navbar() {
                 </Typography>
               )
             ))}
-            <Button sx={{ backgroundColor: "#23A397", color: "white", borderRadius: 2, padding: "10px 20px", cursor: "pointer", ":hover": { backgroundColor: "#002B5B" } }} onClick={() => router.push("/contact")}>Contact Us</Button>
+            <Button sx={{ backgroundColor: "#23A397", color: "white", borderRadius: 2, padding: "10px 20px", cursor: "pointer", ":hover": { backgroundColor: "#002B5B" } }} onClick={() => router.push("/contact")}>Contact Us <span><PhoneOutlinedIcon /></span></Button>
           </Box>
         )}
       </Toolbar>

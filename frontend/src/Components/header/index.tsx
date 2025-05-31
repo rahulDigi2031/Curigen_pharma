@@ -19,7 +19,7 @@ export default function Header() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          height: { xs: '600px', sm: '700px', md: '800px' }, // Restored responsive height
+          height: { xs: '650px', sm: '700px', md: '800px' }, // Restored responsive height
           width: '100%',
           margin: '0 auto',
           position: 'relative' // Ensure positioning context for children
@@ -37,18 +37,47 @@ export default function Header() {
           className={`flex ${isMobile ? 'flex-col-reverse' : 'flex-row'} ${isMobile ? 'pt-4' : ''} items-center`}
         >
           <Box className={`w-full md:w-1/2 ${isMobile ? 'text-center' : 'text-left'}`}>
-            <Typography className="text-2xl md:text-4xl font-bold"> The Pursuit of a Healthier </Typography>
-            <Typography className={`text-2xl md:text-4xl font-bold text-black ${isMobile ? 'mb-4' : ''}`}>
-              {" "}
+            <Typography 
+              sx={{
+                fontWeight: "bolder",
+                color: "#023350",
+                fontSize: { xs: "32px", sm: "38px", md: "45px" },
+                lineHeight: { xs: "1.2", sm: "1.3", md: "0.50" },
+              }} 
+              className="text-2xl md:text-4xl"
+            > 
+              The Pursuit of a Healthier 
+            </Typography>
+            <Typography 
+              sx={{
+                fontWeight: "bolder",
+                color: "#023350",
+                fontSize: { xs: "32px", sm: "38px", md: "45px" },
+                lineHeight: { xs: "1.2", sm: "1.3", md: "1.4" },
+                mb: { xs: 2, sm: 3 }
+              }} 
+              className={`text-2xl md:text-4xl text-black`}
+            >
               <span style={{ color: "#009688" }}>Bharat</span> Fueled by Science
             </Typography>
-            <Typography className="text-base md:text-lg text-black">
+            <Typography 
+              variant="body1" 
+              sx={{
+                color: "#023350",
+                fontSize: { xs: "0.9rem", sm: "1rem", md: "1.1rem" },
+                lineHeight: { xs: 1.5, sm: 1.6, md: 1.7 },
+                maxWidth: { xs: "100%", md: "90%" },
+                wordWrap: "break-word",
+                overflowWrap: "break-word"
+              }}
+            >
               Lorem ipsum is simply dummy text of the printing and typesetting industry.
               Lorem Ipsum has been the industry's standard dummy text ever since the
               1500s, when an unknown printer took a galley of type and scrambled it to
               make a type specimen book.
             </Typography>
           </Box>
+          
           <Box className="w-full md:w-1/2 flex justify-center items-center">
             {/* Container for banner image and delivery icon */}
             <Box sx={{ position: 'relative' }}>

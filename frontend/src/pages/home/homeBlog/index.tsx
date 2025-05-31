@@ -187,6 +187,7 @@ export default function HomeBlog() {
               backgroundSize: "cover",
               backgroundPosition: "center",
               display: "flex",
+              justifyContent:"space-between",
               flexDirection: { xs: "column", md: "row" },
               alignItems: "center",
               padding: "30px",
