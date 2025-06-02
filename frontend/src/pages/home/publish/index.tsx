@@ -24,7 +24,7 @@ export default function PublishContent() {
         position: 'relative',
         minHeight: '838px',
         width: '100%',
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(\/backgroundDoctor.png)',
+        backgroundImage: 'url(/backgroundDoctor.png)',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -49,7 +49,7 @@ export default function PublishContent() {
       >
         {/* Left Content */}
         <Box sx={{ color: 'white', flex: { md: 0.6 }, maxWidth: { md: '50%' } }}>
-          <Typography variant="h3" sx={{ fontWeight: 'bold', mb: 3 }}>
+          <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 3 }}>
             Why US ?
           </Typography>
           <Typography variant="body1" sx={{ mb: 4 }}>
@@ -82,7 +82,8 @@ export default function PublishContent() {
                     fontSize: '0.75rem',
                   }}
                 >
-                  ✓
+                  {/* ✓ */}
+                  <Image src="/rightmark.png" alt="" width={20} height={20}></Image>
                 </Box>
                 <Typography variant="body2">{feature}</Typography>
               </Box>
@@ -135,7 +136,7 @@ export default function PublishContent() {
               bgcolor: 'white',
               borderRadius: '20px',
               p: { xs: 2, md: 3 },
-              boxShadow: 3,
+              boxShadow:"0px 5px 10px rgba(167, 167, 181, 0.89)",
               width: { xs: '90%', sm: '80%', md:"1100px" },
               height: { xs: 'auto', md: 140 },
               display: 'flex',
@@ -150,7 +151,7 @@ export default function PublishContent() {
                 <Typography variant="h4" sx={{ fontWeight: 'bold', color: '#002B5B' }}>
                   {item.value}
                 </Typography>
-                <Typography variant="body1">{item.label}</Typography>
+                <Typography variant="h6" sx={{fontWeight:"600", color:"gray" , fontFamily:"inter"}}>{item.label}</Typography>
               </Box>
             ))}
           </Box>
@@ -168,7 +169,7 @@ export default function PublishContent() {
           mt: { xs: 15, md: 10 },
           position:"relative",
           top:{xs:0 , md:"60px"},
-          left:{md:-490},
+          left:{md:-485},
           zIndex: 5,
           flexDirection: { xs: 'column', sm: 'row' },
           textAlign: { xs: 'center', sm: 'left' },
@@ -182,7 +183,7 @@ export default function PublishContent() {
                   fontSize: '2rem',
                   flexShrink: 0,
               }}>
-                  🏆
+                  <Image src="/warranty1.png" alt="24/7*" width={50} height={40}></Image>
               </Box>
               <Box>
                   <Typography variant="body1" sx={{ fontWeight: 'bold', color: 'inherit' }}>Eight</Typography>
@@ -198,7 +199,7 @@ export default function PublishContent() {
                   fontSize: '2rem',
                   flexShrink: 0,
               }}>
-                  🕒
+                  <Image src="/24.png" alt="24/7*" width={50} height={40}></Image>
               </Box>
               <Box>
                   <Typography variant="body1" sx={{ fontWeight: 'bold', color: 'inherit' }}>24</Typography>

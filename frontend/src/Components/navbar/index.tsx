@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Menu, MenuItem, Toolbar, Typography, useTheme, useMediaQuery, IconButton, Drawer, List, ListItem, ListItemText, Collapse, Divider } from "@mui/material";
+import { Box, Button, Menu, MenuItem, Toolbar, Typography, useTheme, useMediaQuery, IconButton, Drawer, List, ListItem, ListItemText, Collapse, Divider, Container } from "@mui/material";
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
@@ -100,24 +100,27 @@ export default function Navbar() {
   return (
     <Box sx={{ backgroundColor: "transparent", display: "flex", flexDirection: "column", alignItems: "center" }}>
       {/* Top Contact Info */}
-      <Box sx={{width:"77%" , margin:"auto"}}>
-          <Box className={`flex items-center gap-0.5 text-[#023350] text-sm ${isMobile ? 'hidden' : 'flex-row items-center'}`}>
-              <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
-                  <EmailIcon sx={{ fontSize: "16px", color: "#03A297" }} />
-                  <Typography variant="body2" sx={{fontWeight:"550"}}>info@example.com</Typography>
-              </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
-                  <PhoneIcon sx={{ fontSize: "16px", color: "#03A297" }} />
-                  <Typography variant="body2" sx={{fontWeight:"550"}}>+2 123 654 7898</Typography>
-              </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
-                  <HelpOutlineIcon sx={{ fontSize: "16px", color: "#03A297" }} />
-                  <Typography variant="body2" sx={{fontWeight:"550"}}>Need Help?</Typography>
+        <Container maxWidth="xl">
+            <Box sx={{width:"92%" , margin:"auto"}}>
+              <Box className={`flex items-center gap-4 text-[#023350] text-sm ${isMobile ? 'hidden' : 'flex-row items-center'}`}>
+                  <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+                      <EmailIcon sx={{ fontSize: "16px", color: "#03A297" }} />
+                      <Typography variant="body2" sx={{fontWeight:"540"}}>info@example.com</Typography>
+                  </Box>
+                  <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+                      <PhoneIcon sx={{ fontSize: "16px", color: "#03A297" }} />
+                      <Typography variant="body2" sx={{fontWeight:"540"}}>+2 123 654 7898</Typography>
+                  </Box>
+                  <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+                      <HelpOutlineIcon sx={{ fontSize: "16px", color: "#03A297" }} />
+                      <Typography variant="body2" sx={{fontWeight:"540"}}>Need Help?</Typography>
+                  </Box>
               </Box>
           </Box>
-      </Box>
+        </Container>
 
-      <Toolbar className="flex justify-between px-5 w-4/5 mx-auto items-center">
+        <Container maxWidth="xl">
+      <Toolbar className="flex justify-between px-5 w-4/4 mx-auto items-center" sx={{marginLeft:"25px"}}>
         {/* Logo and Brand */}
         <Box
           sx={{
@@ -156,6 +159,7 @@ export default function Navbar() {
                   key={item.name}
                   sx={{ 
                     cursor: "pointer",
+                    fontWeight: "bold",
                     "&:hover": {
                       color: "#03A297"
                     }
@@ -174,7 +178,7 @@ export default function Navbar() {
                   sx={{
                     cursor: "pointer",
                     color: router.pathname === item.path ? "#23A397" : "#023350",
-                    fontWeight: router.pathname === item.path ? "bold" : "normal",
+                    fontWeight: "bold",
                     "&:hover": {
                       color: "#03A297"
                     }
@@ -264,6 +268,7 @@ export default function Navbar() {
           </List>
         </Box>
       </Drawer>
+        </Container>
     </Box>
   );
 }

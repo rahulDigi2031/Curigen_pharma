@@ -5,6 +5,7 @@ import {
   CardContent,
   Button,
   Grid,
+  Container,
 } from "@mui/material";
 import Image from "next/image";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
@@ -159,10 +160,9 @@ export default function HomeBlog() {
           </Grid>
         </Box>
       </Box>
-
       <Box
         sx={{
-          width: "100%",
+          width: "1600px",
           height: { xs: "auto", md: "450px" },
           backgroundColor: "#ffff",
           display: "flex",
@@ -173,10 +173,10 @@ export default function HomeBlog() {
           marginBottom:"20px"
         }}
       >
-        <Box sx={{ height: { xs: "auto", md: "300px" }, width: "100%", margin: "auto" }}>
+        <Box sx={{ height: { xs: "auto", md: "300px" }, width: "80%", margin: "auto" }}>
           <Box
             sx={{
-              width: { xs: "90%", md: "75%" },
+              width: { xs: "90%", md: "70%" },
               margin: "auto",
               minHeight: "100%",
               position: "relative",

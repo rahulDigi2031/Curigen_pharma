@@ -7,7 +7,8 @@ export default function PromiseSection() {
   const isTablet = useMediaQuery(theme.breakpoints.down('lg'));
 
   return (
-    <Box sx={{ width: { xs: '95%', sm: '90%', md: '85%', lg: '80%' }, margin: 'auto' }}>
+    <Container maxWidth="xl">
+        <Box sx={{ width: { xs: '95%', sm: '90%', md: '85%', lg: '100%' }, margin: 'auto' }}>
       <Box
         sx={{
           width: '100%',
@@ -217,5 +218,6 @@ export default function PromiseSection() {
         </Box>
       </Box>
     </Box>
+    </Container>
   );
 }

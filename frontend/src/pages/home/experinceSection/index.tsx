@@ -15,17 +15,19 @@ export default function ExperinceSection() {
                 <Box sx={{ 
                     width: { xs: '100%', md: '50%' },
                     position: 'relative',
+                    padding:"25px"
                 }}>
                     <Image 
                         src="/group174.png" 
                         alt="Experience Section" 
-                        width={650} 
+                        width={500} 
                         height={400} 
                         style={{
-                            width: '100%',
-                            height: 'auto',
+                            width: '800px',
+                            height: '600px',
                             borderRadius: '20px',
                             overflow: 'hidden',
+                            objectFit:"contain"
                         }}
                     />
                 </Box>
