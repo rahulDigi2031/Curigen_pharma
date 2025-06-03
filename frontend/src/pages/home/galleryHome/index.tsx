@@ -11,26 +11,25 @@ export default function HomeGallerySection() {
         <Container maxWidth="xl">
           <Box
             sx={{
-              width: "100%",
+              width: "110%",
+              height:{ xs: "auto", md:"550px", lg:"600px" },
               margin: "auto",
               display: "flex",
-              flexDirection: { xs: "column", md: "row" },
+              flexDirection: { xs: "column", md: "row" , lg:"row"},
               gap: 2,
               alignItems: "center",
             }}
           >
             {/* Image Section */}
-            <Box sx={{ flex: 1 }}>
+            <Box sx={{ flex: 1 , width:{xs:"300px" , md:"550px"} }}>
               <Image
                 src="/01.png"
                 alt="Business Vision"
-                width={1000}
-                height={800}
+                width={550}
+                height={600}
                 style={{
-                  width: "700px",
-                  height: "500px",
-                  borderRadius: "12px",
                   objectFit: "cover",
+                  alignContent:"center",
                 }}
               />
             </Box>
@@ -51,13 +50,13 @@ export default function HomeGallerySection() {
                 {" "}
                 TO OUR CUSTOMERS AND PRODUCTS{" "}
               </Typography>
-              <Typography color="text.secondary" paragraph>
+              <Typography color="text.secondary" variant="body1">
                 Our organization has been committed to providing a wide range of
                 quality and affordable Healthcare solutions to a large number of
                 healthcare institutions and medical facilities. We intend to be
                 the ideal partner for
-              </Typography>
-              <Typography color="text.secondary" paragraph>
+              </Typography><br />
+              <Typography color="text.secondary"variant="body1">
                 Our organization has been committed to providing a wide range of
                 quality and affordable Healthcare solutions to a large number of
                 healthcare institutions and medical facilities. We intend to be
@@ -66,7 +65,7 @@ export default function HomeGallerySection() {
             </Box>
 
             {/* Right Button Stack */}
-            <Stack spacing={2} sx={{ flex: 1 }}>
+            <Stack spacing={5} sx={{ flex: 1 }}>
               {[
                 "Mission",
                 "Vision",
@@ -77,20 +76,24 @@ export default function HomeGallerySection() {
                   key={index}
                   variant="outlined"
                   sx={{
-                    border: "none",
-                    backgroundColor: "#D4D4D4",
+                    height:"60px",
+                    border: "1px solid rgba(114, 121, 129, 0.24)",
+                    width:"270px",
+                    backgroundColor: "#F5F5F5",
                     borderRadius: 2,
-                    textTransform: "none",
                     fontWeight: 500,
-                    padding: "14px 18px",
+                    fontSize:"17px",
+                    textTransform:"none",
+                    // padding: "14px 18px",
                     color: "black",
                     ":hover": {
-                      border: "3px dashed white",
-                      backgroundColor: "#22A396",
-                      color: "white",
-                      fontSize: "17px",
-                      padding: "14px 20px",
-                    },
+                    backgroundColor: "#22A396",
+                    color: "white",
+                    transform: "scale(1.08)", // Apply scale on hover
+                    transition: "transform 0.2s ease-in-out, background-color 0.2s, color 0.2s",
+                    border:"3.50px dashed white",
+                    padding:"15px"
+                    }
                   }}
                 >
                   {" "}
@@ -105,15 +108,15 @@ export default function HomeGallerySection() {
       <Container maxWidth="xl">
         <Box sx={{ textAlign: "center", py: 6 }}>
           <Typography
-            variant="h5"
-            sx={{ fontWeight: "bold", color: "#23A397", mb: 4 }}
+            variant="h6"
+            sx={{ fontWeight: "bold", color: "#23A397", }}
           >
             {" "}
             OUR GALLERY{" "}
           </Typography>
-          <Typography variant="h5" sx={{ mb: 4 }}>
+          <Typography variant="h5" sx={{ mb: 4 , color:"#023350" ,fontWeight:"800"}}>
             {" "}
-            Let's Check Our Photo Gallery{" "}
+            Let's Check Our Photo <span style={{color:"#23A397" , fontWeight:"800"}}>Gallery</span>{" "}
           </Typography>
 
           <Box sx={{ width: { xs: "95%", md: "100%" }, margin: "15px auto" }}>

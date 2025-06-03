@@ -24,7 +24,7 @@ const ItemCategoryGrid = () => {
         marginBottom: { xs: "-65px", md: "0px" }
       }}>
         <Container maxWidth="xl">
-          <Box sx={{width:"95%" ,  margin:"auto"}}>
+          <Box sx={{width:"90%" ,  margin:"auto"}}>
             <Box
               sx={{
                 display: "grid",
@@ -33,11 +33,11 @@ const ItemCategoryGrid = () => {
                   sm: "repeat(3, 1fr)",
                   md: "repeat(6, 1fr)",
                 },
-                gap: { xs: "15px", sm: "20px", md: "45px" },
+                gap: { xs: "15px", sm: "20px", md: "35px" },
                 alignContent: "center",
                 alignItems: "center",
                 margin: "auto",
-                 paddingTop: { xs: "20px", sm: "35px", md: "60px" },
+                paddingTop: { xs: "20px", sm: "35px", md: "60px" },
               }}
             >
               {itemCategory.map((item, index) => (
@@ -48,6 +48,7 @@ const ItemCategoryGrid = () => {
                   sx={{
                     borderRadius: "20px",
                     height: { xs: "220px", sm: "250px", md: "280px" },
+                    width: { xs: "150px", sm: "180px", md: "195px"},
                     "&:hover": {
                       backgroundColor: "#044678",
                       color: "white",
@@ -90,7 +91,7 @@ const ItemCategoryGrid = () => {
                         alt={item.label}
                         width={450}
                         height={450}
-                        className="image w-[80%] h-auto"
+                        className="image w-[100%] h-auto"
                       />
                     </Box>
 

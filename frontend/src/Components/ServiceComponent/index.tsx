@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const services = [
   { icon: "/warranty1.png", title: "Impeccable Quality" },
-  { icon: "/warranty1.png", title: "Affordable Medicines" },
-  { icon: "/warranty1.png", title: "Research and Development" },
-  { icon: "/warranty1.png", title: "Business Responsibility" },
+  { icon: "/price.png", title: "Affordable Medicines" },
+  { icon: "/research.png", title: "Research and Development" },
+  { icon: "/analysis.png", title: "Business Responsibility" },
 ];
 
 export default function ServiceComponent() {
@@ -100,8 +100,8 @@ export default function ServiceComponent() {
               <Box
                 className="icon-bg"
                 sx={{
-                  width: "150px",
-                  height: "90px",
+                  width: "130px",
+                  height: "80px",
                   backgroundColor: "#03A297", // default color
                   borderRadius: "60px 60px 60px 0px",
                   display: "flex",
@@ -114,8 +114,8 @@ export default function ServiceComponent() {
                 <Image
                   src={service.icon}
                   alt={service.title}
-                  width={65}
-                  height={60}
+                  width={50}
+                  height={50}
                   style={{ objectFit: "cover" }}
                 />
               </Box>

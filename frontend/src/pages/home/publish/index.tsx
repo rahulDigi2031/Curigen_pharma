@@ -52,7 +52,7 @@ export default function PublishContent() {
           <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 3 }}>
             Why US ?
           </Typography>
-          <Typography variant="body1" sx={{ mb: 4 }}>
+          <Typography variant="body1" sx={{ mb: 4 , fontFamily:"inter" }}>
             Curigen Pharmaceutical has established itself as a renowned name
             in the pharmaceutical industry, recognized for its unwavering
             dedication to delivering high-quality and effective pharmaceutical
@@ -67,13 +67,13 @@ export default function PublishContent() {
             }}
           >
             {features.map((feature, index) => (
-              <Box key={index} sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <Box key={index} sx={{ display: 'flex', alignItems: 'center', gap:3 }}>
                 <Box
                   sx={{
                     width: 20,
-                    height: 20,
+                    height: 45,
                     color: 'white',
-                    bgcolor: '#076776',
+                    // bgcolor: '#076776',
                     borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
@@ -83,9 +83,9 @@ export default function PublishContent() {
                   }}
                 >
                   {/* ✓ */}
-                  <Image src="/rightmark.png" alt="" width={20} height={20}></Image>
+                  <Image src="/rightmark.png" alt="" width={400} height={45}></Image>
                 </Box>
-                <Typography variant="body2">{feature}</Typography>
+                <Typography variant="body1" sx={{fontSize:"19px"}}>{feature}</Typography>
               </Box>
             ))}
           </Box>

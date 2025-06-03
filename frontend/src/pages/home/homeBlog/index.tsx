@@ -160,9 +160,11 @@ export default function HomeBlog() {
           </Grid>
         </Box>
       </Box>
-      <Box
+
+      <Container maxWidth="xl">
+             <Box
         sx={{
-          width: "1600px",
+          width: "30%",
           height: { xs: "auto", md: "450px" },
           backgroundColor: "#ffff",
           display: "flex",
@@ -176,7 +178,7 @@ export default function HomeBlog() {
         <Box sx={{ height: { xs: "auto", md: "300px" }, width: "80%", margin: "auto" }}>
           <Box
             sx={{
-              width: { xs: "90%", md: "70%" },
+              width: { xs: "310px", md: "1400px" },
               margin: "auto",
               minHeight: "100%",
               position: "relative",
@@ -226,6 +228,7 @@ export default function HomeBlog() {
           </Box>
         </Box>
       </Box>
+      </Container>
     </Box>
   );
 }
