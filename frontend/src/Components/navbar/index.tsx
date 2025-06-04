@@ -43,11 +43,11 @@ export default function Navbar() {
 
   const navigationItems = [
     { name: "Home", path: "/home" },
-    { name: "Global Presence", path: "/global-presence" },
+    { name: "Global Presence", path: "/globalPresence" },
     { name: "Products", isMenu: true },
     { name: "Services", isMenu: true },
     { name: "Gallery", path: "/gallery" },
-    { name: "About Us", path: "/about-us" },
+    { name: "About Us", path: "/aboutUs" },
     { name: "Blog", path: "/blog" },
   ];
 
@@ -65,11 +65,11 @@ export default function Navbar() {
   const serviceMenuItems = [
     {
       name: "Contract Manufacturing",
-      path: "/services/contract-manufacturing",
+      path: "/services/ContractManufacturing",
     },
-    { name: "Institutional Tenders", path: "/services/institutional-tenders" },
-    { name: "OTC Products", path: "/services/otc-products" },
-    { name: "Generic Medicines", path: "/services/generic-medicines" },
+    { name: "Institutional Tenders", path: "/services/InstitutionalTenders" },
+    { name: "OTC Products", path: "/services/otcProducts" },
+    { name: "Generic Medicines", path: "/services/genericMedicines" },
     { name: "QC-QA", path: "/services/qc-qa" },
   ];
 

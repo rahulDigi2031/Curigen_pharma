@@ -1,7 +1,7 @@
 import BackgroundImage from "@/common_components/backgroundComman";
 import Footer from "@/Components/footer";
 import Navbar from "@/Components/navbar";
-import { Box, Grid, List, ListItem, ListItemText, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
+import { Box, Container, Grid, List, ListItem, ListItemText, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
 
 
 export default function ContractManufacturing(){
@@ -37,8 +37,9 @@ export default function ContractManufacturing(){
             <Box>
                 <BackgroundImage imageUrl="/ServicesBG.png" css={{ height: "400px", width: "100%", objectFit: "cover" }}>
                     <Navbar />
+                    <Container maxWidth="xl">
                     <Box sx={{
-                        width: { xs: "95%", sm: "90%", md: "80%" },
+                        width: { xs: "95%", sm: "90%", md: "95%" },
                         margin: "auto",
                         padding: { xs: "10px", sm: "20px" }
                     }}>
@@ -46,16 +47,18 @@ export default function ContractManufacturing(){
                             Services
                         </Typography>
                         <Typography variant="h5" sx={{ color: "#023350", fontSize: { xs: "1rem", sm: "1.25rem" } }}>
-                            Home &gt;&gt; Services &gt;&gt;Generic medicines
+                            Home &gt;&gt; Services &gt;&gt;ContractManufacturing
                         </Typography>
                     </Box>
+                    </Container>
                 </BackgroundImage>
             </Box>
             </header>
 
             <main>
-                <Box sx={{width:"80%" , margin:"3% auto", padding:"15px", marginBottom:"12%"}}>
-                    <Typography variant="h4" sx={{fontWeight:"700", mb:3,color:"#023350"}}>Contract <span style={{color:"#03A297"}}>Manufacturing</span></Typography>
+                <Container maxWidth="xl">
+                    <Box sx={{p:"50px"}}>
+                    <Typography variant="h4" sx={{fontWeight:"700",color:"#023350",mb:2}}>Contract <span style={{color:"#03A297"}}>Manufacturing</span></Typography>
                     <Typography variant="body1" sx={{mb:3}}>Curigen Pharma, a Pharmaceutical Contract Manufacturing Company provides WHO GMP quality for all its Formulations.Wellona Pharma has been a reliable and trusted partner of the Healthcare Industries with a history of proven Quality Products and Services. We currently manufacture products on contract basis at our facility for various leading pharmaceutical companies both for the Domestic as well as Export markets. Backed by a team of highly qualified and experienced professionals, we are capable of customizing the full range of Pharma Formulations as per the customer needs.</Typography>
 
                     <Box>
@@ -76,7 +79,7 @@ export default function ContractManufacturing(){
                     </Box>
 
                     <Box>
-                        <Typography variant="h5" sx={{mb:4}}>Production Capacity:</Typography>
+                        <Typography variant="h5" sx={{mb:4 , fontWeight:"500"}}>Production Capacity:</Typography>
                         {/* table here */}
                         <Grid container spacing={4}>
                         <Grid item xs={12} md={6}>
@@ -122,8 +125,9 @@ export default function ContractManufacturing(){
                         </Grid>
                         </Grid>
                     </Box>
+                    </Box>
+                 </Container>
 
-                </Box>
             </main>
 
             <footer>

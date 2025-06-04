@@ -1,4 +1,4 @@
-import { Box, Typography, useMediaQuery } from "@mui/material";
+import { Box, Container, Typography, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 
 const sectionData = [
@@ -87,7 +87,8 @@ export default function GridImageSection() {
     };
 
     return (
-        <Box sx={{ width: isMobile ? "95%" : isTablet ? "90%" : "80%", margin: "auto" }}>
+       <Container maxWidth="xl">
+             <Box sx={{ width: isMobile ? "95%" : isTablet ? "90%" : "80%", lg:"100%", margin: "auto" }}>
             {sectionData.map((section, index) => (
                 <Box key={index} sx={sectionStyle}>
                     {section.imageFirst ? (
@@ -219,5 +220,6 @@ export default function GridImageSection() {
                 </Box>
             </Box>
         </Box>
+       </Container>
     );
 }

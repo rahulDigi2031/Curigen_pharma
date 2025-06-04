@@ -8,13 +8,7 @@ import {
 import Image from "next/image";
 import { styled } from "@mui/material/styles";
 
-const StyledImage = styled(Image)({
-  objectFit: "contain",
-  transition: "transform 0.5s ease",
-  "&:hover": {
-    transform: "scale(1.02)",
-  },
-});
+
 
 export default function GlobalExperince() {
   const theme = useTheme();
@@ -47,7 +41,7 @@ export default function GlobalExperince() {
           sx={{
             display: "flex",
             flexDirection: { xs: "column", lg: "row" },
-            gap: { xs: 4, md: 6 },
+            gap: { xs: 4, md:0 },
             alignItems: "center",
           }}
         >
@@ -58,26 +52,7 @@ export default function GlobalExperince() {
               position: "relative",
             }}
           >
-            <Box
-              sx={{
-                position: "relative",
-                height: { xs: 300, md: 400, lg: 600 },
-                borderRadius: "20px",
-                overflow: "hidden",
-                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.1)",
-              }}
-            >
-              <StyledImage
-                src="/leftbaner.png"
-                alt="banner"
-                fill
-                priority
-                style={{
-                  objectFit: "cover",
-                  transition: "transform 0.5s ease",
-                }}
-              />
-            </Box>
+            <Image src="/leftbaner.png" alt="" width={600} height={200}></Image>
           </Box>
 
           {/* Content Section */}
