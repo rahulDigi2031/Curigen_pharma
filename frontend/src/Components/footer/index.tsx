@@ -362,30 +362,30 @@ export default function Footer() {
               paddingTop: isMobile ? "10px" : "0px",
             }}
           >
-            <Box sx={{display:{xs:"col" , md:"row" , lg:"row" , xl:"row"} , gap:{lg:"15px"}}}>
+            <Box sx={{display:{xs:"block" , md:"flex" , lg:"flex" , xl:"flex"} , gap:{lg:"15px"}}}>
               <Box className="w-full max-w-[440px]">
                 <Typography>EMAIL ADDRESS</Typography>
                 <Input
                   type="text"
-                  placeholder="Enter your Email Address"
+                  placeholder="Enter email"
                   required
                   css={{
                     backgroundColor: "white",
                     borderRadius: "10px",
-                    width: "250px",
+                    width: "180px",
                   }}
                 />
               </Box>
               <Box className="w-full max-w-[440px]">
                 <Typography>MOBILE</Typography>
                 <Input
-                  type="number"
+                  type="text"
                   placeholder="Number"
                   required
                   css={{
                     backgroundColor: "white",
                     borderRadius: "10px",
-                    width: "250px",
+                    width: "180px",
                     mb:{xs:3 , md:0}
                   }}
                 />
@@ -397,8 +397,9 @@ export default function Footer() {
               sx={{
                 borderRadius: "10px",
                 border: "1px solid white",
+                color: "white",
                 mt: isMobile ? 0 : 2,
-                width:"320px"
+                width:{xs:"200px" , md:"373px" , lg:"373px" , xl:"373px"}
               }}
             >
               Contact Us

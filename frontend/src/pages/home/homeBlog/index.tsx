@@ -98,8 +98,7 @@ export default function HomeBlog() {
                         alignItems: "center",
                         fontSize: 14,
                         padding: "10px 15px",
-                      }}
-                    >
+                      }}>
                       <CalendarMonthIcon sx={{ fontSize: 16 }} />
                       Aug 18, 2024
                     </Box>
@@ -162,19 +161,13 @@ export default function HomeBlog() {
       </Box>
 
       <Container maxWidth="xl">
-             <Box
-        sx={{
-          width: "30%",
-          height: { xs: "auto", md: "450px" },
-          backgroundColor: "#ffff",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          py: { xs: 4, md: 0 },
-          marginTop:"2px",
-          marginBottom:"20px"
-        }}
-      >
+             <Box sx={{width: "30%", height: { xs: "auto", md: "450px" }, backgroundColor: "#ffff", display: "flex", justifyContent: "center",
+              alignItems: "center",
+              py: { xs: 4, md: 0 },
+              marginTop:"2px",
+              marginBottom:"20px"
+            }}
+          >
         <Box sx={{ height: { xs: "auto", md: "300px" }, width: "80%", margin: "auto" }}>
           <Box
             sx={{

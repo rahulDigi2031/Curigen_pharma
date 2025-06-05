@@ -33,7 +33,7 @@ import Image from "next/image";
                             gap: "25px"
                         }}>
                             <Box sx={{
-                                backgroundColor: "#ffff",
+                                backgroundColor: "whitesmoke",
                                 height: {xs: "200px", sm: "250px"},
                                 width: "100%",
                                 borderRadius: "25px",
@@ -42,8 +42,6 @@ import Image from "next/image";
                                 flexDirection:"column",
                                 justifyContent:"center",
                                 ":hover":{
-                                border:"2px dashed blue",
-                                transition:"ease-in 25ms"
                                 }
                             }}>
                                 <Box sx={{backgroundColor:"#03A297" ,  height:"70px" , width:"70px", borderRadius:"50%" , mb:2, display:"flex", justifyContent:"center", alignItems:"center"}}>
@@ -53,7 +51,7 @@ import Image from "next/image";
                                 <Typography variant="body2" sx={{color:"#222831" ,  padding:"4px  14px"}}>25/B Milford Elm Drive Road,<br />New York, USA</Typography>
                             </Box>
                             <Box sx={{
-                                backgroundColor: "#ffff",
+                                backgroundColor: "whitesmoke",
                                 height: {xs: "200px", sm: "250px"},
                                 width: "100%",
                                 borderRadius: "25px",
@@ -62,8 +60,8 @@ import Image from "next/image";
                                 flexDirection:"column",
                                 justifyContent:"center",
                                  ":hover":{
-                                border:"2px dashed blue",
-                                transition:"ease-in 25ms"
+                                // border:"2px dashed blue",
+                                // transition:"ease-in 25ms"
                                 }
                             }}>
                                 <Box sx={{backgroundColor:"#03A297",height:"70px" , width:"70px", borderRadius:"50%", mb:2, display:"flex",justifyContent:"center", alignItems:"center"}}>
@@ -74,7 +72,7 @@ import Image from "next/image";
                                 <Typography variant="body2" sx={{color:"#222831" ,  padding:"4px  14px"}}>+2 123 4565 788 <br /> +2 123 4565 789</Typography>
                             </Box>
                             <Box sx={{
-                                backgroundColor: "#ffff",
+                                backgroundColor: "whitesmoke",
                                 height: {xs: "200px", sm: "250px"},
                                 width: "100%",
                                 borderRadius: "25px",
@@ -95,7 +93,7 @@ import Image from "next/image";
                                 <Typography variant="body2" sx={{color:"#222831" ,  padding:"4px  14px"}}>info@example.com <br /> support@example.com</Typography>
                             </Box>
                             <Box sx={{
-                                backgroundColor: "#ffff",
+                                backgroundColor: "whitesmoke",
                                 height: {xs: "200px", sm: "250px"},
                                 width: "100%",
                                 borderRadius: "25px",
@@ -104,8 +102,8 @@ import Image from "next/image";
                                 flexDirection:"column",
                                 justifyContent:"center",
                                  ":hover":{
-                                border:"2px dashed blue",
-                                transition:"ease-in 25ms"
+                                // border:"2px dashed blue",
+                                // transition:"ease-in 25ms"
                                 }
                             }}>
                                 <Box sx={{backgroundColor:"#03A297" ,  padding:"25px", borderRadius:"50%" , mb:2, display:"flex" , justifyContent:"center" , alignItems:"center"}}>
@@ -122,7 +120,7 @@ import Image from "next/image";
                             display: "flex",
                             flexDirection: "column",
                             gap: "20px",
-                            backgroundColor: "#ffff",
+                            backgroundColor: "whitesmoke",
                             height: {xs: "auto", md: "530px"},
                             padding: {xs: "15px", md: "25px"},
                             borderRadius: "30px"

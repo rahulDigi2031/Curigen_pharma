@@ -12,22 +12,18 @@ export default function ProductAll(){
     const isTablet = useMediaQuery(theme.breakpoints.down('md'));
 
     const Images = [
-        { image: "/productGallery1.png", title: "Surgical Face Mask" },
-        { image: "/productGallery1.png", title: "Surgical Face Mask" },
-        { image: "/productGallery2.png", title: "Surgical Face Mask" },
-        { image: "/productGallery3.png", title: "Surgical Face Mask" },
-        { image: "/productGallery1.png", title: "Surgical Face Mask" },
-        { image: "/productGallery1.png", title: "Surgical Face Mask" },
-        { image: "/productGallery2.png", title: "Surgical Face Mask" },
-        { image: "/productGallery3.png", title: "Surgical Face Mask" },
-        { image: "/productGallery1.png", title: "Surgical Face Mask" },
-        { image: "/productGallery1.png", title: "Surgical Face Mask" },
-        { image: "/productGallery2.png", title: "Surgical Face Mask" },
-        { image: "/productGallery3.png", title: "Surgical Face Mask" },
-        { image: "/productGallery1.png", title: "Surgical Face Mask" },
-        { image: "/productGallery1.png", title: "Surgical Face Mask" },
-        { image: "/productGallery2.png", title: "Surgical Face Mask" },
-        { image: "/productGallery3.png", title: "Surgical Face Mask" }
+        { image: "/tab2.png", title: "Curidol-SP" },
+        { image: "/cap-itra.png", title: "Itracure-200" },
+        { image: "/tab4.png", title: "Azigen - 500" },
+        // { image: "/tabletProduct.png", title: "Curical - 500" },
+        // { image: "/tab2.png", title: "Curidol-SP" },
+        // { image: "/tab3.png", title: "Flucoris" },
+        // { image: "/tab4.png", title: "Azigen - 500" },
+        // { image: "/tabletProduct.png", title: "Curical - 500" },
+        // { image: "/tab2.png", title: "Curidol-SP" },
+        // { image: "/tab3.png", title: "Flucoris" },
+        // { image: "/tab4.png", title: "Azigen - 500" },
+        // { image: "/tabletProduct.png", title: "Curical - 500" },
     ];
 
     const ProductCategory = [
@@ -43,21 +39,23 @@ export default function ProductAll(){
     return(
         <Box className="min-h-screen">
             {/* Header Section with Background Image */}
-            <BackgroundImage
-                imageUrl="/HeaderBG.png"
-                height="400px"
-                css={{marginBottom:"35px"}}
-            >
+            <header>
+                <BackgroundImage imageUrl="/HeaderBG.png" height="400px" css={{marginBottom:"35px"}}>
                 <Navbar/>
-                <Box sx={{width:"80%" , margin:"auto" , padding:"15px" ,borderRadius:"10px"}}>
-                    <Typography variant="h3" className="text-2xl md:text-4xl font-semibold text-[#023350] mb-2">products</Typography>
-                    <Typography variant="h5" className="text-lg md:text-xl text-[#023350]">Home &gt;&gt; All</Typography>
-                </Box>
+                <Container maxWidth="xl">
+                    <Box sx={{width:"95%" , margin:"auto" , padding:"15px" ,borderRadius:"10px"}}>
+                        <Typography variant="h3" className="text-2xl md:text-4xl text-[#023350] mb-2" sx={{fontWeight:"700"}}>Products</Typography>
+                        <Typography variant="h5" className="text-lg md:text-xl text-[#023350]">Home &gt;&gt; Tablet</Typography>
+                    </Box>
+                </Container>
             </BackgroundImage>
+            </header>
 
             {/* Sort/Filter Bar */}
-            <Box sx={{width:"80%" ,  margin:"auto" , marginBottom:"60px"}}>
-            <Box sx={{width:"95%" ,  margin:"auto" , marginBottom:"50px", backgroundColor:"#FFFFFF" , padding:"20px"}}>
+            <main>
+                <Box sx={{width:"80%" ,  margin:"auto" , marginBottom:"60px"}}>
+                <Container maxWidth="xl">
+                    <Box sx={{width:"95%" ,  margin:"auto" , marginBottom:"50px", backgroundColor:"#FAFAFA" , padding:"20px"}}>
                 <Box className="w-full md:w-auto flex flex-col md:flex-row items-center justify-between gap-4">
                     <Box className="flex items-center gap-2">
                         <Typography variant="body1">Sort -By:</Typography>
@@ -79,6 +77,7 @@ export default function ProductAll(){
                     </Box>
                 </Box>
             </Box>
+                </Container>
 
             {/* Product Gallery Grid */}
             <Container maxWidth="xl">
@@ -93,59 +92,68 @@ export default function ProductAll(){
                         },
                         gap: 4,
                         justifyContent: "center",
-                        marginBottom: "60px",
-                        
+                        marginBottom:{xs:"50px", sm:"190px", md:"130px" , lg:"130px"},
                     }}
                 >
                     {Images.map((product, index) => (
                         <Paper
-                            key={index}
-                            elevation={2}
-                            sx={{
-                                padding: "20px",
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'center',
-                                borderRadius: 4,
-                                ":hover":{
-                                  padding:"16px",
-                                  border:"2px dashed blue"
-                                  }
-                            }}
-                        >
-                            <Box sx={{
-                                width: '100%',
-                                height: "390px",
-                                position: 'relative',
-                                ":hover":{border:"3px dashedrgb(34, 26, 92)",cursor:"pointer"},
-                                mb: 5
-                            }}>
-                                <Image
-                                    src={product.image}
-                                    alt={product.title}
-                                    fill
-                                    style={{
-                                        objectFit: 'cover',
-                                        borderRadius: 8,
-                                    }}
-                                />
-                            </Box>
-                            <Typography
-                                variant="body1"
-                                sx={{
-                                    fontWeight: 600,
-                                    color: '#023350'
-                                }}
-                            >
-                                {product.title}
-                            </Typography>
-                        </Paper>
+  key={index}
+  elevation={2}
+  sx={{
+    bgcolor: "#fafafa",
+    padding: "20px",
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    borderRadius: 4,
+    maxWidth: "100%",
+    ":hover": {
+      padding: "16px",
+      transform: "scale(1.05)", // ✅ Correct syntax
+    },
+  }}
+>
+  <Box
+    sx={{
+      width: '90%',
+      height: { xs: "200px", sm: "250px", md: "280px", lg: "300px" }, // ✅ Responsive
+      position: 'relative',
+      mb: 5,
+      ":hover": {
+        border: "3px dashed rgb(34, 26, 92)",
+        cursor: "pointer",
+        transform: "scale(1.05)", // ✅ Correct syntax
+      },
+    }}
+  >
+    <Image
+      src={product.image}
+      alt={product.title}
+      fill
+      style={{
+        objectFit: 'contain',
+        borderRadius: 8,
+        backgroundColor: "#fafafa",
+      }}
+    />
+  </Box>
+  <Typography
+    variant="body1"
+    sx={{ fontWeight: 600, color: '#023350' }}
+  >
+    {product.title}
+  </Typography>
+</Paper>
+
                     ))}
                 </Box>
             </Container>
-        </Box>
+            </Box>
+            </main>
 
-            <Footer/>
+            <footer>
+                <Footer/>
+            </footer>
         </Box>
     );
 }

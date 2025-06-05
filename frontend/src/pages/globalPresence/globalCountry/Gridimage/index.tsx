@@ -88,7 +88,7 @@ export default function GridImageSection() {
 
     return (
        <Container maxWidth="xl">
-             <Box sx={{ width: isMobile ? "95%" : isTablet ? "90%" : "80%", lg:"100%", margin: "auto" }}>
+             <Box sx={{ width: isMobile ? "95%" : isTablet ? "90%" : "1200px", lg:"1200px", margin: "auto" }}>
             {sectionData.map((section, index) => (
                 <Box key={index} sx={sectionStyle}>
                     {section.imageFirst ? (
@@ -219,7 +219,7 @@ export default function GridImageSection() {
                     ))}
                 </Box>
             </Box>
-        </Box>
+            </Box>
        </Container>
     );
 }

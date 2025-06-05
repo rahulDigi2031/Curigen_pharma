@@ -87,9 +87,13 @@ export default function ServiceComponent() {
                 width: 320,
                 borderRadius: "50px 50px 50px 0px",
                 textAlign: "left",
-                transition: "all 0.3s ease-in-out",
                 "&:hover": {
                   border: "2px dashed #002B5B",
+                  // transition: "all 0.3s ease-in-out",
+                  // border: "2px dashed #002B5B",
+	                // boxShadow: "inset 0 0 0 5px dashed  #002B5B"
+                  // border: "3px dashed #002B5B",
+                  // boxShadow : "inset 0 0 0 2px #002B5B"
                 },
                 "&:hover .icon-bg": {
                   backgroundColor: "#002B5B", // Change to blue on hover
