@@ -23,6 +23,15 @@ export default function Footer() {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const isTablet = useMediaQuery(theme.breakpoints.down("md"));
 
+  const navLinks = [
+  { text: "Global presence", path: "/globalPresence" },
+  { text: "Products", path: "/products" },
+  { text: "Services", path: "/services/ContractManufacturing" },
+  { text: "Gallery", path: "/gallery" },
+  { text: "About Us", path: "/aboutUs" },
+  { text: "Blog", path: "/blog" },
+];
+
   return (
     <Box>
       <Box
@@ -236,11 +245,7 @@ export default function Footer() {
           </Container>
 
           <Container maxWidth="xl">
-            <Box
-        sx={{
-          height: { xs: "auto", md: "350px" },
-          width: { xs: "90%", md: "100%" },
-          margin: "auto",
+          <Box sx={{ height: { xs: "auto", md: "350px" }, margin: "auto",
           padding: { xs: "8px", md: "0px 16px" },
           marginTop: isMobile ? "-70px" : "20px",
           display: "flex",
@@ -262,7 +267,7 @@ export default function Footer() {
               height={isMobile ? 30 : 40}
               style={{ marginBottom: isMobile ? "10px" : "20px" }}
             />
-            <Typography variant="body1" sx={{ mb: 2, width: "335px", textAlign: isMobile ? 'center' : 'left' }}>
+            <Typography variant="body1" sx={{ mb: 2, width: {md:"335px" , xs:"320px"}, textAlign: isMobile ? 'center' : 'left' }}>
               Macat Megatrons is a thriving community where innovators,
               professionals, and enthusiasts come together to share knowledge,
               collaborate, and grow.
@@ -286,38 +291,25 @@ export default function Footer() {
 
           {/* Column 2: Company Links and Certifications */}
           <Grid item xs={12} md={4}>
-            <Box
-              sx={{
-                display: "flex",
-                gap: isMobile ? "15px" : "30px",
-                flexDirection: isMobile ? "column" : "row",
+            <Box sx={{ display: "flex", gap: isMobile ? "15px" : "30px", flexDirection: isMobile ? "column" : "row",
                 textAlign: isMobile ? "center" : "left",
-                alignItems: isMobile ? "center" : "flex-start",
-              }}
-            >
+                alignItems: isMobile ? "center" : "flex-start", }}>
               <Box>
                 <Typography
                   variant="h6"
                   sx={{
                     marginBottom: isMobile ? "15px" : "25px",
-                    fontSize: isMobile ? "1rem" : "1.25rem",
-                  }}
-                >
+                    fontSize: isMobile ? "1rem" : "1.25rem", }}>
                   Company
                 </Typography>
-                {["Global presence", "Products", "Services", "Gallery", "About Us", "Blog"].map(
-                  (text, idx) => (
+                  {navLinks.map(({ text, path }, idx) => (
                     <Typography
                       key={idx}
                       variant="body2"
-                      onClick={() => text.toLowerCase().includes("product") ? Router.push("/products") :
-                        text.toLowerCase().includes("service") ? Router.push("/services") : null}
-                      sx={{ marginBottom: "15px", cursor: "pointer" }}
-                    >
-                      {text}
+                      onClick={() => Router.push(path)}
+                      sx={{ marginBottom: "15px", cursor: "pointer" }} >{text}
                     </Typography>
-                  )
-                )}
+                  ))}
               </Box>
 
               <Box sx={{ textAlign: isMobile ? "center" : "left" }}>
@@ -364,31 +356,33 @@ export default function Footer() {
           >
             <Box sx={{display:{xs:"block" , md:"flex" , lg:"flex" , xl:"flex"} , gap:{lg:"15px"}}}>
               <Box className="w-full max-w-[440px]">
-                <Typography>EMAIL ADDRESS</Typography>
+                <Typography></Typography>
                 <Input
+                 labelName={"EMAIL ADDRESS"}
                   type="text"
                   placeholder="Enter email"
                   required
                   css={{
-                    backgroundColor: "white",
-                    borderRadius: "10px",
-                    width: "180px",
+                    backgroundColor:"white",
+                    borderRadius:"10px",
+                    width:{md:"180px"},
                   }}
-                />
+                ></Input>
               </Box>
               <Box className="w-full max-w-[440px]">
-                <Typography>MOBILE</Typography>
+                <Typography></Typography>
                 <Input
+                labelName={"MOBILE"}
                   type="text"
                   placeholder="Number"
                   required
                   css={{
                     backgroundColor: "white",
                     borderRadius: "10px",
-                    width: "180px",
+                    width:{md:"180px"},
                     mb:{xs:3 , md:0}
                   }}
-                />
+                ></Input>
               </Box>
             </Box>
             <Button
@@ -399,7 +393,7 @@ export default function Footer() {
                 border: "1px solid white",
                 color: "white",
                 mt: isMobile ? 0 : 2,
-                width:{xs:"200px" , md:"373px" , lg:"373px" , xl:"373px"}
+                width:{xs:"250px" , md:"373px" , lg:"373px" , xl:"373px"}
               }}
             >
               Contact Us

@@ -71,11 +71,11 @@ export default function HomeBlog() {
             {imageCard.map((el, index) => (
               <Grid item key={index} sx={{ xs: 12, sm: 6, lg: 4 }} className="flex justify-center">
                 <Card sx={{ 
-                  width: { xs: "100%", sm: "450px" }, 
+                  width: { xs: "100%", sm: "450px" , md:"460px" }, 
                   borderRadius: 3, 
                   boxShadow: 3 
                 }}>
-                  <Box sx={{ position: "relative", padding: { xs: "15px", md: "30px" } }}>
+                  <Box sx={{ position: "relative", padding: { xs: "10px", md: "30px" } }}>
                     <Image
                       src={el.image}
                       alt="blog"

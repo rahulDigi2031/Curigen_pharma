@@ -12,22 +12,16 @@ export default function ProductAll(){
     const isTablet = useMediaQuery(theme.breakpoints.down('md'));
 
     const Images = [
-        { image: "/productGallery1.png", title: "Surgical Face Mask" },
-        { image: "/productGallery1.png", title: "Surgical Face Mask" },
-        { image: "/productGallery2.png", title: "Surgical Face Mask" },
-        { image: "/productGallery3.png", title: "Surgical Face Mask" },
-        { image: "/productGallery1.png", title: "Surgical Face Mask" },
-        { image: "/productGallery1.png", title: "Surgical Face Mask" },
-        { image: "/productGallery2.png", title: "Surgical Face Mask" },
-        { image: "/productGallery3.png", title: "Surgical Face Mask" },
-        { image: "/productGallery1.png", title: "Surgical Face Mask" },
-        { image: "/productGallery1.png", title: "Surgical Face Mask" },
-        { image: "/productGallery2.png", title: "Surgical Face Mask" },
-        { image: "/productGallery3.png", title: "Surgical Face Mask" },
-        { image: "/productGallery1.png", title: "Surgical Face Mask" },
-        { image: "/productGallery1.png", title: "Surgical Face Mask" },
-        { image: "/productGallery2.png", title: "Surgical Face Mask" },
-        { image: "/productGallery3.png", title: "Surgical Face Mask" }
+        { image: "/prodinjection.png", title: "Stabixim"},
+
+        { image: "/prodinjection.png", title: "Stabixim"},
+        { image: "/prodinjection.png", title: "Stabixim"},
+        { image: "/prodinjection.png", title: "Stabixim"},
+        { image: "/prodinjection.png", title: "Stabixim"},
+        { image: "/prodinjection.png", title: "Stabixim"},
+        { image: "/prodinjection.png", title: "Stabixim"},
+        { image: "/prodinjection.png", title: "Stabixim"},
+        
     ];
 
     const ProductCategory = [
@@ -40,24 +34,29 @@ export default function ProductAll(){
         {title:"other"}
     ];
 
+
+
     return(
         <Box className="min-h-screen">
             {/* Header Section with Background Image */}
-            <BackgroundImage
-                imageUrl="/HeaderBG.png"
-                height="400px"
-                css={{marginBottom:"35px"}}
-            >
+            <header>
+                <BackgroundImage imageUrl="/HeaderBG.png" height="400px" css={{marginBottom:"35px"}}>
                 <Navbar/>
-                <Box sx={{width:"80%" , margin:"auto" , padding:"15px" ,borderRadius:"10px"}}>
-                    <Typography variant="h3" className="text-2xl md:text-4xl font-semibold text-[#023350] mb-2">products</Typography>
-                    <Typography variant="h5" className="text-lg md:text-xl text-[#023350]">Home &gt;&gt; All</Typography>
-                </Box>
+                    <Container maxWidth="xl">
+                        <Box sx={{width:"95%" , margin:"auto" , padding:"15px" ,borderRadius:"10px"}}>
+                        <Typography variant="h3" className="text-2xl md:text-4xl text-[#023350] mb-2" sx={{fontWeight:"700"}}>Products</Typography>
+                        <Typography variant="h5" className="text-lg md:text-xl text-[#023350] font-bold">Home &gt;&gt; Injection</Typography>
+                    </Box>
+                    </Container>
             </BackgroundImage>
+            </header>
 
+        
             {/* Sort/Filter Bar */}
-            <Box sx={{width:"80%" ,  margin:"auto" , marginBottom:"60px"}}>
-            <Box sx={{width:"95%" ,  margin:"auto" , marginBottom:"50px", backgroundColor:"#FFFFFF" , padding:"20px"}}>
+            <main>
+                <Box sx={{width:"80%" , margin:"auto" , marginBottom:"85px"}}>
+                <Container maxWidth="xl">
+                     <Box sx={{width:"100%" ,  margin:"auto" , marginBottom:"50px", backgroundColor:"#FAFAFA" , padding:"20px"}}>
                 <Box className="w-full md:w-auto flex flex-col md:flex-row items-center justify-between gap-4">
                     <Box className="flex items-center gap-2">
                         <Typography variant="body1">Sort -By:</Typography>
@@ -79,6 +78,7 @@ export default function ProductAll(){
                     </Box>
                 </Box>
             </Box>
+                </Container>
 
             {/* Product Gallery Grid */}
             <Container maxWidth="xl">
@@ -93,8 +93,8 @@ export default function ProductAll(){
                         },
                         gap: 4,
                         justifyContent: "center",
-                        marginBottom: "60px",
-                        
+                        marginBottom: {md:"130px" , xs:"-10px"},
+                    
                     }}
                 >
                     {Images.map((product, index) => (
@@ -106,18 +106,18 @@ export default function ProductAll(){
                                 display: 'flex',
                                 flexDirection: 'column',
                                 alignItems: 'center',
+                                backgroundColor:"#FAFAFA",
                                 borderRadius: 4,
                                 ":hover":{
-                                  padding:"16px",
-                                  border:"2px dashed blue"
-                                  }
-                            }}
-                        >
+                                  transition:" 0.5s ease-out",
+                                  transform: "scale (1.1)"
+                                  } }} >
                             <Box sx={{
-                                width: '100%',
+                                width: '80%',
                                 height: "390px",
                                 position: 'relative',
-                                ":hover":{border:"3px dashedrgb(34, 26, 92)",cursor:"pointer"},
+                                
+                                ":hover":{border:"3px dashedrgb(34, 26, 92)",cursor:"pointer" , transform:"scale (1.1)"},
                                 mb: 5
                             }}>
                                 <Image
@@ -125,8 +125,9 @@ export default function ProductAll(){
                                     alt={product.title}
                                     fill
                                     style={{
-                                        objectFit: 'cover',
+                                        objectFit: 'contain',
                                         borderRadius: 8,
+                                        background: "#FAFAFA"
                                     }}
                                 />
                             </Box>
@@ -143,9 +144,12 @@ export default function ProductAll(){
                     ))}
                 </Box>
             </Container>
-        </Box>
+            </Box>
+            </main>
 
-            <Footer/>
+            <footer>
+                <Footer/>
+            </footer>
         </Box>
     );
 }

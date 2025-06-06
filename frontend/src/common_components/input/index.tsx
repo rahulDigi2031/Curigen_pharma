@@ -26,7 +26,6 @@ const Input: React.FC<InputTypes> = ({
       >
         {required && (
           <Typography component="span" sx={{ color: "red", fontSize: "14px" }}>
-            *{" "}
           </Typography>
         )}
         {labelName}

@@ -47,7 +47,7 @@ export default function ProductAll(){
                     <Container maxWidth="xl">
                         <Box sx={{width:"95%" , margin:"auto" , padding:"15px" ,borderRadius:"10px"}}>
                         <Typography variant="h3" className="text-2xl md:text-4xl text-[#023350] mb-2" sx={{fontWeight:"700"}}>Products</Typography>
-                        <Typography variant="h5" className="text-lg md:text-xl text-[#023350]">Home &gt;&gt; All</Typography>
+                        <Typography variant="h5" className="text-lg md:text-xl text-[#023350] font-bold">Home &gt;&gt; All</Typography>
                     </Box>
                     </Container>
             </BackgroundImage>

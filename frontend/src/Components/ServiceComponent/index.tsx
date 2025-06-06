@@ -16,8 +16,7 @@ export default function ServiceComponent() {
         width: "100%",
         py: 8,
         px: 2,
-      }}
-    >
+      }} >
       <Container maxWidth="xl">
         {/* Header Section */}
         <Box
@@ -104,7 +103,7 @@ export default function ServiceComponent() {
               <Box
                 className="icon-bg"
                 sx={{
-                  width: "130px",
+                  width: "120px",
                   height: "80px",
                   backgroundColor: "#03A297", // default color
                   borderRadius: "60px 60px 60px 0px",
@@ -118,8 +117,8 @@ export default function ServiceComponent() {
                 <Image
                   src={service.icon}
                   alt={service.title}
-                  width={50}
-                  height={50}
+                  width={45}
+                  height={45}
                   style={{ objectFit: "cover" }}
                 />
               </Box>
@@ -133,17 +132,11 @@ export default function ServiceComponent() {
                   mt: { xs: 2, md: 0 },
                 }}
               >
-                <Typography
-                  variant="subtitle1"
-                  sx={{ fontWeight: 600, color: "#002B5B" }}
-                >
+                <Typography variant="subtitle1" sx={{ fontWeight: 600, color: "#002B5B" }}>
                   {service.title}
                 </Typography>
                 <Typography
-                  sx={{
-                    fontSize: "14px",
-                    color: "gray",
-                    fontFamily: "inter",
+                  sx={{fontSize: "14px", color: "gray", fontFamily: "inter",
                     mt: 1,
                   }}
                 >

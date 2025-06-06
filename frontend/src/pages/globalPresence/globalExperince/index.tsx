@@ -72,7 +72,7 @@ export default function GlobalExperince() {
                 lineHeight: 1.2,
               }}
             >
-              Global Experience
+              <span style={{color:"#03A297"}}>Global</span> Experience
             </Typography>
             <Typography
               variant="body1"
@@ -87,7 +87,7 @@ export default function GlobalExperince() {
               continents globally which include North America, CIS, Latin
               America, Africa and South-East Asia. With over 380 International
               Product Registrations (still expanding), we are emerging as a
-              major potential Indian Pharmaceuticals manufacturer. <br />
+              major potential Indian Pharmaceuticals manufacturer. <br /><br />
               Streamlining the export vision at Wellona Pharma, a dedicated
               Export regulatory department team has been set up for complying
               with international audits and providing complete export

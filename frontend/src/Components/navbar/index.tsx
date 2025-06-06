@@ -204,7 +204,7 @@ export default function Navbar() {
                     key={item.name}
                     sx={{
                       cursor: "pointer",
-                     color:router.pathname === item.path ? "#23A397" : "#023350",
+                      color:router.pathname === item.path ? "#23A397" : "#023350",
                       fontWeight: "500",
                       "&:hover": { color: "#03A297" },
                     }}
@@ -220,7 +220,7 @@ export default function Navbar() {
                     sx={{
                       cursor: "pointer",
                       color:
-                        router.pathname === item.path ? "#23A397" : "#023350",
+                        router.pathname === item.path ? "green" : "#023350",
                       fontWeight: "500",
                       "&:hover": { color: "#03A297" },
                     }}
@@ -236,11 +236,14 @@ export default function Navbar() {
                   color: "white",
                   borderRadius: 2,
                   padding: "10px 20px",
+                  display:"flex",
+                  gap:1,
+                  alignItems:"center",
                   ":hover": { backgroundColor: "#002B5B" },
                 }}
                 onClick={() => handleMenuItemClick("/contact")}
               >
-                Contact Us
+                Contact Us <Image src="/calling.png" alt="" width={18} height={20}></Image>
               </Button>
             </Box>
           )}

@@ -9,18 +9,24 @@ import Footer from "@/Components/footer";
 export default function GlobalPresence(){
     return(
         <Box>
-            {/* // Header section  */}
-            <HeaderSection/>
+            <header>
+                {/* // Header section  */}
+                <HeaderSection/>
+            </header>
+            
+            <main>
+                {/* // Body section */}
+                <GlobalExperince/>
 
-            {/* // Body section */}
-            <GlobalExperince/>
-
-            {/*COUNTRY SECTION */}
-            <GallerySection/>
+                {/*COUNTRY SECTION */}
+                <GallerySection/>
     
-            <GridImageSection/>
+                <GridImageSection/>
+            </main>
     
-            <Footer/>
+            <footer>
+                <Footer/>
+            </footer>
             
         </Box>
     )
