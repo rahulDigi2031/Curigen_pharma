@@ -104,12 +104,12 @@ export default function Header() {
                 <Image
                   src="/transport.png"
                   alt=""
-                  width={isMobile ? 150 : 330}
+                  width={isMobile ? 150 : 300}
                   height={isMobile ? 60 : 120}
                   style={{
                     position: "absolute",
-                    bottom: isMobile ? "5%" : "-2%", // Adjust positioning as needed
-                    left: isMobile ? "70%" : "54%", // Adjust positioning as needed
+                    bottom: isMobile ? "5%" : "-3%", // Adjust positioning as needed
+                    left: isMobile ? "70%" : "53%", // Adjust positioning as needed
                     transform: isMobile ? "translateX(-50%)" : "none", // Center horizontally on mobile
                   }}
                 />

@@ -220,12 +220,11 @@ export default function Navbar() {
                     sx={{
                       cursor: "pointer",
                       color:
-                        router.pathname === item.path ? "green" : "#023350",
-                      fontWeight: "500",
+                        router.pathname === item.path ? "#03A297" : "#023350",
+                      fontWeight: router.pathname === item.path ? "900" : "500",
                       "&:hover": { color: "#03A297" },
                     }}
-                    onClick={() => handleMenuItemClick(item.path)}
-                  >
+                    onClick={() => handleMenuItemClick(item.path)}>
                     {item.name}
                   </Typography>
                 )

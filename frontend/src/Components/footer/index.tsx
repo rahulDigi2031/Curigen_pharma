@@ -40,7 +40,7 @@ export default function Footer() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          height: { xs: "1500px", sm: "900px", md: "820px" },
+          height: { xs: "1500px", sm: "900px", md: "550px" },
           top: { xs: "100px", sm: "-70px", md: "38px" },
           width: "100%",
           position: "relative",
@@ -55,7 +55,7 @@ export default function Footer() {
             height: "100%",
             width: "100%",
             position: "absolute",
-            opacity: "0.85",
+            opacity: {xs:"0.84" , md:"0.88"},
             color: "white",
           }}
         >
@@ -267,7 +267,7 @@ export default function Footer() {
               height={isMobile ? 30 : 40}
               style={{ marginBottom: isMobile ? "10px" : "20px" }}
             />
-            <Typography variant="body1" sx={{ mb: 2, width: {md:"335px" , xs:"320px"}, textAlign: isMobile ? 'center' : 'left' }}>
+            <Typography variant="body1" sx={{ mb: 2, width: {md:"500px" , xs:"320px"}, textAlign: isMobile ? 'center' : 'left' }}>
               Macat Megatrons is a thriving community where innovators,
               professionals, and enthusiasts come together to share knowledge,
               collaborate, and grow.
@@ -347,16 +347,14 @@ export default function Footer() {
 
           {/* Column 3: Email and Mobile Form with Tailwind-based Box */}
           <Grid item xs={12} md={4}>
-          <Box
-            className="w-full md:w-1/3 flex flex-col"
-            sx={{
+          <Box className="w-full md:w-1/3 flex flex-col" sx={{
               alignItems: isMobile ? "center" : "flex-start",
               paddingTop: isMobile ? "10px" : "0px",
             }}
           >
             <Box sx={{display:{xs:"block" , md:"flex" , lg:"flex" , xl:"flex"} , gap:{lg:"15px"}}}>
               <Box className="w-full max-w-[440px]">
-                <Typography></Typography>
+                
                 <Input
                  labelName={"EMAIL ADDRESS"}
                   type="text"
@@ -366,11 +364,12 @@ export default function Footer() {
                     backgroundColor:"white",
                     borderRadius:"10px",
                     width:{md:"180px"},
+                    marginBottom:{xs:"10px"}
                   }}
                 ></Input>
-              </Box>
+              </Box>                     
               <Box className="w-full max-w-[440px]">
-                <Typography></Typography>
+                
                 <Input
                 labelName={"MOBILE"}
                   type="text"
