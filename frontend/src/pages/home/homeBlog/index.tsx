@@ -137,16 +137,17 @@ export default function HomeBlog() {
                       There are many variations available the majority have
                       suffered alteration randomised words.
                     </Typography>
+
                     <Button
                       variant="contained"
                       sx={{
                         backgroundColor: "#04A297",
                         borderRadius: 2,
                         textTransform: "none",
-                        px: 2.5,
-                        py: 0.5,
+                        height:"45px",
                         ":hover": {
-                          backgroundColor: "#04A297",
+                          backgroundColor: "#052C59",
+                          transition:"all 0.4s ease-in-out"
                         },
                       }}
                     >

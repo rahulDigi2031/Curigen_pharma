@@ -11,8 +11,8 @@ export default function HomeGallerySection() {
         <Container maxWidth="xl">
           <Box
             sx={{
-              width: "110%",
-              height:{ xs: "auto", md:"550px", lg:"600px" },
+              width: "100%",
+              height:{ xs: "auto", md:"520px", lg:"600px" },
               margin: "auto",
               display: "flex",
               flexDirection: { xs: "column", md: "row" , lg:"row"},
@@ -21,12 +21,12 @@ export default function HomeGallerySection() {
             }}
           >
             {/* Image Section */}
-            <Box sx={{ flex: 1 , width:{xs:"300px" , md:"550px"} }}>
+            <Box sx={{ flex: 2 , width:{xs:"300px" , md:"500px"} }}>
               <Image
                 src="/01.png"
                 alt="Business Vision"
                 width={550}
-                height={600}
+                height={400}
                 style={{
                   objectFit: "cover",
                   alignContent:"center",
@@ -35,16 +35,16 @@ export default function HomeGallerySection() {
             </Box>
 
             {/* Center Text Section */}
-            <Box sx={{ flex: 2 }}>
+            <Box sx={{ flex:2 }}>
               <Typography
-                variant="h5"
+                variant="h4"
                 sx={{ fontWeight: "bold", color: "#002B5B" }}
               >
                 {" "}
                 WE ARE DEDICATED{" "}
               </Typography>
               <Typography
-                variant="h5"
+                variant="h4"
                 sx={{ fontWeight: "bold", color: "#23A397", mb: 2 }}
               >
                 {" "}
@@ -108,15 +108,15 @@ export default function HomeGallerySection() {
       <Container maxWidth="xl">
         <Box sx={{ textAlign: "center", py: 6 }}>
           <Typography
-            variant="h6"
-            sx={{ fontWeight: "bold", color: "#23A397", }}
+            variant="body1"
+            sx={{ fontWeight: "530", color: "#23A397", fontSize: "20px", letterSpacing:"3px" }}
           >
             {" "}
             OUR GALLERY{" "}
           </Typography>
-          <Typography variant="h5" sx={{ mb: 4 , color:"#023350" ,fontWeight:"800"}}>
+          <Typography variant="h4" sx={{ mb: 4 , color:"#023350" ,fontWeight:"800"}}>
             {" "}
-            Let's Check Our Photo <span style={{color:"#23A397" , fontWeight:"800"}}>Gallery</span>{" "}
+            Let's Check Our Photo <span style={{color:"#23A397" , fontWeight:"600"}}>Gallery</span>{" "}
           </Typography>
 
           <Box sx={{ width: { xs: "95%", md: "100%" }, margin: "15px auto" }}>
@@ -180,14 +180,12 @@ export default function HomeGallerySection() {
                           borderRadius: "20px",
                           overflow: "hidden",
                           "&:hover .overlay": { opacity: 1 },
-                        }}
-                      >
+                        }}>
                         <Image
                           src={img.src}
                           alt=""
                           fill
-                          style={{ objectFit: "cover", borderRadius: "20px" }}
-                        />
+                          style={{ objectFit: "cover", objectPosition: "top", borderRadius: "20px" }}/>
                         <Box
                           className="overlay"
                           sx={{
@@ -242,8 +240,7 @@ export default function HomeGallerySection() {
                           src={img.src}
                           alt=""
                           fill
-                          style={{ objectFit: "cover", borderRadius: "20px" }}
-                        />
+                          style={{ objectFit: "cover", objectPosition: "top", borderRadius: "20px" }}/>
                         <Box
                           className="overlay"
                           sx={{
@@ -287,8 +284,7 @@ export default function HomeGallerySection() {
                     src="/gallery6.png"
                     alt=""
                     fill
-                    style={{ objectFit: "cover", borderRadius: "20px" }}
-                  />
+                    style={{ objectFit: "cover", objectPosition: "top", borderRadius: "20px" }}/>
                   <Box
                     className="overlay"
                     sx={{

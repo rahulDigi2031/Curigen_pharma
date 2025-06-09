@@ -1,9 +1,11 @@
 import { Box, Typography, Container } from "@mui/material";
 import Image from "next/image";
 
+var b = <br />
+
 const services = [
   { icon: "/warranty1.png", title: "Impeccable Quality" },
-  { icon: "/price.png", title: "Affordable Medicines" },
+  { icon: "/price.png", title: `Affordable Medicines` },
   { icon: "/research.png", title: "Research and Development" },
   { icon: "/analysis.png", title: "Business Responsibility" },
 ];
@@ -66,86 +68,100 @@ export default function ServiceComponent() {
         </Box>
 
         {/* Service Cards */}
-        <Box
+              <Box
+  sx={{
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    gap: 5,
+  }}
+>
+  {services.map((service, index) => (
+    <Box
+      key={index}
+      sx={{
+        display: "flex",
+        flexDirection: { xs: "column", md: "row" },
+        alignItems: "center",
+        p: 3,
+        backgroundColor: "white",
+        width: 320,
+        borderRadius: "50px 50px 50px 0px",
+        textAlign: "left",
+        position:"relative",
+        overflow:"hidden",
+        border:"8px solid white",
+        transition: "border 0.3s ease-in, boxShadow 0.3s ease-in-out",
+        "&:hover": {
+          // boxShadow: "inset 0px 3px 10px  #002B5B",
+          // border: "1px dashed #002B5B",
+          "&::after": {
+          content: '""',
+          position: "absolute",
+          inset: "0px",
+          border: "3px dashed #002B5B",
+          borderRadius: "50px 50px 50px 0px", // Match the box's shape
+          pointerEvents: "none",
+          zIndex: 1,
+        },
+        },
+         
+
+        "&:hover .icon-bg": {
+          backgroundColor: "#002B5B", // Change to blue on hover
+        },
+      }}
+    >
+      {/* Icon Wrapper with a class for targeting */}
+      <Box
+        className="icon-bg"
+        sx={{
+          width: "120px",
+          height: "80px",
+          backgroundColor: "#03A297", // default color
+          borderRadius: "60px 60px 60px 0px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "flex-start",
+          pl: "12px",
+          transition: "background-color 0.3s ease-in-out",
+        }}
+      >
+        <Image
+          src={service.icon}
+          alt={service.title}
+          width={45}
+          height={45}
+          style={{ objectFit: "cover" }}
+        />
+      </Box>
+
+      {/* Text Content */}
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          ml: { xs: 0, md: 2 },
+          mt: { xs: 2, md: 0 },
+        }}
+      >
+        <Typography variant="subtitle1" sx={{ fontWeight: 600, color: "#002B5B" }}>
+          {service.title}
+        </Typography>
+        <Typography
           sx={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            gap: 5,
+            fontSize: "14px",
+            color: "gray",
+            fontFamily: "Inter",
+            mt: 1,
           }}
         >
-          {services.map((service, index) => (
-            <Box
-              key={index}
-              sx={{
-                display: "flex",
-                flexDirection: { xs: "column", md: "row" },
-                alignItems: "center",
-                p: 3,
-                backgroundColor: "white",
-                width: 320,
-                borderRadius: "50px 50px 50px 0px",
-                textAlign: "left",
-                "&:hover": {
-                  border: "2px dashed #002B5B",
-                  // transition: "all 0.3s ease-in-out",
-                  // border: "2px dashed #002B5B",
-	                // boxShadow: "inset 0 0 0 5px dashed  #002B5B"
-                  // border: "3px dashed #002B5B",
-                  // boxShadow : "inset 0 0 0 2px #002B5B"
-                },
-                "&:hover .icon-bg": {
-                  backgroundColor: "#002B5B", // Change to blue on hover
-                },
-              }}
-            >
-              {/* Icon Wrapper with a class for targeting */}
-              <Box
-                className="icon-bg"
-                sx={{
-                  width: "120px",
-                  height: "80px",
-                  backgroundColor: "#03A297", // default color
-                  borderRadius: "60px 60px 60px 0px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "flex-start",
-                  pl: "12px",
-                  transition: "background-color 0.3s ease-in-out",
-                }}
-              >
-                <Image
-                  src={service.icon}
-                  alt={service.title}
-                  width={45}
-                  height={45}
-                  style={{ objectFit: "cover" }}
-                />
+          Lorem Ipsum is simply dummy text of the
+        </Typography>
+      </Box>
+    </Box>
+  ))}
               </Box>
-
-              {/* Text Content */}
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  ml: { xs: 0, md: 2 },
-                  mt: { xs: 2, md: 0 },
-                }}
-              >
-                <Typography variant="subtitle1" sx={{ fontWeight: 600, color: "#002B5B" }}>
-                  {service.title}
-                </Typography>
-                <Typography
-                  sx={{fontSize: "14px", color: "gray", fontFamily: "inter",
-                    mt: 1,
-                  }}
-                >
-                  Lorem Ipsum is simply dummy text of the
-                </Typography>
-              </Box>
-            </Box>
-          ))}
-        </Box>
       </Container>
     </Box>
   );

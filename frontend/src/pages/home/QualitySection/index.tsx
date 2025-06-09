@@ -38,11 +38,11 @@ export default function PromiseSection() {
             }}
           >
             <Typography 
-              variant="h6" 
+              variant="body1" 
               sx={{ 
-                mb: 1, 
+                mb:"-2px", 
                 fontWeight: 600,
-                fontSize: { xs: '1.1rem', sm: '1.25rem' }
+                fontSize: { xs: '1.1rem', sm: '28px' , md:"34px" }
               }}
             >
               Our Promise
@@ -51,7 +51,7 @@ export default function PromiseSection() {
               variant="body1" 
               sx={{ 
                 lineHeight: 1.6,
-                fontSize: { xs: '0.9rem', sm: '1rem' }
+                fontSize: { xs: '0.9rem', sm: '14px' ,md:"14px" }
               }}
             >
               Lorem Ipsum is simply dummy text of the printing and typesetting

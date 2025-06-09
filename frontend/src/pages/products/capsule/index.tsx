@@ -74,9 +74,9 @@ export default function ProductAll() {
               </Typography>
               <Typography
                 variant="h5"
-                className="text-lg md:text-xl text-[#023350]"
+                className="text-lg md:text-xl text-[#023350]" 
               >
-                Home &gt;&gt; Tablet
+                Home &gt;&gt; Capsule
               </Typography>
             </Box>
           </Container>

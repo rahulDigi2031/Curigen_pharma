@@ -38,17 +38,9 @@ export default function ContractManufacturing(){
                 <BackgroundImage imageUrl="/ServicesBG.png" css={{ height: "400px", width: "100%", objectFit: "cover" }}>
                     <Navbar />
                     <Container maxWidth="xl">
-                    <Box sx={{
-                        width: { xs: "95%", sm: "90%", md: "95%" },
-                        margin: "auto",
-                        padding: { xs: "10px", sm: "20px" }
-                    }}>
-                        <Typography variant="h4" sx={{ fontWeight: 700, mb: 3, color: "#023350", fontSize: { xs: "1.5rem", sm: "2rem", md: "2.25rem" } }}>
-                            Services
-                        </Typography>
-                        <Typography variant="h5" sx={{ color: "#023350", fontSize: { xs: "1rem", sm: "1.25rem" } }}>
-                            Home &gt;&gt; Services &gt;&gt;ContractManufacturing
-                        </Typography>
+                        <Box sx={{width:"95%" , margin:"auto", padding:"20px"}}>
+                        <Typography variant="h4" sx={{fontWeight:"700",mb:3,color:"#023350"}}>Services</Typography>
+                        <Typography variant="h5" sx={{color:"#023350", fontWeight:"450"}}>Home &gt;&gt; Services &gt;&gt; ContractManufacturing</Typography>
                     </Box>
                     </Container>
                 </BackgroundImage>

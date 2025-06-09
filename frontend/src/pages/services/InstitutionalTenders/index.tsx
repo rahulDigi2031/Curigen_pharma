@@ -9,18 +9,12 @@ export default function InstituionalTenders() {
             <Box>
                 <BackgroundImage imageUrl="/ServicesBG.png" css={{ height: "400px", width: "100%", objectFit: "cover" }}>
                     <Navbar />
-                    <Box sx={{
-                        width: { xs: "95%", sm: "90%", md: "80%" },
-                        margin: "auto",
-                        padding: { xs: "10px", sm: "20px" }
-                    }}>
-                        <Typography variant="h4" sx={{ fontWeight: 700, mb: 3, color: "#023350", fontSize: { xs: "1.5rem", sm: "2rem", md: "2.25rem" } }}>
-                            Services
-                        </Typography>
-                        <Typography variant="h5" sx={{ color: "#023350", fontSize: { xs: "18px", sm: "1.25rem" } , marginTop:{xs:"2%"} }}>
-                            Home &gt;&gt; Services &gt;&gt;InstituionalTenders
-                        </Typography>
+                    <Container maxWidth="xl">
+                        <Box sx={{width:"95%" , margin:"auto", padding:"20px"}}>
+                        <Typography variant="h4" sx={{fontWeight:"700",mb:3,color:"#023350"}}>Services</Typography>
+                        <Typography variant="h5" sx={{color:"#023350" , fontWeight:"450"}}>Home &gt;&gt; Services &gt;&gt; InstitutionalTenders</Typography>
                     </Box>
+                    </Container>
                 </BackgroundImage>
             </Box>
 
@@ -32,7 +26,7 @@ export default function InstituionalTenders() {
             }}>
                 <Container maxWidth="xl" sx={{ width: { xs: "98%", sm: "90%", md: "80%" }, padding: { xs: "10px", sm: "15px" }, margin: "auto" }}>
                     <Box>
-                        <Typography variant="h4" sx={{ color: "#023350", fontWeight: 700, mb: 3, fontSize: { xs: "1.25rem", sm: "2rem", md: "2.25rem" } }}>
+                        <Typography variant="h4" sx={{ color: "#023350", fontWeight: 700, mb: 3, fontSize: { xs: "1.85rem", sm: "2rem", md: "2.25rem" } }}>
                         Institutional <span style={{ color: "#03A297", fontWeight: 700 }}>Tenders</span>
                         </Typography>
                         <Typography variant="body2" sx={{ mb: 2, fontSize: { xs: "0.95rem", sm: "1rem" } }}>

@@ -9,8 +9,6 @@ export default function ExperinceSection() {
     "We Made Awesome Products",
   ];
 
-  //  sx={{ width: "80%", margin: "auto", py: 1 }} 
-  
   return (
     <Container maxWidth="xl">
       <Box
@@ -18,16 +16,17 @@ export default function ExperinceSection() {
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
           alignItems: "center",
-          gap: { xs: 4, md: 8 },
+          gap: { xs: 2, md: 8 }, // Reduced xs gap for mobile
           mt: { xs: 10, sm: 10, md: 0 },
           position: "relative",
         }}
       >
+        {/* Image Section */}
         <Box
           sx={{
             width: { xs: "100%", md: "50%" },
             position: "relative",
-            padding: "25px",
+            padding: { xs: 0, md: "25px" }, // No padding on small screens
           }}
         >
           <Image
@@ -36,15 +35,15 @@ export default function ExperinceSection() {
             width={500}
             height={400}
             style={{
-              width: "800px",
-              height: "600px",
+              width: "100%", // responsive width
+              height: "auto", // maintain aspect ratio
               borderRadius: "20px",
-              overflow: "hidden",
-              objectFit: "contain",
+              objectFit: "cover",
             }}
           />
         </Box>
 
+        {/* Text Section */}
         <Box
           sx={{
             width: { xs: "100%", md: "50%" },
@@ -77,10 +76,11 @@ export default function ExperinceSection() {
           <Typography sx={{ mb: 3, color: "#6b7280" }}>
             Curigen Pharmaceutical has established itself as a renowned name in
             the pharmaceutical industry, recognized for its unwavering
-            dedicationto delivering high-quality and effective pharmaceutical
+            dedication to delivering high-quality and effective pharmaceutical
             products. With years of experience
           </Typography>
 
+          {/* Feature List */}
           <Box
             sx={{
               display: "grid",
@@ -97,7 +97,6 @@ export default function ExperinceSection() {
                   gap: 2,
                 }}
               >
-                {/* Circle Icon */}
                 <Box
                   sx={{
                     width: 24,
@@ -119,7 +118,6 @@ export default function ExperinceSection() {
                   />
                 </Box>
 
-                {/* Text */}
                 <Typography
                   sx={{
                     fontWeight: 700,

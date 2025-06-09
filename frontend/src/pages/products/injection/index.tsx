@@ -15,12 +15,12 @@ export default function ProductAll(){
         { image: "/prodinjection.png", title: "Stabixim"},
 
         { image: "/prodinjection.png", title: "Stabixim"},
-        { image: "/prodinjection.png", title: "Stabixim"},
-        { image: "/prodinjection.png", title: "Stabixim"},
-        { image: "/prodinjection.png", title: "Stabixim"},
-        { image: "/prodinjection.png", title: "Stabixim"},
-        { image: "/prodinjection.png", title: "Stabixim"},
-        { image: "/prodinjection.png", title: "Stabixim"},
+        // { image: "/prodinjection.png", title: "Stabixim"},
+        // { image: "/prodinjection.png", title: "Stabixim"},
+        // { image: "/prodinjection.png", title: "Stabixim"},
+        // { image: "/prodinjection.png", title: "Stabixim"},
+        // { image: "/prodinjection.png", title: "Stabixim"},
+        // { image: "/prodinjection.png", title: "Stabixim"},
         
     ];
 
@@ -56,9 +56,9 @@ export default function ProductAll(){
             <main>
                 <Box sx={{width:"80%" , margin:"auto" , marginBottom:"85px"}}>
                 <Container maxWidth="xl">
-                     <Box sx={{width:"100%" ,  margin:"auto" , marginBottom:"50px", backgroundColor:"#FAFAFA" , padding:"20px"}}>
-                <Box className="w-full md:w-auto flex flex-col md:flex-row items-center justify-between gap-4">
-                    <Box className="flex items-center gap-2">
+                     <Box sx={{width:"95%" ,  margin:"auto" , marginBottom:"50px", backgroundColor:"#FAFAFA" , padding:"20px"}}>
+                    <Box className="w-full md:w-auto flex flex-col md:flex-row items-center justify-between gap-4">
+                     <Box className="flex items-center gap-2">
                         <Typography variant="body1">Sort -By:</Typography>
                         <Autocomplete
                             disablePortal
@@ -84,6 +84,8 @@ export default function ProductAll(){
             <Container maxWidth="xl">
                 <Box
                     sx={{
+                        width:"95%",
+                        margin:"auto",
                         display: "grid",
                         gridTemplateColumns: {
                             xs: "1fr",
