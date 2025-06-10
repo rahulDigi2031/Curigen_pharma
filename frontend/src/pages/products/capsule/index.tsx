@@ -5,9 +5,6 @@ import {
   Box,
   TextField,
   Typography,
-  Grid,
-  useTheme,
-  useMediaQuery,
   Paper,
   Container,
 } from "@mui/material";
@@ -17,9 +14,7 @@ import Image from "next/image";
 import Footer from "@/Components/footer";
 
 export default function ProductAll() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  const isTablet = useMediaQuery(theme.breakpoints.down("md"));
+  // const theme = useTheme();
 
   const Images = [
     { image: "/tab2.png", title: "Curidol-SP" },

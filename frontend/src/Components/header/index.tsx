@@ -1,10 +1,8 @@
 import { Box, Container } from "@mui/material";
-import { Grid, Typography, useTheme, useMediaQuery } from "@mui/material";
+import { Typography, useTheme, useMediaQuery } from "@mui/material";
 import Navbar from "../navbar";
 import Image from "next/image";
-import EmailIcon from "@mui/icons-material/Email";
-import PhoneIcon from "@mui/icons-material/Phone";
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
+
 
 export default function Header() {
   const theme = useTheme();

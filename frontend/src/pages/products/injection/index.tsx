@@ -1,15 +1,13 @@
 import BackgroundImage from "@/common_components/backgroundComman";
 import Navbar from "@/Components/navbar";
-import { Autocomplete, Box, TextField, Typography, Grid, useTheme, useMediaQuery, Paper, Container } from "@mui/material";
+import { Autocomplete, Box, TextField, Typography, Paper, Container } from "@mui/material";
 import GridViewIcon from '@mui/icons-material/GridView';
 import ViewListOutlinedIcon from '@mui/icons-material/ViewListOutlined';
 import Image from "next/image";
 import Footer from "@/Components/footer";
 
 export default function ProductAll(){
-    const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-    const isTablet = useMediaQuery(theme.breakpoints.down('md'));
+    
 
     const Images = [
         { image: "/prodinjection.png", title: "Stabixim"},

@@ -1,11 +1,7 @@
 import BackgroundImage from "@/common_components/backgroundComman";
 import Navbar from "@/Components/navbar";
-// import ContactInfoCard from "@/Components/ContactInfoCard";
-import { Box, Typography, TextField, Button, Card, CardContent, Grid, Paper } from "@mui/material";
-// import LocationOnOutlined from "@mui/icons-material/LocationOnOutlined";
-// import HeadphonesOutlined from "@mui/icons-material/HeadphonesOutlined";
-// import MailOutline from "@mui/icons-material/MailOutline";
-// import AccessTimeOutlined from "@mui/icons-material/AccessTimeOutlined";
+import { Box, Typography,} from "@mui/material";
+
 
 
 export default function HeaderContact(){

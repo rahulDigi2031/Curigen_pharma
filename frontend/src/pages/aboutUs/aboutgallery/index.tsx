@@ -7,13 +7,13 @@ export default function ManagementMessage() {
       <Box
         sx={{
           display: "flex",
-          flexDirection: { xs: "column", md: "row" }, // Stack on mobile, side-by-side on desktop
-          alignItems: "flex-start", // Align items to the top
-          gap: { xs: 2, md: 4 }, // Reduced gap between text and image
+          flexDirection: { xs: "column", md: "row" }, 
+          alignItems: "flex-start",
+          gap: { xs: 2, md: 4 }, 
           mb: { xs: 6, md: 8 },
         }}
       >
-        {/* Text Content */}
+        
         <Box sx={{ flex: 1 }}>
           <Typography variant="h4" sx={{ fontWeight: 700, color: "#023350", mb: 3 }}>
             Management <span style={{ fontWeight: "700", color: "#03A297" }}>Message</span>
@@ -98,23 +98,23 @@ export default function ManagementMessage() {
           sx={{
             flex: 1,
             display: "flex",
-            justifyContent: { xs: "center", md: "flex-end" }, // Center on mobile, align right on desktop
+            justifyContent: { xs: "center", md: "flex-end" }, 
             alignItems: "center",
-            minWidth: 0, // Allows flex item to shrink
-            mt: { xs: 3, md: 0 }, // Add top margin on mobile
+            minWidth: 0, 
+            mt: { xs: 3, md: 0 },
           }}
         >
           <Image
-            src="/Aboutimage.png" // Replace with the actual image path
+            src="/Aboutimage.png" 
             alt="Management Message"
-            width={520} // Set a base width
-            height={320} // Set a base height
+            width={520} 
+            height={320} 
             style={{
               borderRadius: "20px",
               objectFit: "cover",
-              width: "100%", // Make image fluid up to maxWidth
-              maxWidth: 520, // Max width of the image
-              height: "auto", // Maintain aspect ratio
+              width: "100%", 
+              maxWidth: 520, 
+              height: "auto", 
             }}
           />
         </Box>

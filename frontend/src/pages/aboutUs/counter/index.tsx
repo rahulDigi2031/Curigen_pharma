@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import PublicIcon from "@mui/icons-material/Public";
 import GroupsIcon from "@mui/icons-material/Groups";
 import VaccinesIcon from "@mui/icons-material/Vaccines";
@@ -10,7 +10,8 @@ export default function Counter(){
     return(
         <Box>
             <Box sx={{ width: "100%", backgroundColor: "#22A396", py: { xs: 4, md: 6 }, mb: 4, }}>
-                    <Box sx={{ width: { xs: "98%", sm: "90%", md: "80%" }, mx: "auto",
+                <Container maxWidth="xl">
+                    <Box sx={{ width: { xs: "98%", sm: "90%", md: "98%" }, mx: "auto",
                             display: "flex",
                             flexDirection: { xs: "column", sm: "row" },
                             justifyContent: "space-between",
@@ -171,7 +172,8 @@ export default function Counter(){
                             </Typography>
                         </Box>
                     </Box>
-                </Box>
+                </Container>
+            </Box>
         </Box>
     )
 }

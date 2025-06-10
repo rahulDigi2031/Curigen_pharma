@@ -1,23 +1,15 @@
 import {
     Box,
     Typography,
-    TextField,
     Button,
     Grid,
-    Paper,
     TextareaAutosize,
-    useTheme,
-    useMediaQuery,
   } from "@mui/material";
 
 import Input from "@/common_components/input";
 import Image from "next/image";
   
   export default function ContactSection() {
-    const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-    const isTablet = useMediaQuery(theme.breakpoints.down('md'));
-
     return (
         <Box>
             <Box sx={{width: {xs: "95%", sm: "90%", md: "80%"}, margin: "5% auto"}}>

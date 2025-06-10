@@ -4,7 +4,6 @@ import Image from "next/image";
 export default function PromiseSection() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-  const isTablet = useMediaQuery(theme.breakpoints.down('lg'));
 
   return (
     <Container maxWidth="xl">

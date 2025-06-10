@@ -19,7 +19,7 @@ export default function Gallery(){
                 <Navbar/>
             <Box sx={{width:"80%" , margin:"auto" , padding:"15px" , marginTop:"2%" , fontFamily:"inter"}}>
                 <Typography variant="h3" sx={{fontWeight:"600" , color:"#023350" , marginBottom:"5px"}}>Gallery</Typography>
-                <Typography variant="h5" sx={{color:"#023350"}}>Home >> Gallery</Typography>
+                <Typography variant="h5" sx={{color:"#023350"}}>Home &gt;&gt; Gallery</Typography>
             </Box>
         </BackgroundImage>
         {/* PRODUCT GALLERY SECTION  */}

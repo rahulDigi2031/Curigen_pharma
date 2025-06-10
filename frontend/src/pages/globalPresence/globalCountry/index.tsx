@@ -1,5 +1,4 @@
 // import BackgroundImage from "@/common_components/backgroundComman";
-import { Padding } from "@mui/icons-material";
 import { Box, Typography, Container } from "@mui/material";
 
 export default function GallerySection() {

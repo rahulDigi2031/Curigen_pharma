@@ -1,53 +1,48 @@
 import { Box, Container, Typography } from "@mui/material";
 // You would import specific icons here, e.g.:
-// import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
-// import GroupsIcon from '@mui/icons-material/Groups';
-// import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
-// import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
-// import LightbulbOutlinedIcon from '@mui/icons-material/LightbulbOutlined';
-// import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
+import Image from "next/image";
 
 
 // Define the data for each business value item
 const businessValues = [
     {
-        // icon: <PeopleOutlineIcon sx={{ fontSize: 30, color: '#fff' }} />, // Replace with actual icon component
+        path: "/users1.png",
         iconColor: '#03A297', // Example color for the icon background circle
         title: 'Human Welfare',
         description: 'To manufacture and make readily available, affordable medicines that are adept for the prevention and treatment of diseases.',
     },
     {
-        // icon: <GroupsIcon sx={{ fontSize: 30, color: '#fff' }} />, // Replace with actual icon component
+        path: "/csr1.png",
         iconColor: '#03A297',
         title: 'Corporate Responsibility',
         description: 'We are well-versed with the expectations and trust that our customers and stakeholders place in us and work towards getting them the best returns with the assurance of a healthier world.',
     },
     {
-        // icon: <LocalHospitalIcon sx={{ fontSize: 30, color: '#fff' }} />, // Replace with actual icon component
+        path: "/social.png",
         iconColor: '#03A297',
         title: 'Social Responsibility',
         description: 'Towards society, we feel an immense sense of responsibility to improve the quality of life for our patients through our innovative formulations which we strive to continuously improve.',
     },
     {
-        // icon: <WorkspacePremiumIcon sx={{ fontSize: 30, color: '#fff' }} />, // Replace with actual icon component
+        path: "/warranty1.png",
         iconColor: '#03A297',
         title: 'Quality',
         description: 'When our products aim to alleviate pain and misery through medicine, we make doubly sure that they adhere to the highest standards of quality expected out of them.',
     },
     {
-        // icon: <LightbulbOutlinedIcon sx={{ fontSize: 30, color: '#fff' }} />, // Replace with actual icon component
+        path: "/innovation.png",
         iconColor: '#03A297',
         title: 'Innovation',
         description: 'By putting in ample R&D efforts, we innovate and develop new products which are world class in aspect of efficiency, usability and affordability.',
     },
      {
-        // icon: <EmojiEventsOutlinedIcon sx={{ fontSize: 30, color: '#fff' }} />, // Replace with actual icon component
+        path: "/Ambition.png",
         iconColor: '#03A297',
         title: 'Ambition',
         description: "In consonance with the saying 'Sky is the Limit', we endeavour to aim for the stars, develop and inculcate a work culture where every person gets equal opportunity for growth. By the use of fair practices, we seek to expand our national and international boundaries.",
     },
     {
-        // icon: <LightbulbOutlinedIcon sx={{ fontSize: 30, color: '#fff' }} />, // Replace with actual icon component - Note: duplicate "Innovation" in image
+        path: "/innovation.png",
         iconColor: '#03A297',
         title: 'Innovation',
         description: 'By putting in ample R&D efforts, we innovate and develop new products which are world class in aspect of efficiency, usability and affordability.',
@@ -81,9 +76,9 @@ export default function BusinessVision(){
                             <Box
                                 sx={{
                                     flexShrink: 0, // Prevent shrinking
-                                    width: { xs: 50, md: 60 }, // Icon circle size
-                                    height: { xs: 50, md: 60 },
-                                    borderRadius: '50%',
+                                    width: { xs: 50, md: 80 }, // Icon circle size
+                                    height: { xs: 50, md: 80 },
+                                    borderRadius: '50px 50px 50px 0px',
                                     backgroundColor: item.iconColor, // Background color
                                     display: 'flex',
                                     alignItems: 'center',
@@ -93,7 +88,9 @@ export default function BusinessVision(){
                                 }}
                             >
                               {/* Example placeholder icon (replace with actual icon component) */}
-                                <Box sx={{fontSize: { xs: 30, md: 35 }, color: '#fff'}}>💡</Box>
+                                <Box sx={{fontSize: { xs: 30, md: 35 }, color: '#fff'}}>
+                                    <Image src={item.path} alt="images of Bussiness" width={50} height={50}></Image>
+                                </Box>
                             </Box>
 
                             {/* Text Content */}

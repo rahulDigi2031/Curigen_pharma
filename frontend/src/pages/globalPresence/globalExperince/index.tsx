@@ -2,18 +2,10 @@ import {
   Box,
   Typography,
   Container,
-  useTheme,
-  useMediaQuery,
 } from "@mui/material";
 import Image from "next/image";
-import { styled } from "@mui/material/styles";
-
-
 
 export default function GlobalExperince() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  const isTablet = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <Box

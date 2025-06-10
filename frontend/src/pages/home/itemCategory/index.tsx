@@ -4,7 +4,6 @@
 import React from "react";
 import Image from "next/image";
 import { Box, Card, Container, Typography } from "@mui/material";
-import { transform } from "next/dist/build/swc/generated-native";
 
 const itemCategory = [
   { image: "/tablet1.png", label: "Tablet", count: 30 },

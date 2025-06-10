@@ -1,5 +1,5 @@
 // import Card from "@/common_components/card";
-import { Box, Button, Card, CardContent, Grid, Typography } from "@mui/material";
+import { Box, Button, Card, CardContent, Typography } from "@mui/material";
 import Image from "next/image";
 
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";

@@ -3,8 +3,6 @@ import {
   Button as MuiButton,
   CircularProgress,
   useTheme,
-  SxProps,
-  Theme,
 } from "@mui/material";
 import { ButtonTypes } from "./types";
 

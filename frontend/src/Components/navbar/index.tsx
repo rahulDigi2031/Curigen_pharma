@@ -269,11 +269,14 @@ export default function Navbar() {
         {/* Drawer (Mobile) */}
         <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
           <Box
-            sx={{ width: isMobile ? "80vw" : 250 }}
+            sx={{ width: isMobile ? "80vw" : 250,
+              height: "100vh",
+              backgroundColor: "whitesmoke",
+            }}
             role="presentation"
             onKeyDown={toggleDrawer(false)}
           >
-            <Box sx={{ display: "flex", justifyContent: "flex-end", p: 1 }}>
+            <Box sx={{ display: "flex", justifyContent: "flex-end", p: 1 ,boxShadow:"rgba(0,0,0,0.56)"}}>
               <IconButton onClick={toggleDrawer(false)}>
                 <CloseIcon />
               </IconButton>
