@@ -69,7 +69,7 @@ export default function HomeBlog() {
 
           <Grid container spacing={4} justifyContent="center" className="px-4 md:px-0">
             {imageCard.map((el, index) => (
-              <Grid item key={index} sx={{ xs: 12, sm: 6, lg: 4 }} className="flex justify-center">
+              <Grid key={index} sx={{ xs: 12, sm: 6, lg: 4 }} className="flex justify-center">
                 <Card sx={{ 
                   width: { xs: "100%", sm: "450px" , md:"460px" }, 
                   borderRadius: 3, 

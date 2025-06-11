@@ -22,13 +22,13 @@ export default function Footer() {
   const isTablet = useMediaQuery(theme.breakpoints.down("md"));
 
   const navLinks = [
-  { text: "Global presence", path: "/globalPresence" },
-  { text: "Products", path: "/products" },
-  { text: "Services", path: "/services/ContractManufacturing" },
-  { text: "Gallery", path: "/gallery" },
-  { text: "About Us", path: "/aboutUs" },
-  { text: "Blog", path: "/blog" },
-];
+    { text: "Global presence", path: "/globalPresence" },
+    { text: "Products", path: "/products" },
+    { text: "Services", path: "/services/ContractManufacturing" },
+    { text: "Gallery", path: "/gallery" },
+    { text: "About Us", path: "/aboutUs" },
+    { text: "Blog", path: "/blog" },
+  ];
 
   return (
     <Box>
@@ -53,7 +53,7 @@ export default function Footer() {
             height: "100%",
             width: "100%",
             position: "absolute",
-            opacity: {xs:"0.84" , md:"0.88"},
+            opacity: { xs: "0.84", md: "0.88" },
             color: "white",
           }}
         >
@@ -243,162 +243,212 @@ export default function Footer() {
           </Container>
 
           <Container maxWidth="xl">
-          <Box sx={{ height: { xs: "auto", md: "350px" }, margin: "auto",
-          padding: { xs: "8px", md: "0px 16px" },
-          marginTop: isMobile ? "-70px" : "20px",
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
-        <Grid
-          container
-          spacing={isMobile ? 2 : 3}
-          direction={isTablet ? "column" : "row"}
-          alignItems={isTablet ? 'center' : 'flex-start'}
-        >
-          {/* Column 1: Logo and Description */}
-          <Grid item xs={12} md={4}>
-            <Image
-              src="/link.png"
-              alt=""
-              width={isMobile ? 150 : 200}
-              height={isMobile ? 30 : 40}
-              style={{ marginBottom: isMobile ? "10px" : "20px" }}
-            />
-            <Typography variant="body1" sx={{ mb: 2, width: {md:"500px" , xs:"320px"}, textAlign: isMobile ? 'center' : 'left' }}>
-              Macat Megatrons is a thriving community where innovators,
-              professionals, and enthusiasts come together to share knowledge,
-              collaborate, and grow.
-            </Typography>
             <Box
               sx={{
-                width: isMobile ? "100%" : "200px",
+                height: { xs: "auto", md: "350px" },
+                margin: "auto",
+                padding: { xs: "8px", md: "0px 16px" },
+                marginTop: isMobile ? "-70px" : "20px",
                 display: "flex",
-                gap: isMobile ? "10px" : "15px",
-                cursor: "pointer",
-                justifyContent: isMobile ? "center" : "flex-start",
+                alignItems: "center",
               }}
             >
-              <a href=""><FacebookRoundedIcon /></a>
-              <a href=""><InstagramIcon /></a>
-              <a href=""><GoogleIcon /></a>
-              <a href=""><XIcon /></a>
-              <a href=""><LinkedInIcon /></a>
-            </Box>
-          </Grid>
+              <Grid
+                container
+                spacing={isMobile ? 2 : 3}
+                direction={isTablet ? "column" : "row"}
+                alignItems={isTablet ? "center" : "flex-start"}
+              >
+                {/* Column 1: Logo and Description */}
+                <Grid size={{ xs: 12, md: 4 }}>
+                  <Image
+                    src="/link.png"
+                    alt=""
+                    width={isMobile ? 150 : 200}
+                    height={isMobile ? 30 : 40}
+                    style={{ marginBottom: isMobile ? "10px" : "20px" }}
+                  />
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      mb: 2,
+                      width: { md: "500px", xs: "320px" },
+                      textAlign: isMobile ? "center" : "left",
+                    }}
+                  >
+                    Macat Megatrons is a thriving community where innovators,
+                    professionals, and enthusiasts come together to share
+                    knowledge, collaborate, and grow.
+                  </Typography>
+                  <Box
+                    sx={{
+                      width: isMobile ? "100%" : "200px",
+                      display: "flex",
+                      gap: isMobile ? "10px" : "15px",
+                      cursor: "pointer",
+                      justifyContent: isMobile ? "center" : "flex-start",
+                    }}
+                  >
+                    <a href="">
+                      <FacebookRoundedIcon />
+                    </a>
+                    <a href="">
+                      <InstagramIcon />
+                    </a>
+                    <a href="">
+                      <GoogleIcon />
+                    </a>
+                    <a href="">
+                      <XIcon />
+                    </a>
+                    <a href="">
+                      <LinkedInIcon />
+                    </a>
+                  </Box>
+                </Grid>
 
-          {/* Column 2: Company Links and Certifications */}
-          <Grid item xs={12} md={4}>
-            <Box sx={{ display: "flex", gap: isMobile ? "15px" : "30px", flexDirection: isMobile ? "column" : "row",
-                textAlign: isMobile ? "center" : "left",
-                alignItems: isMobile ? "center" : "flex-start", }}>
-              <Box>
-                <Typography
-                  variant="h6"
-                  sx={{
-                    marginBottom: isMobile ? "15px" : "25px",
-                    fontSize: isMobile ? "1rem" : "1.25rem", }}>
-                  Company
-                </Typography>
-                  {navLinks.map(({ text, path }, idx) => (
-                    <Typography
-                      key={idx}
-                      variant="body2"
-                      onClick={() => Router.push(path)}
-                      sx={{ marginBottom: "15px", cursor: "pointer" }} >{text}
-                    </Typography>
-                  ))}
-              </Box>
+                {/* Column 2: Company Links and Certifications */}
+                <Grid size={{ xs: 12, md: 4 }}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      gap: isMobile ? "15px" : "30px",
+                      flexDirection: isMobile ? "column" : "row",
+                      textAlign: isMobile ? "center" : "left",
+                      alignItems: isMobile ? "center" : "flex-start",
+                    }}
+                  >
+                    <Box>
+                      <Typography
+                        variant="h6"
+                        sx={{
+                          marginBottom: isMobile ? "15px" : "25px",
+                          fontSize: isMobile ? "1rem" : "1.25rem",
+                        }}
+                      >
+                        Company
+                      </Typography>
+                      {navLinks.map(({ text, path }, idx) => (
+                        <Typography
+                          key={idx}
+                          variant="body2"
+                          onClick={() => Router.push(path)}
+                          sx={{ marginBottom: "15px", cursor: "pointer" }}
+                        >
+                          {text}
+                        </Typography>
+                      ))}
+                    </Box>
 
-              <Box sx={{ textAlign: isMobile ? "center" : "left" }}>
-                <Typography
-                  sx={{
-                    marginBottom: isMobile ? "20px" : "35px",
-                    fontSize: isMobile ? "1rem" : "1.25rem",
-                  }}
-                >
-                  Global Certification
-                </Typography>
-                <Box
-                  sx={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(3, 1fr)",
-                    gap: isMobile ? "10px" : "15px",
-                    mb: 2,
-                  }}
-                >
-                  {["/FDCA.webp", "/iso.png", "/FDCA.webp", "/iso.png", "/FDCA.webp", "/iso.png"].map(
-                    (src, idx) => (
-                      <Image
-                        key={idx}
-                        src={src}
-                        alt=""
-                        width={isMobile ? 70 : 100}
-                        height={isMobile ? 60 : 120}
-                      />
-                    )
-                  )}
-                </Box>
-              </Box>
-            </Box>
-          </Grid>
+                    <Box sx={{ textAlign: isMobile ? "center" : "left" }}>
+                      <Typography
+                        sx={{
+                          marginBottom: isMobile ? "20px" : "35px",
+                          fontSize: isMobile ? "1rem" : "1.25rem",
+                        }}
+                      >
+                        Global Certification
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "grid",
+                          gridTemplateColumns: "repeat(3, 1fr)",
+                          gap: isMobile ? "10px" : "15px",
+                          mb: 2,
+                        }}
+                      >
+                        {[
+                          "/FDCA.webp",
+                          "/iso.png",
+                          "/FDCA.webp",
+                          "/iso.png",
+                          "/FDCA.webp",
+                          "/iso.png",
+                        ].map((src, idx) => (
+                          <Image
+                            key={idx}
+                            src={src}
+                            alt=""
+                            width={isMobile ? 70 : 100}
+                            height={isMobile ? 60 : 120}
+                          />
+                        ))}
+                      </Box>
+                    </Box>
+                  </Box>
+                </Grid>
 
-          {/* Column 3: Email and Mobile Form with Tailwind-based Box */}
-          <Grid item xs={12} md={4}>
-          <Box className="w-full md:w-1/3 flex flex-col" sx={{
-              alignItems: isMobile ? "center" : "flex-start",
-              paddingTop: isMobile ? "10px" : "0px",
-            }}
-          >
-            <Box sx={{display:{xs:"block" , md:"flex" , lg:"flex" , xl:"flex"} , gap:{lg:"15px"}}}>
-              <Box className="w-full max-w-[440px]">
-                
-                <Input
-                 labelName={"EMAIL ADDRESS"}
-                  type="text"
-                  placeholder="Enter email"
-                  required
-                  css={{
-                    backgroundColor:"white",
-                    borderRadius:"10px",
-                    width:{md:"180px"},
-                    marginBottom:{xs:"10px"}
-                  }}
-                ></Input>
-              </Box>                     
-              <Box className="w-full max-w-[440px]">
-                
-                <Input
-                labelName={"MOBILE"}
-                  type="text"
-                  placeholder="Number"
-                  required
-                  css={{
-                    backgroundColor: "white",
-                    borderRadius: "10px",
-                    width:{md:"180px"},
-                    mb:{xs:3 , md:0}
-                  }}
-                ></Input>
-              </Box>
+                {/* Column 3: Email and Mobile Form with Tailwind-based Box */}
+                <Grid size={{ xs: 12, md: 4 }}>
+                  <Box
+                    className="w-full md:w-1/3 flex flex-col"
+                    sx={{
+                      alignItems: isMobile ? "center" : "flex-start",
+                      paddingTop: isMobile ? "10px" : "0px",
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        display: {
+                          xs: "block",
+                          md: "flex",
+                          lg: "flex",
+                          xl: "flex",
+                        },
+                        gap: { lg: "15px" },
+                      }}
+                    >
+                      <Box className="w-full max-w-[440px]">
+                        <Input
+                          labelName={"EMAIL ADDRESS"}
+                          type="text"
+                          placeholder="Enter email"
+                          required
+                          css={{
+                            backgroundColor: "white",
+                            borderRadius: "10px",
+                            width: { md: "180px" },
+                            marginBottom: { xs: "10px" },
+                          }}
+                        ></Input>
+                      </Box>
+                      <Box className="w-full max-w-[440px]">
+                        <Input
+                          labelName={"MOBILE"}
+                          type="text"
+                          placeholder="Number"
+                          required
+                          css={{
+                            backgroundColor: "white",
+                            borderRadius: "10px",
+                            width: { md: "180px" },
+                            mb: { xs: 3, md: 0 },
+                          }}
+                        ></Input>
+                      </Box>
+                    </Box>
+                    <Button
+                      variant="outlined"
+                      className="w-full max-w-[440px] text-white"
+                      sx={{
+                        borderRadius: "10px",
+                        border: "1px solid white",
+                        color: "white",
+                        mt: isMobile ? 0 : 2,
+                        width: {
+                          xs: "250px",
+                          md: "373px",
+                          lg: "373px",
+                          xl: "373px",
+                        },
+                      }}
+                    >
+                      Contact Us
+                    </Button>
+                  </Box>
+                </Grid>
+              </Grid>
             </Box>
-            <Button
-              variant="outlined"
-              className="w-full max-w-[440px] text-white"
-              sx={{
-                borderRadius: "10px",
-                border: "1px solid white",
-                color: "white",
-                mt: isMobile ? 0 : 2,
-                width:{xs:"250px" , md:"373px" , lg:"373px" , xl:"373px"}
-              }}
-            >
-              Contact Us
-            </Button>
-          </Box>
-          </Grid>
-        </Grid>
-      </Box>
           </Container>
         </Box>
       </Box>

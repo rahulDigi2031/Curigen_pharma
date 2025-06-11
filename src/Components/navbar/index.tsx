@@ -204,7 +204,8 @@ export default function Navbar() {
                     key={item.name}
                     sx={{
                       cursor: "pointer",
-                      color:router.pathname === item.path ? "#23A397" : "#023350",
+                      color:
+                        router.pathname === item.path ? "#23A397" : "#023350",
                       fontWeight: "500",
                       "&:hover": { color: "#03A297" },
                     }}
@@ -224,7 +225,8 @@ export default function Navbar() {
                       fontWeight: router.pathname === item.path ? "900" : "500",
                       "&:hover": { color: "#03A297" },
                     }}
-                    onClick={() => handleMenuItemClick(item.path)}>
+                    onClick={() => handleMenuItemClick(item.path)}
+                  >
                     {item.name}
                   </Typography>
                 )
@@ -235,14 +237,15 @@ export default function Navbar() {
                   color: "white",
                   borderRadius: 2,
                   padding: "10px 20px",
-                  display:"flex",
-                  gap:1,
-                  alignItems:"center",
+                  display: "flex",
+                  gap: 1,
+                  alignItems: "center",
                   ":hover": { backgroundColor: "#002B5B" },
                 }}
                 onClick={() => handleMenuItemClick("/contact")}
               >
-                Contact Us <Image src="/calling.png" alt="" width={18} height={20}></Image>
+                Contact Us{" "}
+                <Image src="/calling.png" alt="" width={18} height={20}></Image>
               </Button>
             </Box>
           )}
@@ -269,14 +272,22 @@ export default function Navbar() {
         {/* Drawer (Mobile) */}
         <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
           <Box
-            sx={{ width: isMobile ? "80vw" : 250,
+            sx={{
+              width: isMobile ? "80vw" : 250,
               height: "100vh",
               backgroundColor: "whitesmoke",
             }}
             role="presentation"
             onKeyDown={toggleDrawer(false)}
           >
-            <Box sx={{ display: "flex", justifyContent: "flex-end", p: 1 ,boxShadow:"rgba(0,0,0,0.56)"}}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "flex-end",
+                p: 1,
+                boxShadow: "rgba(0,0,0,0.56)",
+              }}
+            >
               <IconButton onClick={toggleDrawer(false)}>
                 <CloseIcon />
               </IconButton>
@@ -287,7 +298,7 @@ export default function Navbar() {
                 item.isMenu ? (
                   <React.Fragment key={item.name}>
                     <ListItem
-                      button
+                      // button
                       onClick={
                         item.name === "Products"
                           ? handleProductMenuClickInDrawer
@@ -322,7 +333,7 @@ export default function Navbar() {
                           : serviceMenuItems
                         ).map((subItem) => (
                           <ListItem
-                            button
+                            // button
                             key={subItem.name}
                             sx={{ pl: 4 }}
                             onClick={() => handleMenuItemClick(subItem.path)}
@@ -335,7 +346,7 @@ export default function Navbar() {
                   </React.Fragment>
                 ) : (
                   <ListItem
-                    button
+                    // button
                     key={item.name}
                     onClick={() => handleMenuItemClick(item.path)}
                   >
@@ -343,7 +354,10 @@ export default function Navbar() {
                   </ListItem>
                 )
               )}
-              <ListItem button onClick={() => handleMenuItemClick("/contact")}>
+              <ListItem
+                // button
+                onClick={() => handleMenuItemClick("/contact")}
+              >
                 <ListItemText primary="Contact Us" />
               </ListItem>
             </List>

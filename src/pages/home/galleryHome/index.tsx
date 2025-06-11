@@ -120,7 +120,7 @@ export default function HomeGallerySection() {
 
           <Box sx={{ width: { xs: "95%", md: "100%" }, margin: "15px auto" }}>
             <Grid container spacing={2}>
-              <Grid size={6} item xs={12} md={6}>
+              <Grid size={{ xs : 12, md : 6 }}>
                 <Box
                   sx={{
                     position: "relative",
@@ -214,7 +214,7 @@ export default function HomeGallerySection() {
                 </Box>
               </Grid>
 
-              <Grid size={6} item xs={12} md={6}>
+              <Grid size={{ xs : 12, md : 6 }}>
                 <Box
                   sx={{
                     display: "flex",

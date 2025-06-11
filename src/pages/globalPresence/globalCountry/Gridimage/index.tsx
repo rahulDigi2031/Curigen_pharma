@@ -78,7 +78,7 @@ export default function GridImageSection() {
           justifyContent="center"
           sx={{ mb: 8 }}
         >
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs : 12, md : 6 }}>
             <Typography
               variant="h4"
               sx={{ fontWeight: 700, color: "#023350", mb: 2 }}
@@ -92,7 +92,7 @@ export default function GridImageSection() {
               them.
             </Typography>
           </Grid>
-          <Grid item xs={12} md={6} sx={{ textAlign: "center" }}>
+          <Grid size={{ xs : 12, md : 6 }} sx={{ textAlign: "center" }}>
             <Image src="/grid1.png" alt="Grid 1" width={680} height={200} />
           </Grid>
         </Grid>
@@ -105,10 +105,10 @@ export default function GridImageSection() {
           justifyContent="center"
           sx={{ mb: 8 }}
         >
-          <Grid item xs={12} md={6} sx={{ textAlign: "center" }}>
+          <Grid size={{ xs : 12, md : 6 }} sx={{ textAlign: "center" }}>
             <Image src="/grid2.png" alt="Grid 2" width={600} height={100} />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs : 12, md : 6 }}>
             <Typography
               variant="h4"
               sx={{ fontWeight: 700, color: "#023350", mb: 2 }}
@@ -137,7 +137,7 @@ export default function GridImageSection() {
           justifyContent="center"
           sx={{ mb: 8 }}
         >
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs : 12, md : 6 }}>
             <Typography
               variant="h4"
               sx={{ fontWeight: 700, color: "#023350", mb: 2 }}
@@ -158,7 +158,7 @@ export default function GridImageSection() {
               specific to the requirements of our customers.
             </Typography>
           </Grid>
-          <Grid item xs={12} md={6} sx={{ textAlign: "center" }}>
+          <Grid size={{ xs : 12, md : 6 }} sx={{ textAlign: "center" }}>
             <Image src="/grid3.png" alt="Grid 3" width={620} height={100} />
           </Grid>
         </Grid>
@@ -171,10 +171,10 @@ export default function GridImageSection() {
           justifyContent="center"
           sx={{ mb: 8 }}
         >
-          <Grid item xs={12} md={6} sx={{ textAlign: "center" }}>
+          <Grid size={{ xs : 12, md : 6 }} sx={{ textAlign: "center" }}>
             <Image src="/grid4.png" alt="Grid 4" width={600} height={100} />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs : 12, md : 6 }}>
             <Typography
               variant="h4"
               sx={{ fontWeight: 700, color: "#023350", mb: 2 }}
@@ -208,7 +208,7 @@ export default function GridImageSection() {
           justifyContent="center"
           sx={{ mb: 8 }}
         >
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs : 12, md : 6 }}>
             <Typography
               variant="h4"
               sx={{ fontWeight: 700, color: "#023350", mb: 2 }}
@@ -228,7 +228,7 @@ export default function GridImageSection() {
               specific to the requirements of our customers.
             </Typography>
           </Grid>
-          <Grid item xs={12} md={6} sx={{ textAlign: "center" }}>
+          <Grid size={{ xs : 12, md : 6 }} sx={{ textAlign: "center" }}>
             <Image src="/grid5.png" alt="Grid 3" width={620} height={100} />
           </Grid>
         </Grid>
@@ -241,10 +241,10 @@ export default function GridImageSection() {
           justifyContent="center"
           sx={{ mb: 8 }}
         >
-          <Grid item xs={12} md={6} sx={{ textAlign: "center" }}>
+          <Grid size={{ xs : 12, md : 6 }} sx={{ textAlign: "center" }}>
             <Image src="/grid6.png" alt="Grid 4" width={600} height={100} />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs : 12, md : 6 }}>
             <Typography
               variant="h4"
               sx={{ fontWeight: 700, color: "#023350", mb: 2 }}

@@ -74,7 +74,7 @@ export default function ContractManufacturing(){
                         <Typography variant="h5" sx={{mb:4 , fontWeight:"500"}}>Production Capacity:</Typography>
                         {/* table here */}
                         <Grid container spacing={4}>
-                        <Grid item xs={12} md={6}>
+                        <Grid size={{ xs : 12, md : 6 }}>
                             <TableContainer component={Paper} sx={{ borderRadius: 2 }}>
                             <Table>
                                 <TableHead sx={{ backgroundColor: "#033350" }}>
@@ -95,7 +95,7 @@ export default function ContractManufacturing(){
                             </TableContainer>
                         </Grid>
 
-                        <Grid item xs={12} md={6}>
+                        <Grid size={{ xs : 12, md : 6 }}>
                             <TableContainer component={Paper} sx={{ borderRadius: 2 , fontSize:"40px" }}>
                             <Table>
                                 <TableHead sx={{ backgroundColor: "#033350" }}>
