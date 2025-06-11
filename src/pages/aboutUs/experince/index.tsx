@@ -22,37 +22,36 @@ export default function Experience() {
             }}
           >
             {/* Image Section */}
-            
-            <Box
-  sx={{
-    flex: 1,
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    width: "100%",
-  }}
->
-  <Image
-    src="/Group174.png"
-    alt="Experience"
-    width={550}
-    height={600}
-    style={{
-      width: "100%",
-      height: "auto",
-      maxWidth: 700, // increased to match the new dimensions
-      borderRadius: 20,
-      objectFit: "cover",
-    }}
-  />
-</Box>
 
+            <Box
+              sx={{
+                flex: 1,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "100%",
+              }}
+            >
+              <Image
+                src="/Group174.png"
+                alt="Experience"
+                width={550}
+                height={600}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  maxWidth: 700, // increased to match the new dimensions
+                  borderRadius: 20,
+                  objectFit: "cover",
+                }}
+              />
+            </Box>
 
             {/* Text Section */}
             <Box
               sx={{
                 flex: 1,
-                padding: { xs: "10px", },
+                padding: { xs: "10px" },
                 marginTop: { xs: "10px", lg: 0 },
               }}
             >
@@ -60,13 +59,34 @@ export default function Experience() {
                 variant="h4"
                 sx={{
                   fontWeight: "500",
-                  
+
                   fontSize: { xs: "1.25rem", sm: "24px" },
-                  color: "#23A397",}}> Wel-come to
+                  color: "#23A397",
+                }}
+              >
+                {" "}
+                Wel-come to
               </Typography>
 
-              <Typography sx={{ color: "#23A397" , fontWeight:"800" , fontSize:{xs:"1.30rem" , md:"34px"},mb:2 }}>
-                Curigen <span style={{ color: "#023350" , fontWeight:"800" , fontSize:"{xs:1.30rem , md:34px}", lineHeight:"{md:-55px}"}}>Pharmaceuticals <br />Limited
+              <Typography
+                sx={{
+                  color: "#23A397",
+                  fontWeight: "800",
+                  fontSize: { xs: "1.30rem", md: "34px" },
+                  mb: 2,
+                }}
+              >
+                Curigen{" "}
+                <span
+                  style={{
+                    color: "#023350",
+                    fontWeight: "800",
+                    fontSize: "{xs:1.30rem , md:34px}",
+                    lineHeight: "{md:-55px}",
+                  }}
+                >
+                  Pharmaceuticals <br />
+                  Limited
                 </span>
               </Typography>
 
@@ -78,10 +98,7 @@ export default function Experience() {
                 for its quality standards and efficacy of the products. 
               </Typography>
 
-              <Typography
-            
-                sx={{ color: "text.secondary", mb:1 }}
-              >
+              <Typography sx={{ color: "text.secondary", mb: 1 }}>
                 CURIGEN PHARMA is a leading Manufacturer and Exporter
                 of Pharmaceutical Finished Formulations such as Tablets,
                 Capsules, Injections, Pre-filled Syringes, Inhalers/Respules,
@@ -126,14 +143,14 @@ export default function Experience() {
           </Typography>
 
           <Typography sx={{ color: "text.secondary", mb: 3 }}>
-            Quality has always been a strong part of Wellona Pharma – 'We always
-            ensure a high level of quality in our healthcare products and
-            related services'. Our organization has been committed to provide a
-            wide range of quality and affordable Healthcare solutions to a large
-            number of Healthcare Institutions, Governmental Institutions and
-            Medical Facilities. We intend to be the ideal partner for our
-            clients and our aim is to deliver a diverse array of quality
-            healthcare supplies and Pharma Products.
+            Quality has always been a strong part of Wellona Pharma – &lsquo;We
+            always ensure a high level of quality in our healthcare products and
+            related services&lsquo;. Our organization has been committed to
+            provide a wide range of quality and affordable Healthcare solutions
+            to a large number of Healthcare Institutions, Governmental
+            Institutions and Medical Facilities. We intend to be the ideal
+            partner for our clients and our aim is to deliver a diverse array of
+            quality healthcare supplies and Pharma Products.
           </Typography>
 
           <Typography sx={{ color: "text.secondary", mb: 3 }}>
@@ -146,7 +163,7 @@ export default function Experience() {
           </Typography>
 
           <Typography sx={{ color: "text.secondary", mb: 3 }}>
-            To accomplish Wellona Pharma's achievements in Pharmaceutical
+            To accomplish Wellona Pharma&lsquo;s achievements in Pharmaceutical
             Exports, Ministry of Commerce & Industry has honoured us with badge
             of ONE STAR EXPORT HOUSE. We have earned accolades and recognition
             from customers in international market due to our indefatigable and

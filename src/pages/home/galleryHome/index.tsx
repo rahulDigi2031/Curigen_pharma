@@ -115,7 +115,7 @@ export default function HomeGallerySection() {
             OUR GALLERY{" "}
           </Typography>
           <Typography variant="h4" sx={{ mb: 4 , color:"#023350" ,fontWeight:"800"}}>
-            Let's Check Our Photo <span style={{color:"#23A397" , fontWeight:"600"}}>Gallery</span>
+            Let&lsquo;s Check Our Photo <span style={{color:"#23A397" , fontWeight:"600"}}>Gallery</span>
           </Typography>
 
           <Box sx={{ width: { xs: "95%", md: "100%" }, margin: "15px auto" }}>

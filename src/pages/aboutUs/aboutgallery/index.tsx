@@ -25,7 +25,7 @@ export default function ManagementMessage() {
             At Curigen, we follow an open and transparent culture where people are encouraged to present and implement their opinions and ideas. Our duty is to find the right talent, give them the right opportunity and always support them.
           </Typography>
            <Typography variant="body1" sx={{ mb: 2, color: '#555' }}>
-            One of our core values - "We are a team. Everyone matters." - has been the mantra that has taken Wellona Pharma to such heights. Hence, we have cultivated a work culture that permits our employees to learn, innovate and experiment with new ideas.
+            One of our core values - &#34;We are a team. Everyone matters.&#34; - has been the mantra that has taken Wellona Pharma to such heights. Hence, we have cultivated a work culture that permits our employees to learn, innovate and experiment with new ideas.
           </Typography>
            <Typography variant="body1" sx={{ mb: 2, color: '#555' }}>
             The constant support and encouragement from our valued customers is vital to us and we promise to deliver quality products that will help them to live a happier, healthier and more active life.
@@ -83,7 +83,7 @@ export default function ManagementMessage() {
             At Curigen, we follow an open and transparent culture where people are encouraged to present and implement their opinions and ideas. Our duty is to find the right talent, give them the right opportunity and always support them.
           </Typography>
            <Typography variant="body1" sx={{ mb: 2, color: '#555' }}>
-            One of our core values - "We are a team. Everyone matters." - has been the mantra that has taken Wellona Pharma to such heights. Hence, we have cultivated a work culture that permits our employees to learn, innovate and experiment with new ideas.
+            One of our core values - &#34;We are a team. Everyone matters.&#34;- has been the mantra that has taken Wellona Pharma to such heights. Hence, we have cultivated a work culture that permits our employees to learn, innovate and experiment with new ideas.
           </Typography>
            <Typography variant="body1" sx={{ mb: 2, color: '#555' }}>
             The constant support and encouragement from our valued customers is vital to us and we promise to deliver quality products that will help them to live a happier, healthier and more active life.

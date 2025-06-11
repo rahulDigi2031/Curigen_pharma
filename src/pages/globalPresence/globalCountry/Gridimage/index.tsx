@@ -1,50 +1,50 @@
 import { Box, Container, Grid, Typography, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 
-const sectionData = [
-  {
-    title: "Our Partnering Policy",
-    content:
-      "We believe in working together towards success, with mutual trust, understanding our partner's requirements and above all satisfying them.",
-    image: "/grid1.png",
-    imageFirst: false,
-  },
-  {
-    title: "Partnerships",
-    content:
-      "Our products are available to local pharmaceutical distributors in most countries. We support our partners with manufacture and supply of pharmaceutical products according to their requirements and specifications. We provide the marketing support to our partners. Our business development team and Regulatory team are always at our customer's service.",
-    image: "/grid2.png",
-    imageFirst: true,
-  },
-  {
-    title: "Customer Specific Manufacture And Supply",
-    content:
-      "Our products are available under private label to our distributors and partners in most countries. In order to satisfy the diverse needs of our various customers located in different parts of the world we believe in developing products specific to the requirements of our customers.",
-    image: "/grid3.png",
-    imageFirst: false,
-  },
-  {
-    title: "Co-marketing",
-    content:
-      "At Wellona Pharma, we help build 'molecules into brands.' We work with our Customers, strategically and programmatically, to accelerate, expand and extend the product life cycles of ethical drugs. We have developed considerable brand marketing experience in the emerging markets through our portfolio of branded generics. We focus on new generations of drugs thereby ascending the value chain in the marketing and ultimately increase revenues from the sales of our products.",
-    image: "/grid4.png",
-    imageFirst: true,
-  },
-  {
-    title: "Regulatory Support/ Services",
-    content:
-      "Our Regulatory team consists of elite, highly qualified personnel engaged in providing data required to assure the high Quality, efficacy and safety of our Products. We can provide, clinical Trials, FDA Certificates and BE Studies for registration of our products as per guidelines of most health authorities in most countries.",
-    image: "/grid5.png",
-    imageFirst: false,
-  },
-  {
-    title: "Logistics",
-    content:
-      "We understand that distribution of pharmaceutical products must be undertaken with a great deal of care and attention. Raw materials awaiting processing and finished products awaiting dispatch are stored in modern, fully climate-controlled high-bay storage areas. We are able to meet the delivery needs of its customers thanks to its modern data and order processing systems, its inspections of all goods entering and leaving the factory, and the latest transport logistics (road, sea or air). No matter what route product takes, or how long it takes to get there, its journey is carefully monitored until it reaches its destination.",
-    image: "/grid6.png",
-    imageFirst: true,
-  },
-];
+// const sectionData = [
+//   {
+//     title: "Our Partnering Policy",
+//     content:
+//       "We believe in working together towards success, with mutual trust, understanding our partner's requirements and above all satisfying them.",
+//     image: "/grid1.png",
+//     imageFirst: false,
+//   },
+//   {
+//     title: "Partnerships",
+//     content:
+//       "Our products are available to local pharmaceutical distributors in most countries. We support our partners with manufacture and supply of pharmaceutical products according to their requirements and specifications. We provide the marketing support to our partners. Our business development team and Regulatory team are always at our customer's service.",
+//     image: "/grid2.png",
+//     imageFirst: true,
+//   },
+//   {
+//     title: "Customer Specific Manufacture And Supply",
+//     content:
+//       "Our products are available under private label to our distributors and partners in most countries. In order to satisfy the diverse needs of our various customers located in different parts of the world we believe in developing products specific to the requirements of our customers.",
+//     image: "/grid3.png",
+//     imageFirst: false,
+//   },
+//   {
+//     title: "Co-marketing",
+//     content:
+//       "At Wellona Pharma, we help build 'molecules into brands.' We work with our Customers, strategically and programmatically, to accelerate, expand and extend the product life cycles of ethical drugs. We have developed considerable brand marketing experience in the emerging markets through our portfolio of branded generics. We focus on new generations of drugs thereby ascending the value chain in the marketing and ultimately increase revenues from the sales of our products.",
+//     image: "/grid4.png",
+//     imageFirst: true,
+//   },
+//   {
+//     title: "Regulatory Support/ Services",
+//     content:
+//       "Our Regulatory team consists of elite, highly qualified personnel engaged in providing data required to assure the high Quality, efficacy and safety of our Products. We can provide, clinical Trials, FDA Certificates and BE Studies for registration of our products as per guidelines of most health authorities in most countries.",
+//     image: "/grid5.png",
+//     imageFirst: false,
+//   },
+//   {
+//     title: "Logistics",
+//     content:
+//       "We understand that distribution of pharmaceutical products must be undertaken with a great deal of care and attention. Raw materials awaiting processing and finished products awaiting dispatch are stored in modern, fully climate-controlled high-bay storage areas. We are able to meet the delivery needs of its customers thanks to its modern data and order processing systems, its inspections of all goods entering and leaving the factory, and the latest transport logistics (road, sea or air). No matter what route product takes, or how long it takes to get there, its journey is carefully monitored until it reaches its destination.",
+//     image: "/grid6.png",
+//     imageFirst: true,
+//   },
+// ];
 
 const successFactors = [
   [
@@ -88,7 +88,7 @@ export default function GridImageSection() {
             <Typography variant="body1" sx={{ color: "text.secondary" }}>
               We believe in working together towards success, with mutual trust,
               <br />
-              understanding our partner's requirements and above all satisfying
+              understanding our partner&lsquo;s requirements and above all satisfying
               them.
             </Typography>
           </Grid>
@@ -124,7 +124,7 @@ export default function GridImageSection() {
               specifications. <br />
               We provide the marketing support to our partners. Our business
               development team <br />
-              and Regulatory team are always at our customer's service.
+              and Regulatory team are always at our customer&lsquo;s service.
             </Typography>
           </Grid>
         </Grid>
@@ -188,7 +188,7 @@ export default function GridImageSection() {
                 width: { xs: "330px", md: "635px" },
               }}
             >
-              At Wellona Pharma, we help build "molecules into brands." We work
+              At Wellona Pharma, we help build &#34;molecules into brands.&#34; We work
               with our Customers, strategically and programmatically, to
               accelerate, expand and extend the product life cycles of ethical
               drugs. We have developed considerable brand marketing experience
