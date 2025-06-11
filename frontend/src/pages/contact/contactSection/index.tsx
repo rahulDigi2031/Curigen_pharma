@@ -168,10 +168,11 @@ import Image from "next/image";
                                 sx={{
                                     backgroundColor: "#03A297",
                                     color: "white",
-                                    width: {xs: "100%", md: "auto"}
+                                    width: {xs: "100%", md: "200px"},
+                                    height:"40px"
                                 }}
                             >
-                                Send message 
+                                Send message
                             </Button>
                         </Box>
                     </Grid>
